@@ -4,47 +4,55 @@ Okay, let's embark on an extensive journey into the world of C# and .NET 8! This
 
 **1.1 What is C# and .NET?**
 
-* **C#:**  A modern, object-oriented, and type-safe programming language developed by Microsoft. It's designed for building a wide range of applications, from desktop software and web applications to mobile apps and games.
-* **.NET:** A free, cross-platform, open-source developer platform for building many different types of applications. .NET 8 is the latest major version, offering performance improvements, new features, and enhanced developer productivity.
+*   **C#:** A modern, object-oriented, and type-safe programming language developed by Microsoft. It's designed for building a wide range of applications, from desktop software and web applications to mobile apps and games.
+*   **.NET:** A free, cross-platform, open-source developer platform for building many different types of applications. .NET 8 is the latest major version, offering performance improvements, new features, and enhanced developer productivity.
 
 **1.2 Installing the .NET SDK**
 
 The .NET Software Development Kit (SDK) is essential for writing, building, and running .NET applications.
 
-* **Download:** Navigate to the official .NET download page ([https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download)) and download the SDK for your operating system (Windows, macOS, or Linux).
-* **Installation:** Follow the on-screen instructions for installation.
-* **Verification:** Open your terminal or command prompt and type:
-   ```bash
-   dotnet --version
-   ```
-   This should display the installed .NET SDK version.
+*   **Download:** Navigate to the official .NET download page ([https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download)) and download the SDK for your operating system (Windows, macOS, or Linux).
+*   **Installation:** Follow the on-screen instructions for installation.
+*   **Verification:** Open your terminal or command prompt and type:
+
+    ```bash
+    dotnet --version
+    ```
+
+    This should display the installed .NET SDK version.
 
 **1.3 The .NET CLI (Command-Line Interface)**
 
 The .NET CLI is a powerful tool for managing .NET projects.
 
-* **Creating a New Project:**
-   ```bash
-   dotnet new console -o MyFirstApp
-   cd MyFirstApp
-   ```
-   This creates a new console application named "MyFirstApp" in a directory with the same name.
+*   **Creating a New Project:**
 
-* **Project Structure:**
-   * `MyFirstApp.csproj`: The project file, containing project settings, dependencies, and build configurations.
-   * `Program.cs`: The main entry point of your application.
+    ```bash
+    dotnet new console -o MyFirstApp
+    cd MyFirstApp
+    ```
 
-* **Building the Application:**
-   ```bash
-   dotnet build
-   ```
-   This compiles your code into an executable.
+    This creates a new console application named "MyFirstApp" in a directory with the same name.
 
-* **Running the Application:**
-   ```bash
-   dotnet run
-   ```
-   This executes your compiled application.
+*   **Project Structure:**
+    *   `MyFirstApp.csproj`: The project file, containing project settings, dependencies, and build configurations.
+    *   `Program.cs`: The main entry point of your application.
+
+*   **Building the Application:**
+
+    ```bash
+    dotnet build
+    ```
+
+    This compiles your code into an executable.
+
+*   **Running the Application:**
+
+    ```bash
+    dotnet run
+    ```
+
+    This executes your compiled application.
 
 **1.4 Your First C# Program**
 
@@ -55,10 +63,10 @@ Open `Program.cs` in a text editor or IDE (like Visual Studio Code with the C# e
 Console.WriteLine("Hello, World!");
 ```
 
-* **`//`:** Single-line comment.
-* **`Console`:** A class in the `System` namespace providing access to the console.
-* **`WriteLine()`:** A method of the `Console` class that writes a line of text to the console.
-* **`"Hello, World!"`:** A string literal.
+*   **`//`:** Single-line comment.
+*   **`Console`:** A class in the `System` namespace providing access to the console.
+*   **`WriteLine()`:** A method of the `Console` class that writes a line of text to the console.
+*   **`"Hello, World!"`:** A string literal.
 
 **Exercise 1.1:** Modify the `Program.cs` file to print your name to the console.
 
@@ -66,28 +74,29 @@ Console.WriteLine("Hello, World!");
 
 Variables are used to store data. C# is a statically-typed language, meaning you need to declare the data type of a variable.
 
-* **Common Data Types:**
-    * `int`: Integer numbers (e.g., 10, -5).
-    * `double`: Floating-point numbers (e.g., 3.14, -0.5).
-    * `float`: Single-precision floating-point numbers (use `f` suffix, e.g., 3.14f).
-    * `char`: Single characters (e.g., 'A', 'b').
-    * `string`: Sequences of characters (e.g., "Hello").
-    * `bool`: Boolean values (either `true` or `false`).
+*   **Common Data Types:**
+    *   `int`: Integer numbers (e.g., 10, -5).
+    *   `double`: Floating-point numbers (e.g., 3.14, -0.5).
+    *   `float`: Single-precision floating-point numbers (use `f` suffix, e.g., 3.14f).
+    *   `char`: Single characters (e.g., 'A', 'b').
+    *   `string`: Sequences of characters (e.g., "Hello").
+    *   `bool`: Boolean values (either `true` or `false`).
 
-* **Declaring Variables:**
-   ```csharp
-   int age = 30;
-   string name = "Alice";
-   double price = 19.99;
-   bool isAdult = true;
-   ```
+*   **Declaring Variables:**
 
-* **`var` Keyword (Type Inference):** The `var` keyword allows the compiler to infer the data type based on the assigned value.
+    ```csharp
+    int age = 30;
+    string name = "Alice";
+    double price = 19.99;
+    bool isAdult = true;
+    ```
 
-   ```csharp
-   var count = 10; // count is inferred as int
-   var message = "Welcome"; // message is inferred as string
-   ```
+*   **`var` Keyword (Type Inference):** The `var` keyword allows the compiler to infer the data type based on the assigned value.
+
+    ```csharp
+    var count = 10; // count is inferred as int
+    var message = "Welcome"; // message is inferred as string
+    ```
 
 **Exercise 1.2:** Write a program that declares variables for your age, favorite color, and whether you like programming, and then prints these values to the console.
 
@@ -95,10 +104,10 @@ Variables are used to store data. C# is a statically-typed language, meaning you
 
 Operators perform operations on values.
 
-* **Arithmetic Operators:** `+`, `-`, `*`, `/`, `%` (modulo - remainder of division).
-* **Assignment Operators:** `=`, `+=`, `-=`, `*=`, `/=`, `%=`.
-* **Comparison Operators:** `==` (equal to), `!=` (not equal to), `>`, `<`, `>=`, `<=`.
-* **Logical Operators:** `&&` (logical AND), `||` (logical OR), `!` (logical NOT).
+*   **Arithmetic Operators:** `+`, `-`, `*`, `/`, `%` (modulo - remainder of division).
+*   **Assignment Operators:** `=`, `+=`, `-=`, `*=`, `/=`, `%=`.
+*   **Comparison Operators:** `==` (equal to), `!=` (not equal to), `>`, `<`, `>=`, `<=`.
+*   **Logical Operators:** `&&` (logical AND), `||` (logical OR), `!` (logical NOT).
 
 **Exercise 1.3:** Write a program that takes two integer inputs from the user, performs arithmetic operations on them, and prints the results.
 
@@ -106,76 +115,76 @@ Operators perform operations on values.
 
 Control flow statements dictate the order in which code is executed.
 
-* **`if` Statement:** Executes a block of code if a condition is true.
+*   **`if` Statement:** Executes a block of code if a condition is true.
 
-   ```csharp
-   int number = 15;
-   if (number > 10)
-   {
-       Console.WriteLine("Number is greater than 10");
-   }
-   else if (number < 5)
-   {
-       Console.WriteLine("Number is less than 5");
-   }
-   else
-   {
-       Console.WriteLine("Number is between 5 and 10");
-   }
-   ```
+    ```csharp
+    int number = 15;
+    if (number > 10)
+    {
+        Console.WriteLine("Number is greater than 10");
+    }
+    else if (number < 5)
+    {
+        Console.WriteLine("Number is less than 5");
+    }
+    else
+    {
+        Console.WriteLine("Number is between 5 and 10");
+    }
+    ```
 
-* **`switch` Statement:** Selects one of many code blocks to execute based on the value of an expression.
+*   **`switch` Statement:** Selects one of many code blocks to execute based on the value of an expression.
 
-   ```csharp
-   int dayOfWeek = 3;
-   switch (dayOfWeek)
-   {
-       case 1:
-           Console.WriteLine("Monday");
-           break;
-       case 2:
-           Console.WriteLine("Tuesday");
-           break;
-       // ... other cases
-       default:
-           Console.WriteLine("Weekend");
-           break;
-   }
-   ```
+    ```csharp
+    int dayOfWeek = 3;
+    switch (dayOfWeek)
+    {
+        case 1:
+            Console.WriteLine("Monday");
+            break;
+        case 2:
+            Console.WriteLine("Tuesday");
+            break;
+        // ... other cases
+        default:
+            Console.WriteLine("Weekend");
+            break;
+    }
+    ```
 
-* **Loops:**
-    * **`for` Loop:** Executes a block of code a specific number of times.
+*   **Loops:**
+    *   **`for` Loop:** Executes a block of code a specific number of times.
 
-       ```csharp
-       for (int i = 0; i < 5; i++)
-       {
-           Console.WriteLine($"Iteration: {i}");
-       }
-       ```
+        ```csharp
+        for (int i = 0; i < 5; i++)
+        {
+            Console.WriteLine($"Iteration: {i}");
+        }
+        ```
 
-    * **`while` Loop:** Executes a block of code as long as a condition is true.
+    *   **`while` Loop:** Executes a block of code as long as a condition is true.
 
-       ```csharp
-       int counter = 0;
-       while (counter < 3)
-       {
-           Console.WriteLine($"Counter: {counter}");
-           counter++;
-       }
-       ```
+        ```csharp
+        int counter = 0;
+        while (counter < 3)
+        {
+            Console.WriteLine($"Counter: {counter}");
+            counter++;
+        }
+        ```
 
-    * **`do-while` Loop:** Executes a block of code at least once, then repeats as long as a condition is true.
+    *   **`do-while` Loop:** Executes a block of code at least once, then repeats as long as a condition is true.
 
-       ```csharp
-       int value = 10;
-       do
-       {
-           Console.WriteLine($"Value: {value}");
-           value--;
-       } while (value > 5);
-       ```
+        ```csharp
+        int value = 10;
+        do
+        {
+            Console.WriteLine($"Value: {value}");
+            value--;
+        } while (value > 5);
+        ```
 
-    * **`foreach` Loop:** Iterates over the elements of a collection. (We'll see this later with Collections).
+    *   **`foreach` Loop:** Iterates over the elements of a collection. (We'll see this later with Collections).
 
 **Exercise 1.4:** Write a program that asks the user for a number and then prints the multiplication table for that number up to 10 using a `for` loop.
 
@@ -189,75 +198,75 @@ Create a console application that takes two numbers and an operation (+, -, *, /
 
 OOP is a programming paradigm based on the concept of "objects," which can contain data (attributes) and code (methods). Key OOP principles include:
 
-* **Encapsulation:** Bundling data and methods that operate on that data within a single unit (a class). This helps in data hiding and organization.
-* **Abstraction:** Showing only the essential details to the user and hiding the complex implementation.
-* **Inheritance:** Creating new classes (derived classes) based on existing classes (base classes), inheriting their properties and behaviors. This promotes code reusability.
-* **Polymorphism:** The ability of objects of different classes to respond to the same method call in their own specific ways.
+*   **Encapsulation:** Bundling data and methods that operate on that data within a single unit (a class). This helps in data hiding and organization.
+*   **Abstraction:** Showing only the essential details to the user and hiding the complex implementation.
+*   **Inheritance:** Creating new classes (derived classes) based on existing classes (base classes), inheriting their properties and behaviors. This promotes code reusability.
+*   **Polymorphism:** The ability of objects of different classes to respond to the same method call in their own specific ways.
 
 **2.2 Classes and Objects**
 
-* **Class:** A blueprint or template for creating objects. It defines the properties (data) and methods (behavior) that objects of that class will have.
+*   **Class:** A blueprint or template for creating objects. It defines the properties (data) and methods (behavior) that objects of that class will have.
 
-   ```csharp
-   public class Dog
-   {
-       // Properties (attributes)
-       public string Name { get; set; }
-       public string Breed { get; set; }
-       public int Age { get; set; }
+    ```csharp
+    public class Dog
+    {
+        // Properties (attributes)
+        public string Name { get; set; }
+        public string Breed { get; set; }
+        public int Age { get; set; }
 
-       // Constructor (special method to initialize objects)
-       public Dog(string name, string breed, int age)
-       {
-           Name = name;
-           Breed = breed;
-           Age = age;
-       }
+        // Constructor (special method to initialize objects)
+        public Dog(string name, string breed, int age)
+        {
+            Name = name;
+            Breed = breed;
+            Age = age;
+        }
 
-       // Method (behavior)
-       public void Bark()
-       {
-           Console.WriteLine("Woof!");
-       }
+        // Method (behavior)
+        public void Bark()
+        {
+            Console.WriteLine("Woof!");
+        }
 
-       public void DisplayInformation()
-       {
-           Console.WriteLine($"Name: {Name}, Breed: {Breed}, Age: {Age}");
-       }
-   }
-   ```
+        public void DisplayInformation()
+        {
+            Console.WriteLine($"Name: {Name}, Breed: {Breed}, Age: {Age}");
+        }
+    }
+    ```
 
-* **Object:** An instance of a class. You create objects from classes.
+*   **Object:** An instance of a class. You create objects from classes.
 
-   ```csharp
-   public class Program
-   {
-       public static void Main(string[] args)
-       {
-           // Creating objects of the Dog class
-           Dog myDog = new Dog("Buddy", "Golden Retriever", 3);
-           Dog anotherDog = new Dog("Lucy", "Labrador", 5);
+    ```csharp
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            // Creating objects of the Dog class
+            Dog myDog = new Dog("Buddy", "Golden Retriever", 3);
+            Dog anotherDog = new Dog("Lucy", "Labrador", 5);
 
-           // Accessing properties
-           Console.WriteLine(myDog.Name); // Output: Buddy
+            // Accessing properties
+            Console.WriteLine(myDog.Name); // Output: Buddy
 
-           // Calling methods
-           myDog.Bark(); // Output: Woof!
-           anotherDog.DisplayInformation(); // Output: Name: Lucy, Breed: Labrador, Age: 5
-       }
-   }
-   ```
+            // Calling methods
+            myDog.Bark(); // Output: Woof!
+            anotherDog.DisplayInformation(); // Output: Name: Lucy, Breed: Labrador, Age: 5
+        }
+    }
+    ```
 
 **2.3 Encapsulation and Access Modifiers**
 
 Access modifiers control the visibility and accessibility of class members (properties and methods).
 
-* **`public`:** Accessible from anywhere.
-* **`private`:** Accessible only within the same class.
-* **`protected`:** Accessible within the same class and derived classes.
-* **`internal`:** Accessible within the same assembly (project).
-* **`protected internal`:** Accessible within the same assembly and derived classes in other assemblies.
-* **`private protected`:** Accessible within the same class and derived classes in the same assembly.
+*   **`public`:** Accessible from anywhere.
+*   **`private`:** Accessible only within the same class.
+*   **`protected`:** Accessible within the same class and derived classes.
+*   **`internal`:** Accessible within the same assembly (project).
+*   **`protected internal`:** Accessible within the same assembly and derived classes in other assemblies.
+*   **`private protected`:** Accessible within the same class and derived classes in the same assembly.
 
 **2.4 Inheritance**
 
@@ -304,10 +313,10 @@ public class Program
 }
 ```
 
-* **`:` operator:** Used to specify inheritance.
-* **`base` keyword:** Used to call the constructor of the base class.
-* **`virtual` keyword:** Allows a method in the base class to be overridden in derived classes.
-* **`override` keyword:** Used in the derived class to indicate that a virtual method from the base class is being overridden.
+*   **`:` operator:** Used to specify inheritance.
+*   **`base` keyword:** Used to call the constructor of the base class.
+*   **`virtual` keyword:** Allows a method in the base class to be overridden in derived classes.
+*   **`override` keyword:** Used in the derived class to indicate that a virtual method from the base class is being overridden.
 
 **2.5 Polymorphism**
 
@@ -334,58 +343,58 @@ public class Program
 
 **2.6 Abstract Classes and Interfaces**
 
-* **Abstract Class:** A class that cannot be instantiated directly. It can contain abstract methods (methods without implementation) and concrete methods. Derived classes must implement the abstract methods.
+*   **Abstract Class:** A class that cannot be instantiated directly. It can contain abstract methods (methods without implementation) and concrete methods. Derived classes must implement the abstract methods.
 
-   ```csharp
-   public abstract class Shape
-   {
-       public abstract double GetArea(); // Abstract method
+    ```csharp
+    public abstract class Shape
+    {
+        public abstract double GetArea(); // Abstract method
 
-       public virtual void Display() // Virtual method with implementation
-       {
-           Console.WriteLine("This is a shape.");
-       }
-   }
+        public virtual void Display() // Virtual method with implementation
+        {
+            Console.WriteLine("This is a shape.");
+        }
+    }
 
-   public class Circle : Shape
-   {
-       public double Radius { get; set; }
+    public class Circle : Shape
+    {
+        public double Radius { get; set; }
 
-       public Circle(double radius)
-       {
-           Radius = radius;
-       }
+        public Circle(double radius)
+        {
+            Radius = radius;
+        }
 
-       public override double GetArea()
-       {
-           return Math.PI * Radius * Radius;
-       }
-   }
-   ```
+        public override double GetArea()
+        {
+            return Math.PI * Radius * Radius;
+        }
+    }
+    ```
 
-* **Interface:** A contract that defines a set of methods and properties that classes implementing the interface must provide. Interfaces cannot have implementation details.
+*   **Interface:** A contract that defines a set of methods and properties that classes implementing the interface must provide. Interfaces cannot have implementation details.
 
-   ```csharp
-   public interface IPrintable
-   {
-       void Print();
-   }
+    ```csharp
+    public interface IPrintable
+    {
+        void Print();
+    }
 
-   public class Document : IPrintable
-   {
-       public string Content { get; set; }
+    public class Document : IPrintable
+    {
+        public string Content { get; set; }
 
-       public Document(string content)
-       {
-           Content = content;
-       }
+        public Document(string content)
+        {
+            Content = content;
+        }
 
-       public void Print()
-       {
-           Console.WriteLine($"Printing document: {Content}");
-       }
-   }
-   ```
+        public void Print()
+        {
+            Console.WriteLine($"Printing document: {Content}");
+        }
+    }
+    ```
 
 **Exercise 2.1:** Create a class hierarchy for vehicles (e.g., `Vehicle`, `Car`, `Bicycle`). Include properties like `NumberOfWheels` and methods like `StartEngine()` (which would be abstract in the base class).
 
@@ -403,8 +412,8 @@ Asynchronous programming allows your application to perform long-running operati
 
 The `async` and `await` keywords are the foundation of asynchronous programming in C#.
 
-* **`async`:** Marks a method as asynchronous. It allows the use of the `await` keyword inside the method. Asynchronous methods typically return a `Task` or `Task<T>`.
-* **`await`:** Pauses the execution of the asynchronous method until the awaited task completes. It does not block the main thread.
+*   **`async`:** Marks a method as asynchronous. It allows the use of the `await` keyword inside the method. Asynchronous methods typically return a `Task` or `Task<T>`.
+*   **`await`:** Pauses the execution of the asynchronous method until the awaited task completes. It does not block the main thread.
 
 ```csharp
 public class Program
@@ -427,8 +436,8 @@ public class Program
 
 **3.3 `Task` and `Task<T>`**
 
-* **`Task`:** Represents an asynchronous operation that does not return a value.
-* **`Task<T>`:** Represents an asynchronous operation that returns a value of type `T`.
+*   **`Task`:** Represents an asynchronous operation that does not return a value.
+*   **`Task<T>`:** Represents an asynchronous operation that returns a value of type `T`.
 
 ```csharp
 public class Program
@@ -449,8 +458,8 @@ public class Program
 
 **3.4 Parallelism vs. Asynchrony**
 
-* **Parallelism:** Running multiple operations truly at the same time, often using multiple CPU cores.
-* **Asynchrony:**  Allowing other work to be done while waiting for an operation to complete. It doesn't necessarily involve multiple threads running simultaneously.
+*   **Parallelism:** Running multiple operations truly at the same time, often using multiple CPU cores.
+*   **Asynchrony:** Allowing other work to be done while waiting for an operation to complete. It doesn't necessarily involve multiple threads running simultaneously.
 
 **3.5 Common Asynchronous Operations**
 
@@ -1080,6 +1089,7 @@ Let's create more examples with different databases:
 **Project Setup (For Each Database):**
 
 1. Create a new console application:
+
     ```bash
     dotnet new console -o EFSample
     cd EFSample
@@ -1088,26 +1098,31 @@ Let's create more examples with different databases:
 2. Install necessary NuGet packages:
 
     *   **Common:**
+
         ```bash
         dotnet add package Microsoft.EntityFrameworkCore.Design
         ```
 
     *   **SQLite:**
+
         ```bash
         dotnet add package Microsoft.EntityFrameworkCore.Sqlite
         ```
 
     *   **MySQL:**
+
         ```bash
         dotnet add package Pomelo.EntityFrameworkCore.MySql
         ```
 
     *   **PostgreSQL:**
+
         ```bash
         dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
         ```
 
     *   **MS SQL Server:**
+
         ```bash
         dotnet add package Microsoft.EntityFrameworkCore.SqlServer
         ```
@@ -1158,16 +1173,19 @@ Let's create more examples with different databases:
 **Code Example (Database-Specific Connection Strings):**
 
 *   **MySQL:**
+
     ```csharp
     private const string ConnectionString = "server=localhost;database=mydatabase;user=myuser;password=mypassword;";
     ```
 
 *   **PostgreSQL:**
+
     ```csharp
     private const string ConnectionString = "Host=localhost;Database=mydatabase;Username=myuser;Password=mypassword;";
     ```
 
 *   **MS SQL Server:**
+
     ```csharp
     private const string ConnectionString = "Server=localhost;Database=mydatabase;Trusted_Connection=True;TrustServerCertificate=true"; // Or use User ID and Password
     ```
@@ -1221,11 +1239,13 @@ public class Program
 **Migrations (Optional but Recommended):**
 
 1. Add a migration:
+
     ```bash
     dotnet ef migrations add InitialCreate
     ```
 
 2. Update the database:
+
     ```bash
     dotnet ef database update
     ```
