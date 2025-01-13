@@ -1,1 +1,1 @@
-Various tutorials for C#, HTML, CSS, and Obsidian
+Various tutorials for C#, HTML, CSS, Javascript, Markdown, and Obsidian
