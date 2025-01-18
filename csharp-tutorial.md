@@ -81,6 +81,23 @@ Variables are used to store data. C# is a statically-typed language, meaning you
     *   `char`: Single characters (e.g., 'A', 'b').
     *   `string`: Sequences of characters (e.g., "Hello").
     *   `bool`: Boolean values (either `true` or `false`).
+    *   `decimal`: High-precision decimal numbers (e.g., 123.456m).
+    *   `nint` and `nuint`: Native-sized integers (size depends on platform).
+    *   `Half`: 16-bit floating-point number (C# 11+).
+
+*   **New C# 12 Features:**
+    ```csharp
+    // Primary constructors (C# 12)
+    public class Person(string name, int age)
+    {
+        public string Name { get; } = name;
+        public int Age { get; } = age;
+    }
+
+    // Collection expressions (C# 12)
+    int[] numbers = [1, 2, 3, 4, 5];
+    List<string> names = ["Alice", "Bob", "Charlie"];
+    ```
 
 *   **Declaring Variables:**
 
@@ -89,9 +106,26 @@ Variables are used to store data. C# is a statically-typed language, meaning you
     string name = "Alice";
     double price = 19.99;
     bool isAdult = true;
+    decimal preciseValue = 123.456m;
+    nint nativeInt = 100;
+    Half halfPrecision = (Half)1.234;
     ```
 
 *   **`var` Keyword (Type Inference):** The `var` keyword allows the compiler to infer the data type based on the assigned value.
+    
+    ```csharp
+    // C# 12 target-typed new expressions
+    List<string> names = new() { "Alice", "Bob" };
+    Dictionary<string, int> ages = new()
+    {
+        ["Alice"] = 30,
+        ["Bob"] = 25
+    };
+
+    // Implicitly typed arrays
+    var numbers = new[] { 1, 2, 3, 4, 5 };
+    var mixed = new[] { 1, 2.5, 3.7 }; // double[]
+    ```
 
     ```csharp
     var count = 10; // count is inferred as int
@@ -108,6 +142,28 @@ Operators perform operations on values.
 *   **Assignment Operators:** `=`, `+=`, `-=`, `*=`, `/=`, `%=`.
 *   **Comparison Operators:** `==` (equal to), `!=` (not equal to), `>`, `<`, `>=`, `<=`.
 *   **Logical Operators:** `&&` (logical AND), `||` (logical OR), `!` (logical NOT).
+*   **Null-coalescing Operators:** `??`, `??=`
+*   **Null-conditional Operators:** `?.`, `?[]`
+*   **Range Operator:** `..` (C# 8+)
+*   **Index Operator:** `^` (C# 8+)
+
+```csharp
+// Null-coalescing and null-conditional examples
+string name = null;
+string displayName = name ?? "Unknown";
+name ??= "Default Name";
+
+// Range and index examples
+int[] numbers = [1, 2, 3, 4, 5];
+int[] slice = numbers[1..^1]; // [2, 3, 4]
+int last = numbers[^1]; // 5
+
+// Pattern matching (C# 12 enhanced)
+if (numbers is [1, .., 5])
+{
+    Console.WriteLine("Starts with 1 and ends with 5");
+}
+```
 
 **Exercise 1.3:** Write a program that takes two integer inputs from the user, performs arithmetic operations on them, and prints the results.
 
@@ -118,22 +174,59 @@ Control flow statements dictate the order in which code is executed.
 *   **`if` Statement:** Executes a block of code if a condition is true.
 
     ```csharp
-    int number = 15;
-    if (number > 10)
+    // C# 12 pattern matching enhancements
+    object obj = "Hello";
+    
+    if (obj is string { Length: > 5 } s)
     {
-        Console.WriteLine("Number is greater than 10");
+        Console.WriteLine($"Long string: {s}");
     }
-    else if (number < 5)
+    else if (obj is int i && i > 100)
     {
-        Console.WriteLine("Number is less than 5");
-    }
-    else
-    {
-        Console.WriteLine("Number is between 5 and 10");
+        Console.WriteLine($"Large number: {i}");
     }
     ```
 
+    ```csharp
+    // C# 12 enhanced switch expressions
+    int number = 15;
+    string result = number switch
+    {
+        > 100 => "Very large",
+        > 50 => "Large",
+        > 10 => "Medium",
+        > 0 => "Small",
+        _ => "Negative or zero"
+    };
+    
+    Console.WriteLine(result); // "Medium"
+    ```
+
 *   **`switch` Statement:** Selects one of many code blocks to execute based on the value of an expression.
+
+    ```csharp
+    // C# 12 pattern matching in switch
+    object shape = new Circle(5);
+    
+    switch (shape)
+    {
+        case Circle { Radius: > 10 } c:
+            Console.WriteLine($"Large circle with radius {c.Radius}");
+            break;
+        case Circle c:
+            Console.WriteLine($"Circle with radius {c.Radius}");
+            break;
+        case Rectangle r when r.Width == r.Height:
+            Console.WriteLine($"Square with side {r.Width}");
+            break;
+        case Rectangle r:
+            Console.WriteLine($"Rectangle {r.Width}x{r.Height}");
+            break;
+        default:
+            Console.WriteLine("Unknown shape");
+            break;
+    }
+    ```
 
     ```csharp
     int dayOfWeek = 3;
@@ -640,15 +733,229 @@ Create a console application that allows the user to navigate through directorie
 
 **Chapter 9: Generics**
 
-**Chapter 10: Collections**
+**Chapter 10: Collections and LINQ**
 
-**Chapter 11: Exception Handling and Reflection**
+**10.1 Common Collection Types**
 
-**Chapter 12: Strings and StringBuilder**
+* **List<T>:** Dynamic array
+* **Dictionary<TKey, TValue>:** Key-value pairs
+* **HashSet<T>:** Unique elements
+* **Queue<T>:** FIFO collection
+* **Stack<T>:** LIFO collection
 
-**Chapter 13: Use of Services with Dependency Injection**
+```csharp
+// C# 12 collection expressions
+List<int> numbers = [1, 2, 3, 4, 5];
+Dictionary<string, int> ages = new()
+{
+    ["Alice"] = 30,
+    ["Bob"] = 25
+};
 
-**(And any other pertinent subjects)**
+// LINQ examples
+var evenNumbers = numbers.Where(n => n % 2 == 0);
+var adults = ages.Where(p => p.Value >= 18)
+                 .Select(p => p.Key);
+```
+
+**10.2 LINQ (Language Integrated Query)**
+
+* **Query Syntax:**
+```csharp
+var results = from n in numbers
+              where n > 10
+              orderby n descending
+              select n * 2;
+```
+
+* **Method Syntax:**
+```csharp
+var results = numbers
+    .Where(n => n > 10)
+    .OrderByDescending(n => n)
+    .Select(n => n * 2);
+```
+
+**10.3 Advanced LINQ Features**
+
+* **Grouping:**
+```csharp
+var grouped = from p in people
+              group p by p.Age into ageGroup
+              select new { Age = ageGroup.Key, Count = ageGroup.Count() };
+```
+
+* **Joins:**
+```csharp
+var joined = from p in people
+             join c in cities on p.CityId equals c.Id
+             select new { p.Name, c.CityName };
+```
+
+**Chapter 11: Generics**
+
+**11.1 Generic Classes and Methods**
+
+```csharp
+public class Repository<T> where T : class
+{
+    private List<T> _items = new();
+
+    public void Add(T item) => _items.Add(item);
+    
+    public T? Find(Predicate<T> match) => _items.Find(match);
+}
+
+// Usage
+var repo = new Repository<Person>();
+repo.Add(new Person("Alice"));
+```
+
+**11.2 Generic Constraints**
+
+* **where T : class**
+* **where T : struct**
+* **where T : new()**
+* **where T : BaseClass**
+* **where T : Interface**
+
+**11.3 Covariance and Contravariance**
+
+```csharp
+// Covariant interface
+interface IReadOnlyList<out T> { /*...*/ }
+
+// Contravariant interface
+interface IComparer<in T> { /*...*/ }
+```
+
+**Chapter 12: Exception Handling and Reflection**
+
+**12.1 Exception Handling Best Practices**
+
+```csharp
+try
+{
+    // Risky operation
+}
+catch (SpecificException ex)
+{
+    // Handle specific exception
+    LogError(ex);
+    throw; // Re-throw if needed
+}
+catch (Exception ex)
+{
+    // General catch
+    LogError(ex);
+    throw new CustomException("Operation failed", ex);
+}
+finally
+{
+    // Cleanup resources
+}
+```
+
+**12.2 Creating Custom Exceptions**
+
+```csharp
+public class CustomException : Exception
+{
+    public CustomException() { }
+    public CustomException(string message) : base(message) { }
+    public CustomException(string message, Exception inner) 
+        : base(message, inner) { }
+}
+```
+
+**12.3 Reflection Basics**
+
+```csharp
+Type type = typeof(MyClass);
+var properties = type.GetProperties();
+var methods = type.GetMethods();
+
+// Create instance
+var instance = Activator.CreateInstance(type);
+```
+
+**Chapter 13: Dependency Injection and Services**
+
+**13.1 Dependency Injection Patterns**
+
+* Constructor Injection
+* Property Injection
+* Method Injection
+
+**13.2 .NET Core Dependency Injection**
+
+```csharp
+// In Startup.cs
+services.AddScoped<IMyService, MyService>();
+services.AddTransient<IRepository, Repository>();
+services.AddSingleton<IConfiguration, Configuration>();
+
+// Usage
+public class MyController
+{
+    private readonly IMyService _service;
+
+    public MyController(IMyService service)
+    {
+        _service = service;
+    }
+}
+```
+
+**13.3 Advanced DI Scenarios**
+
+* Named Services
+* Factory Pattern
+* Options Pattern
+* Decorator Pattern
+
+**Chapter 14: Advanced Topics**
+
+**14.1 Span<T> and Memory<T>**
+
+```csharp
+Span<int> numbers = stackalloc int[10];
+for (int i = 0; i < numbers.Length; i++)
+{
+    numbers[i] = i;
+}
+```
+
+**14.2 Records (C# 9+)**
+
+```csharp
+public record Person(string FirstName, string LastName);
+
+// Usage
+var person = new Person("John", "Doe");
+var (firstName, lastName) = person; // Deconstruction
+```
+
+**14.3 Pattern Matching Enhancements**
+
+```csharp
+if (obj is Person { Age: > 18 } p)
+{
+    Console.WriteLine($"{p.Name} is an adult");
+}
+```
+
+**14.4 Source Generators**
+
+* Compile-time code generation
+* Reduce boilerplate code
+* Improve performance
+
+**14.5 Native AOT Compilation (.NET 7+)**
+
+* Ahead-of-Time compilation
+* Reduced memory usage
+* Faster startup times
 
 **Final Project: Building Your Own Bash Shell CLI Terminal**
 

@@ -6,26 +6,26 @@ Okay, let's create a comprehensive tutorial on network programming in C# 12 and 
 
 Network programming involves writing applications that communicate with each other over a network (like the internet or a local network). Key concepts include:
 
-*   **IP Addresses:** Unique addresses that identify devices on a network (e.g., 192.168.1.1).
-*   **Ports:** Virtual endpoints on a device used to direct network traffic to specific applications (e.g., port 80 for HTTP, port 443 for HTTPS).
-*   **Protocols:** Sets of rules that govern how data is formatted and transmitted (e.g., TCP, UDP, HTTP).
-*   **Sockets:** Programming interfaces that allow applications to send and receive data over a network.
-*   **Clients and Servers:**
-    *   **Client:** Initiates a connection to a server.
-    *   **Server:** Listens for incoming connections from clients.
+* **IP Addresses:** Unique addresses that identify devices on a network (e.g., 192.168.1.1).
+* **Ports:** Virtual endpoints on a device used to direct network traffic to specific applications (e.g., port 80 for HTTP, port 443 for HTTPS).
+* **Protocols:** Sets of rules that govern how data is formatted and transmitted (e.g., TCP, UDP, HTTP).
+* **Sockets:** Programming interfaces that allow applications to send and receive data over a network.
+* **Clients and Servers:**
+  * **Client:** Initiates a connection to a server.
+  * **Server:** Listens for incoming connections from clients.
 
 **5.2 TCP/IP Basics**
 
 TCP (Transmission Control Protocol) and IP (Internet Protocol) are the foundation of much of the internet.
 
-*   **TCP:** A connection-oriented protocol that provides reliable, ordered delivery of data. It establishes a connection before transmitting data and uses acknowledgments to ensure delivery.
-*   **IP:** A connectionless protocol responsible for addressing and routing data packets across networks.
+* **TCP:** A connection-oriented protocol that provides reliable, ordered delivery of data. It establishes a connection before transmitting data and uses acknowledgments to ensure delivery.
+* **IP:** A connectionless protocol responsible for addressing and routing data packets across networks.
 
 **5.3 Working with `TcpClient` and `TcpListener`**
 
 These are the fundamental classes for TCP communication in .NET.
 
-*   **`TcpClient`:** Used to create client applications that connect to TCP servers.
+* **`TcpClient`:** Used to create client applications that connect to TCP servers.
 
     ```csharp
     using System.Net.Sockets;
@@ -54,15 +54,31 @@ These are the fundamental classes for TCP communication in .NET.
                 string responseData = Encoding.ASCII.GetString(data, 0, bytes);
                 Console.WriteLine($"Received: {responseData}");
             }
+            catch (SocketException ex)
+            {
+                Console.WriteLine($"Socket error: {ex.SocketErrorCode} - {ex.Message}");
+            }
+            catch (WebSocketException ex)
+            {
+                Console.WriteLine($"WebSocket error: {ex.WebSocketErrorCode} - {ex.Message}");
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine($"IO error: {ex.Message}");
+            }
+            catch (ObjectDisposedException)
+            {
+                Console.WriteLine("Connection was unexpectedly closed");
+            }
             catch (Exception ex)
             {
-                Console.WriteLine($"Exception: {ex.Message}");
+                Console.WriteLine($"Unexpected error: {ex.GetType().Name} - {ex.Message}");
             }
         }
     }
     ```
 
-*   **`TcpListener`:** Used to create server applications that listen for incoming TCP connections.
+* **`TcpListener`:** Used to create server applications that listen for incoming TCP connections.
 
     ```csharp
     using System.Net;
@@ -91,9 +107,21 @@ These are the fundamental classes for TCP communication in .NET.
                     _ = HandleClientAsync(client); // Handle client communication asynchronously
                 }
             }
+            catch (SocketException ex)
+            {
+                Console.WriteLine($"Socket error: {ex.SocketErrorCode} - {ex.Message}");
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine($"IO error: {ex.Message}");
+            }
+            catch (ObjectDisposedException)
+            {
+                Console.WriteLine("Connection was unexpectedly closed");
+            }
             catch (Exception ex)
             {
-                Console.WriteLine($"Exception: {ex.Message}");
+                Console.WriteLine($"Unexpected error: {ex.GetType().Name} - {ex.Message}");
             }
             finally
             {
@@ -222,9 +250,21 @@ public class SimpleHttpServer
                 await writer.WriteLineAsync();
             }
         }
+        catch (SocketException ex)
+        {
+            Console.WriteLine($"Socket error: {ex.SocketErrorCode} - {ex.Message}");
+        }
+        catch (IOException ex)
+        {
+            Console.WriteLine($"IO error: {ex.Message}");
+        }
+        catch (ObjectDisposedException)
+        {
+            Console.WriteLine("Connection was unexpectedly closed");
+        }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error handling client: {ex.Message}");
+            Console.WriteLine($"Unexpected error: {ex.GetType().Name} - {ex.Message}");
         }
         finally
         {
@@ -381,45 +421,119 @@ public class HttpClientExamples
 
 **5.6 Using `HttpClientFactory` (Recommended for Long-Lived Applications)**
 
-In ASP.NET Core and other applications that run for a long time, directly instantiating `HttpClient` can lead to socket exhaustion. `HttpClientFactory` helps manage the lifetime of `HttpClient` instances.
+In ASP.NET Core and other applications that run for a long time, directly instantiating `HttpClient` can lead to socket exhaustion. `HttpClientFactory` helps manage the lifetime of `HttpClient` instances and provides additional benefits:
 
-**In `Program.cs` (or `Startup.cs` in older .NET versions):**
+* Centralized configuration of HTTP clients
+* Automatic disposal of HttpClientMessageHandlers
+* Integration with dependency injection
+* Support for named and typed clients
+* Built-in retry and circuit breaker policies
+
+**Basic Setup:**
 
 ```csharp
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-// ... other code
+var builder = Host.CreateApplicationBuilder(args);
 
-var builder = Host.CreateApplicationBuilder(args); // Or WebApplication.CreateBuilder(args) in web apps
-
-// Register HttpClientFactory
+// Register HttpClientFactory with default configuration
 builder.Services.AddHttpClient();
 
-// Example of named client configuration (optional)
-builder.Services.AddHttpClient("MyApiClient", client =>
+// Register named client with custom configuration
+builder.Services.AddHttpClient("GitHubClient", client =>
 {
-    client.BaseAddress = new Uri("https://api.example.com/");
-    client.DefaultRequestHeaders.Add("Authorization", "Bearer mytoken");
+    client.BaseAddress = new Uri("https://api.github.com/");
+    client.DefaultRequestHeaders.Add("Accept", "application/vnd.github.v3+json");
+    client.DefaultRequestHeaders.UserAgent.ParseAdd("MyApp/1.0");
+    client.Timeout = TimeSpan.FromSeconds(30);
 });
+
+// Register typed client
+builder.Services.AddHttpClient<GitHubService>();
 
 using var host = builder.Build();
 
-// Resolve HttpClientFactory
+// Example usage of named client
 var httpClientFactory = host.Services.GetRequiredService<IHttpClientFactory>();
+using var client = httpClientFactory.CreateClient("GitHubClient");
 
-// Create a client (dispose it after use)
-using var client = httpClientFactory.CreateClient(); // Or CreateClient("MyApiClient") for named clients
-
-// Now you can use the client to make requests
-// ...
+// Example usage of typed client
+var gitHubService = host.Services.GetRequiredService<GitHubService>();
 ```
+
+**Typed Client Implementation:**
+
+```csharp
+public class GitHubService
+{
+    private readonly HttpClient _httpClient;
+
+    public GitHubService(HttpClient httpClient)
+    {
+        _httpClient = httpClient;
+        _httpClient.BaseAddress = new Uri("https://api.github.com/");
+        _httpClient.DefaultRequestHeaders.Add("Accept", "application/vnd.github.v3+json");
+        _httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("MyApp/1.0");
+    }
+
+    public async Task<string> GetUserRepositoriesAsync(string username)
+    {
+        var response = await _httpClient.GetAsync($"/users/{username}/repos");
+        response.EnsureSuccessStatusCode();
+        return await response.Content.ReadAsStringAsync();
+    }
+}
+```
+
+**Adding Resilience with Polly:**
+
+```csharp
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Polly;
+using Polly.Extensions.Http;
+
+var builder = Host.CreateApplicationBuilder(args);
+
+// Configure retry policy
+var retryPolicy = HttpPolicyExtensions
+    .HandleTransientHttpError()
+    .WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
+
+// Configure circuit breaker policy
+var circuitBreakerPolicy = HttpPolicyExtensions
+    .HandleTransientHttpError()
+    .CircuitBreakerAsync(5, TimeSpan.FromSeconds(30));
+
+builder.Services.AddHttpClient("ResilientClient")
+    .AddPolicyHandler(retryPolicy)
+    .AddPolicyHandler(circuitBreakerPolicy);
+
+// Combine policies
+builder.Services.AddHttpClient("CombinedClient")
+    .AddPolicyHandler(retryPolicy)
+    .AddPolicyHandler(circuitBreakerPolicy)
+    .AddTransientHttpErrorPolicy(p => p.RetryAsync(3))
+    .AddPolicyHandler(Policy.TimeoutAsync<HttpResponseMessage>(TimeSpan.FromSeconds(10)));
+
+// Best Practices:
+// 1. Always use HttpClientFactory instead of creating HttpClient instances directly
+// 2. Configure timeouts for all clients
+// 3. Use typed clients for better organization and testability
+// 4. Implement proper error handling and retry mechanisms
+// 5. Monitor and log HTTP request metrics
+// 6. Use appropriate caching strategies where applicable
+// 7. Implement proper authentication and authorization
+// 8. Validate all responses and handle errors gracefully
+// 9. Use content compression where appropriate
+// 10. Implement proper connection pooling configuration
 
 **5.7 WebSockets**
 
-WebSockets provide full-duplex communication channels over a single TCP connection.
+WebSockets provide full-duplex communication channels over a single TCP connection. They're ideal for real-time applications like chat systems, live updates, and gaming.
 
-*   **Client-Side (`ClientWebSocket`):**
+* **Client-Side (`ClientWebSocket`):**
 
     ```csharp
     using System.Net.WebSockets;
@@ -432,32 +546,54 @@ WebSockets provide full-duplex communication channels over a single TCP connecti
             using var ws = new ClientWebSocket();
             try
             {
-                await ws.ConnectAsync(new Uri(url), CancellationToken.None);
+                // Configure WebSocket options
+                ws.Options.KeepAliveInterval = TimeSpan.FromSeconds(30);
+                ws.Options.SetRequestHeader("X-Client-Version", "1.0");
 
-                // Send messages
-                await SendAsync(ws, "Hello from client!");
+                // Connect with timeout
+                using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+                await ws.ConnectAsync(new Uri(url), cts.Token);
 
-                // Receive messages
-                await ReceiveMessagesAsync(ws);
+                Console.WriteLine("WebSocket connected!");
+
+                // Start message processing
+                var receiveTask = ReceiveMessagesAsync(ws);
+                var sendTask = SendMessagesAsync(ws);
+
+                await Task.WhenAll(receiveTask, sendTask);
+            }
+            catch (SocketException ex)
+            {
+                Console.WriteLine($"Socket error: {ex.SocketErrorCode} - {ex.Message}");
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine($"IO error: {ex.Message}");
+            }
+            catch (ObjectDisposedException)
+            {
+                Console.WriteLine("Connection was unexpectedly closed");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"WebSocket error: {ex.Message}");
+                Console.WriteLine($"Unexpected error: {ex.GetType().Name} - {ex.Message}");
             }
-            finally
-            {
-                if (ws.State == WebSocketState.Open)
-                {
-                    await ws.CloseAsync(WebSocketCloseStatus.NormalClosure, "Closing", CancellationToken.None);
-                }
-            }
-        }
 
-        static async Task SendAsync(ClientWebSocket ws, string message)
+        static async Task SendMessagesAsync(ClientWebSocket ws)
         {
-            byte[] buffer = Encoding.UTF8.GetBytes(message);
-            await ws.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, CancellationToken.None);
-            Console.WriteLine($"Sent: {message}");
+            while (ws.State == WebSocketState.Open)
+            {
+                Console.Write("Enter message (or 'exit' to quit): ");
+                string message = Console.ReadLine();
+
+                if (message == "exit") break;
+
+                byte[] buffer = Encoding.UTF8.GetBytes(message);
+                await ws.SendAsync(new ArraySegment<byte>(buffer), 
+                    WebSocketMessageType.Text, 
+                    true, 
+                    CancellationToken.None);
+            }
         }
 
         static async Task ReceiveMessagesAsync(ClientWebSocket ws)
@@ -465,23 +601,97 @@ WebSockets provide full-duplex communication channels over a single TCP connecti
             byte[] buffer = new byte[1024 * 4];
             while (ws.State == WebSocketState.Open)
             {
-                WebSocketReceiveResult result = await ws.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
-                if (result.MessageType == WebSocketMessageType.Text)
+                WebSocketReceiveResult result;
+                var message = new StringBuilder();
+
+                do
                 {
-                    string receivedMessage = Encoding.UTF8.GetString(buffer, 0, result.Count);
-                    Console.WriteLine($"Received: {receivedMessage}");
+                    result = await ws.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+                    if (result.MessageType == WebSocketMessageType.Close)
+                    {
+                        await ws.CloseAsync(WebSocketCloseStatus.NormalClosure, string.Empty, CancellationToken.None);
+                        Console.WriteLine("Connection closed by server.");
+                        return;
+                    }
+
+                    string receivedChunk = Encoding.UTF8.GetString(buffer, 0, result.Count);
+                    message.Append(receivedChunk);
                 }
-                else if (result.MessageType == WebSocketMessageType.Close)
-                {
-                    await ws.CloseAsync(WebSocketCloseStatus.NormalClosure, string.Empty, CancellationToken.None);
-                    Console.WriteLine("Connection closed by server.");
-                }
+                while (!result.EndOfMessage);
+
+                Console.WriteLine($"Received: {message}");
             }
         }
     }
     ```
 
-*   **Server-Side (Requires ASP.NET Core):** ASP.NET Core provides middleware for handling WebSocket requests.
+* **Server-Side Implementation (ASP.NET Core):**
+
+    ```csharp
+    public class WebSocketMiddleware
+    {
+        private readonly RequestDelegate _next;
+
+        public WebSocketMiddleware(RequestDelegate next)
+        {
+            _next = next;
+        }
+
+        public async Task InvokeAsync(HttpContext context)
+        {
+            if (context.WebSockets.IsWebSocketRequest)
+            {
+                using var webSocket = await context.WebSockets.AcceptWebSocketAsync();
+                await HandleWebSocketConnection(webSocket);
+            }
+            else
+            {
+                context.Response.StatusCode = StatusCodes.Status400BadRequest;
+            }
+        }
+
+        private async Task HandleWebSocketConnection(WebSocket webSocket)
+        {
+            var buffer = new byte[1024 * 4];
+            var receiveResult = await webSocket.ReceiveAsync(
+                new ArraySegment<byte>(buffer), CancellationToken.None);
+
+            while (!receiveResult.CloseStatus.HasValue)
+            {
+                // Process message
+                string message = Encoding.UTF8.GetString(buffer, 0, receiveResult.Count);
+                Console.WriteLine($"Received: {message}");
+
+                // Echo message back
+                await webSocket.SendAsync(
+                    new ArraySegment<byte>(buffer, 0, receiveResult.Count),
+                    receiveResult.MessageType,
+                    receiveResult.EndOfMessage,
+                    CancellationToken.None);
+
+                receiveResult = await webSocket.ReceiveAsync(
+                    new ArraySegment<byte>(buffer), CancellationToken.None);
+            }
+
+            await webSocket.CloseAsync(
+                receiveResult.CloseStatus.Value,
+                receiveResult.CloseStatusDescription,
+                CancellationToken.None);
+        }
+    }
+
+    // In Program.cs:
+    app.UseWebSockets();
+    app.UseMiddleware<WebSocketMiddleware>();
+    ```
+
+* **Security Considerations:**
+    - Always use `wss://` (WebSocket Secure) in production
+    - Validate and sanitize all incoming messages
+    - Implement rate limiting to prevent abuse
+    - Use authentication and authorization
+    - Set appropriate message size limits
+    - Handle connection timeouts gracefully
 
 **Project: Network Monitoring Application**
 
@@ -626,10 +836,10 @@ public class Program
 
 **Enhancements:**
 
-*   **Configuration:** Load the list of URLs from a configuration file (e.g., `appsettings.json`).
-*   **Logging:** Use a logging framework (like Serilog or the built-in `ILogger`) to log errors and events.
-*   **Alerting:** Implement alerting mechanisms (e.g., send an email or SMS) when a website goes down.
-*   **UI:** Create a more interactive UI (e.g., using a console UI library or a web front-end with ASP.NET Core).
-*   **Background Service:** Turn the monitoring loop into a background service so it runs continuously.
+* **Configuration:** Load the list of URLs from a configuration file (e.g., `appsettings.json`).
+* **Logging:** Use a logging framework (like Serilog or the built-in `ILogger`) to log errors and events.
+* **Alerting:** Implement alerting mechanisms (e.g., send an email or SMS) when a website goes down.
+* **UI:** Create a more interactive UI (e.g., using a console UI library or a web front-end with ASP.NET Core).
+* **Background Service:** Turn the monitoring loop into a background service so it runs continuously.
 
 This tutorial has provided you with a solid understanding of network programming in C# and .NET 8, including creating servers, making HTTP requests, and using `HttpClientFactory` effectively. The network monitoring application project demonstrates how to apply these concepts in a practical scenario. Keep exploring and expanding upon these examples to further enhance your network programming skills!
