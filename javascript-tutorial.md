@@ -252,6 +252,234 @@ h1 {
 4. Declare a variable in the global scope and try to access it inside a function.
 5. Declare a variable inside a function and try to access it outside the function.
 
+**Advanced JavaScript Concepts**
+
+**Modern JavaScript Features (ES6+)**
+
+* **Arrow Functions:** Concise syntax for writing functions
+```javascript
+const add = (a, b) => a + b;
+```
+
+* **Template Literals:** Easier string interpolation
+```javascript
+const name = "Alice";
+console.log(`Hello, ${name}!`);
+```
+
+* **Destructuring:** Extract values from arrays/objects
+```javascript
+const [x, y] = [1, 2];
+const {name, age} = {name: "Bob", age: 30};
+```
+
+* **Spread/Rest Operator:** 
+```javascript
+// Spread
+const arr1 = [1, 2];
+const arr2 = [...arr1, 3, 4];
+
+// Rest
+function sum(...numbers) {
+  return numbers.reduce((a, b) => a + b);
+}
+```
+
+* **Optional Chaining:** Safely access nested properties
+```javascript
+const user = {profile: {name: "Alice"}};
+console.log(user?.profile?.name); // "Alice"
+console.log(user?.address?.city); // undefined
+```
+
+* **Nullish Coalescing:** Provide default values
+```javascript
+const value = null;
+const result = value ?? "default";
+```
+
+**JavaScript Performance Optimization**
+
+* **Debouncing and Throttling:** Control function execution rate
+* **Memoization:** Cache function results
+* **Web Workers:** Offload heavy computations
+* **Lazy Loading:** Load resources only when needed
+* **Code Splitting:** Break code into smaller bundles
+* **Tree Shaking:** Remove unused code
+* **Minification:** Reduce file size
+* **Caching:** Store frequently used data
+
+**Real-World Patterns**
+
+* **Singleton Pattern:** Ensure only one instance exists
+* **Factory Pattern:** Create objects without specifying exact class
+* **Observer Pattern:** Implement event-driven systems
+* **Module Pattern:** Encapsulate private data
+* **Revealing Module Pattern:** Expose public API
+* **Prototype Pattern:** Clone existing objects
+* **Mixin Pattern:** Add functionality to objects
+
+**Closures**
+
+A closure is a function that retains access to its lexical scope even when the function is executed outside that scope. This allows for powerful patterns like data encapsulation and function factories.
+
+```javascript
+function createCounter() {
+    let count = 0;
+    return function() {
+        count++;
+        return count;
+    };
+}
+
+const counter = createCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter()); // 3
+```
+
+**Hoisting**
+
+JavaScript hoists variable and function declarations to the top of their scope. This means you can use functions before they're declared, but be careful with variable hoisting.
+
+```javascript
+// Function hoisting
+sayHello(); // Works because function declarations are hoisted
+
+function sayHello() {
+    console.log("Hello!");
+}
+
+// Variable hoisting
+console.log(x); // undefined (declaration is hoisted, but not initialization)
+var x = 5;
+console.log(x); // 5
+
+// let and const are hoisted but not initialized
+console.log(y); // ReferenceError
+let y = 10;
+```
+
+**The Event Loop**
+
+JavaScript uses an event loop to handle asynchronous operations. Understanding this is crucial for working with async code.
+
+```javascript
+console.log("Start");
+
+setTimeout(() => {
+    console.log("Timeout");
+}, 0);
+
+Promise.resolve().then(() => {
+    console.log("Promise");
+});
+
+console.log("End");
+
+// Output order:
+// Start
+// End
+// Promise
+// Timeout
+```
+
+**Practical Examples and Exercises**
+
+**Example 1: Shopping Cart with Closures**
+```javascript
+function createCart() {
+  let items = [];
+  
+  return {
+    addItem: function(item) {
+      items.push(item);
+      console.log(`${item} added to cart`);
+    },
+    removeItem: function(item) {
+      const index = items.indexOf(item);
+      if (index !== -1) {
+        items.splice(index, 1);
+        console.log(`${item} removed from cart`);
+      }
+    },
+    getItems: function() {
+      return [...items];
+    },
+    getTotal: function() {
+      return items.length;
+    }
+  };
+}
+
+const cart = createCart();
+cart.addItem('Shirt');
+cart.addItem('Shoes');
+console.log(cart.getItems()); // ['Shirt', 'Shoes']
+cart.removeItem('Shirt');
+console.log(cart.getTotal()); // 1
+```
+
+**Example 2: Event Loop Visualization**
+```javascript
+console.log('Start');
+
+setTimeout(() => console.log('Timeout 1'), 0);
+setTimeout(() => console.log('Timeout 2'), 1000);
+
+Promise.resolve().then(() => console.log('Promise 1'));
+Promise.resolve().then(() => console.log('Promise 2'));
+
+console.log('End');
+
+// Output order:
+// Start
+// End
+// Promise 1
+// Promise 2
+// Timeout 1
+// Timeout 2
+```
+
+**Example 3: Memoization with Closures**
+```javascript
+function memoize(fn) {
+  const cache = new Map();
+  
+  return function(...args) {
+    const key = JSON.stringify(args);
+    if (cache.has(key)) {
+      console.log('From cache');
+      return cache.get(key);
+    }
+    
+    const result = fn(...args);
+    cache.set(key, result);
+    console.log('Calculated');
+    return result;
+  };
+}
+
+const factorial = memoize(n => {
+  if (n === 0) return 1;
+  return n * factorial(n - 1);
+});
+
+console.log(factorial(5)); // Calculated
+console.log(factorial(5)); // From cache
+```
+
+**Programming Exercises**
+
+1. Create a function factory that generates functions to add a specific number.
+2. Write a function that uses closures to create a private counter.
+3. Experiment with hoisting by moving function calls before their declarations.
+4. Create an example that demonstrates the event loop's behavior with multiple setTimeout and Promise calls.
+5. Implement a memoized Fibonacci sequence generator.
+6. Create a rate limiter using closures that limits function calls to N per second.
+7. Build a simple state management system using closures.
+8. Implement a debounce function that only executes after a certain period of inactivity.
+
 **3. Working with the DOM**
 
 **What is the DOM?**
@@ -361,13 +589,175 @@ let parent = firstListItem.parentNode; // ul
 let children = ul.children; // listItems
 ```
 
+**Advanced DOM Techniques**
+
+**Event Delegation**
+
+Event delegation is a pattern where you add a single event listener to a parent element to handle events for multiple child elements. This is more efficient than adding listeners to each child element.
+
+```html
+<ul id="todo-list">
+    <li>Buy groceries</li>
+    <li>Walk the dog</li>
+    <li>Do laundry</li>
+</ul>
+```
+
+```javascript
+document.getElementById('todo-list').addEventListener('click', function(e) {
+    if (e.target.tagName === 'LI') {
+        e.target.classList.toggle('completed');
+    }
+});
+```
+
+**Form Validation**
+
+JavaScript can validate form input before submission:
+
+```html
+<form id="signup-form">
+    <input type="text" id="username" placeholder="Username" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button type="submit">Sign Up</button>
+</form>
+```
+
+```javascript
+document.getElementById('signup-form').addEventListener('submit', function(e) {
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    
+    if (username.length < 3) {
+        alert('Username must be at least 3 characters');
+        e.preventDefault();
+    }
+    
+    if (!validateEmail(email)) {
+        alert('Please enter a valid email address');
+        e.preventDefault();
+    }
+    
+    if (password.length < 8) {
+        alert('Password must be at least 8 characters');
+        e.preventDefault();
+    }
+});
+
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+}
+```
+
+**Drag and Drop**
+
+Implementing drag and drop functionality:
+
+```html
+<div id="drag-container">
+    <div id="drag-item" draggable="true">Drag me!</div>
+</div>
+<div id="drop-zone">Drop here</div>
+```
+
+```javascript
+const dragItem = document.getElementById('drag-item');
+const dropZone = document.getElementById('drop-zone');
+
+dragItem.addEventListener('dragstart', function(e) {
+    e.dataTransfer.setData('text/plain', e.target.id);
+});
+
+dropZone.addEventListener('dragover', function(e) {
+    e.preventDefault();
+    dropZone.classList.add('drag-over');
+});
+
+dropZone.addEventListener('dragleave', function() {
+    dropZone.classList.remove('drag-over');
+});
+
+dropZone.addEventListener('drop', function(e) {
+    e.preventDefault();
+    dropZone.classList.remove('drag-over');
+    const id = e.dataTransfer.getData('text/plain');
+    const draggedElement = document.getElementById(id);
+    dropZone.appendChild(draggedElement);
+});
+```
+
+**Intersection Observer API**
+
+Lazy loading images with Intersection Observer:
+
+```html
+<img class="lazy" data-src="image1.jpg" alt="Image 1">
+<img class="lazy" data-src="image2.jpg" alt="Image 2">
+```
+
+```javascript
+const lazyImages = document.querySelectorAll('.lazy');
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+            observer.unobserve(img);
+        }
+    });
+});
+
+lazyImages.forEach(img => {
+    observer.observe(img);
+});
+```
+
+**Advanced DOM Traversal**
+
+More sophisticated DOM traversal techniques:
+
+```javascript
+// Get all siblings of an element
+function getSiblings(element) {
+    return Array.from(element.parentNode.children)
+        .filter(child => child !== element);
+}
+
+// Get the next element sibling that matches a selector
+function nextElementSibling(element, selector) {
+    let next = element.nextElementSibling;
+    while (next) {
+        if (next.matches(selector)) return next;
+        next = next.nextElementSibling;
+    }
+    return null;
+}
+
+// Get all ancestors of an element
+function getAncestors(element) {
+    const ancestors = [];
+    let current = element.parentElement;
+    while (current) {
+        ancestors.push(current);
+        current = current.parentElement;
+    }
+    return ancestors;
+}
+```
+
 **Programming Exercises**
 
-1. Select the `h1` element on a page and change its text color to red using JavaScript.
-2. Create a new `div` element and add it to the end of the `body`.
-3. Add a new list item to an existing unordered list.
-4. Remove the second paragraph from a page.
-5. Write a function that takes an element ID and a new text value and updates the element's text content.
+1. Implement a todo list using event delegation to handle item clicks.
+2. Create a form with real-time validation that shows error messages as the user types.
+3. Build a drag-and-drop file upload interface.
+4. Implement lazy loading for a gallery of images.
+5. Write a function that finds all elements with a specific class within a given container.
+6. Create a function that highlights all ancestors of a clicked element.
 
 **4. Events**
 
@@ -454,12 +844,129 @@ document.getElementById("myButton").addEventListener("click", function(event) {
 *   **Form:** `submit`, `focus`, `blur`, `change`
 *   **Window:** `load`, `resize`, `scroll`
 
+**Advanced Event Handling**
+
+**Custom Events**
+
+JavaScript allows you to create and dispatch custom events, which can be useful for creating your own event-driven architecture.
+
+```javascript
+// Create a custom event
+const myEvent = new CustomEvent('myCustomEvent', {
+    detail: {
+        message: 'This is a custom event!'
+    }
+});
+
+// Listen for the custom event
+document.addEventListener('myCustomEvent', function(e) {
+    console.log('Custom event received:', e.detail.message);
+});
+
+// Dispatch the event
+document.dispatchEvent(myEvent);
+```
+
+**Event Throttling and Debouncing**
+
+When handling events that fire rapidly (like scroll or resize), it's important to optimize performance using throttling or debouncing.
+
+```javascript
+// Throttle: Execute at most once every 100ms
+function throttle(func, limit) {
+    let lastFunc;
+    let lastRan;
+    return function() {
+        const context = this;
+        const args = arguments;
+        if (!lastRan) {
+            func.apply(context, args);
+            lastRan = Date.now();
+        } else {
+            clearTimeout(lastFunc);
+            lastFunc = setTimeout(function() {
+                if ((Date.now() - lastRan) >= limit) {
+                    func.apply(context, args);
+                    lastRan = Date.now();
+                }
+            }, limit - (Date.now() - lastRan));
+        }
+    }
+}
+
+window.addEventListener('resize', throttle(function() {
+    console.log('Resize event throttled');
+}, 100));
+
+// Debounce: Execute only after 100ms of inactivity
+function debounce(func, delay) {
+    let timeout;
+    return function() {
+        const context = this;
+        const args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(context, args), delay);
+    }
+}
+
+window.addEventListener('scroll', debounce(function() {
+    console.log('Scroll event debounced');
+}, 100));
+```
+
+**Touch Events**
+
+For mobile devices, you can handle touch-specific events:
+
+```javascript
+const touchElement = document.getElementById('touch-area');
+
+touchElement.addEventListener('touchstart', function(e) {
+    console.log('Touch started');
+});
+
+touchElement.addEventListener('touchmove', function(e) {
+    console.log('Touch moved');
+});
+
+touchElement.addEventListener('touchend', function(e) {
+    console.log('Touch ended');
+});
+
+touchElement.addEventListener('touchcancel', function(e) {
+    console.log('Touch canceled');
+});
+```
+
+**Event Delegation Patterns**
+
+Event delegation is a powerful pattern for handling events on multiple elements efficiently:
+
+```html
+<ul id="task-list">
+    <li>Task 1 <button class="complete">Complete</button></li>
+    <li>Task 2 <button class="complete">Complete</button></li>
+    <li>Task 3 <button class="complete">Complete</button></li>
+</ul>
+```
+
+```javascript
+document.getElementById('task-list').addEventListener('click', function(e) {
+    if (e.target.classList.contains('complete')) {
+        const taskItem = e.target.closest('li');
+        taskItem.classList.add('completed');
+        console.log('Task completed:', taskItem.textContent);
+    }
+});
+```
+
 **Programming Exercises**
 
-1. Add an event listener to a button that changes its background color when clicked.
-2. Create a text input and log the entered text to the console whenever the user types a key.
-3. Implement a simple image gallery where clicking on a thumbnail displays a larger version of the image.
-4. Create a form with validation that prevents submission if required fields are empty. Use the `submit` event.
+1. Create a custom event that fires when a specific condition is met (e.g., when a counter reaches 10).
+2. Implement a scroll-to-top button that appears after scrolling down 500px, using throttled scroll events.
+3. Create a touch-enabled image carousel that responds to swipe gestures.
+4. Implement a complex form with real-time validation using event delegation.
+5. Build a drag-and-drop interface that works with both mouse and touch events.
 
 **5. Asynchronous JavaScript**
 
@@ -560,11 +1067,185 @@ async function getTodos() {
 getTodos();
 ```
 
+**Advanced Asynchronous Patterns**
+
+**Error Handling with Async/Await**
+
+Proper error handling is crucial for robust async code. Here's how to handle errors effectively:
+
+```javascript
+async function fetchWithRetry(url, retries = 3) {
+    for (let i = 0; i < retries; i++) {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            return await response.json();
+        } catch (error) {
+            if (i === retries - 1) throw error;
+            await new Promise(resolve => setTimeout(resolve, 1000 * (i + 1)));
+        }
+    }
+}
+
+async function main() {
+    try {
+        const data = await fetchWithRetry('https://api.example.com/data');
+        console.log(data);
+    } catch (error) {
+        console.error('Failed after retries:', error);
+    }
+}
+```
+
+**Parallel Execution with Promise.all()**
+
+When you need to execute multiple async operations in parallel:
+
+```javascript
+async function fetchMultipleUrls(urls) {
+    try {
+        const promises = urls.map(url => fetch(url).then(res => res.json()));
+        const results = await Promise.all(promises);
+        return results;
+    } catch (error) {
+        console.error('One of the requests failed:', error);
+        throw error;
+    }
+}
+
+// Usage
+const urls = [
+    'https://api.example.com/data1',
+    'https://api.example.com/data2',
+    'https://api.example.com/data3'
+];
+
+fetchMultipleUrls(urls)
+    .then(results => console.log(results))
+    .catch(error => console.error(error));
+```
+
+**Advanced Fetch API Usage**
+
+The Fetch API has many powerful features:
+
+```javascript
+async function fetchWithTimeout(url, options = {}, timeout = 5000) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+    try {
+        const response = await fetch(url, {
+            ...options,
+            signal: controller.signal
+        });
+        clearTimeout(timeoutId);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        return await response.json();
+    } catch (error) {
+        if (error.name === 'AbortError') {
+            throw new Error('Request timed out');
+        }
+        throw error;
+    }
+}
+```
+
+**Web Workers for CPU-Intensive Tasks**
+
+Offload heavy computations to a web worker:
+
+```javascript
+// main.js
+const worker = new Worker('worker.js');
+
+worker.postMessage({ type: 'CALCULATE', data: 1000000 });
+
+worker.onmessage = function(event) {
+    console.log('Result from worker:', event.data);
+};
+
+// worker.js
+self.onmessage = function(event) {
+    if (event.data.type === 'CALCULATE') {
+        const result = heavyComputation(event.data.data);
+        self.postMessage(result);
+    }
+};
+
+function heavyComputation(n) {
+    let result = 0;
+    for (let i = 0; i < n; i++) {
+        result += Math.sqrt(i);
+    }
+    return result;
+}
+```
+
+**Real-World Async Patterns**
+
+1. **Rate Limiting:** Control the rate of API calls
+2. **Queue System:** Process tasks sequentially
+3. **Caching:** Store API responses
+4. **Batching:** Combine multiple requests
+
+Example of a simple rate limiter:
+
+```javascript
+class RateLimiter {
+    constructor(limit, interval) {
+        this.limit = limit;
+        this.interval = interval;
+        this.queue = [];
+        this.processing = 0;
+    }
+
+    async execute(fn) {
+        return new Promise((resolve, reject) => {
+            const task = async () => {
+                this.processing++;
+                try {
+                    const result = await fn();
+                    resolve(result);
+                } catch (error) {
+                    reject(error);
+                } finally {
+                    this.processing--;
+                    this.processQueue();
+                }
+            };
+
+            this.queue.push(task);
+            this.processQueue();
+        });
+    }
+
+    processQueue() {
+        while (this.queue.length > 0 && this.processing < this.limit) {
+            const task = this.queue.shift();
+            task();
+            setTimeout(() => this.processQueue(), this.interval);
+        }
+    }
+}
+
+// Usage
+const limiter = new RateLimiter(2, 1000); // 2 requests per second
+
+for (let i = 0; i < 10; i++) {
+    limiter.execute(() => fetch('https://api.example.com/data'))
+        .then(response => console.log(response))
+        .catch(error => console.error(error));
+}
+```
+
 **Programming Exercises**
 
-1. Rewrite the callback example using promises.
-2. Rewrite the promise example using `async/await`.
-3. Fetch data from the JSONPlaceholder API (`https://jsonplaceholder.typicode.com/posts`) and display the titles of the posts on the page.
+1. Implement a retry mechanism with exponential backoff for failed API requests.
+2. Create a function that fetches data from multiple APIs in parallel and returns the fastest response.
+3. Build a simple caching system for API responses that invalidates after a certain time.
+4. Implement a task queue that processes tasks sequentially with a configurable concurrency limit.
+5. Create a web worker that performs image processing operations.
 
 **6. Intermediate JavaScript**
 
