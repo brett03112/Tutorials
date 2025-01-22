@@ -1,149 +1,152 @@
-Okay, here is a comprehensive Python tutorial that addresses the concepts you've listed, adhering to Python 3.12 and 3.13 best practices, and incorporating examples from Project Euler, Pygame, and data analysis.
+# Comprehensive Python Tutorial
 
-**I. Fundamental Data Types**
+This tutorial covers Python 3.12 and 3.13 best practices, with examples from Project Euler, Pygame, and data analysis.
 
-* **1. Numbers**
+## I. Fundamental Data Types
 
-  * **Integers (int):** Whole numbers without decimal points.
+### 1. Numbers
 
-        ```python
-        age = 30
-        population = 7800000000
-        ```
+- **Integers (int):** Whole numbers without decimal points.
 
-  * **Floating-Point Numbers (float):** Numbers with decimal points.
+```python
+age = 30
+population = 7800000000
+```
 
-        ```python
-        pi = 3.14159
-        temperature = 25.5
-        ```
+- **Floating-Point Numbers (float):** Numbers with decimal points.
 
-  * **Complex Numbers (complex):** Numbers with real and imaginary parts.
+```python
+pi = 3.14159
+temperature = 25.5
+```
 
-        ```python
-        z = 2 + 3j
-        w = complex(4, -1)  # Another way to create complex numbers
-        ```
+- **Complex Numbers (complex):** Numbers with real and imaginary parts.
 
-  * **Numeric Operations:**
+```python
+z = 2 + 3j
+w = complex(4, -1)  # Another way to create complex numbers
+```
 
-        ```python
-        # Basic arithmetic
-        sum_result = 10 + 5
-        difference = 20 - 8
-        product = 7 * 6
-        quotient = 25 / 5  # Always returns a float
-        floor_division = 25 // 6  # Returns the integer part of the division
-        remainder = 17 % 5  # Modulo operator
-        power = 2 ** 3  # Exponentiation
+- **Numeric Operations:**
 
-        # Built-in functions
-        absolute_value = abs(-10)
-        rounded_number = round(3.14159, 2)  # Round to 2 decimal places
-        ```
+```python
+# Basic arithmetic
+sum_result = 10 + 5
+difference = 20 - 8
+product = 7 * 6
+quotient = 25 / 5  # Always returns a float
+floor_division = 25 // 6  # Returns the integer part of the division
+remainder = 17 % 5  # Modulo operator
+power = 2 ** 3  # Exponentiation
 
-  * **Project Euler Example (Problem 1: Multiples of 3 or 5):**
+# Built-in functions
+absolute_value = abs(-10)
+rounded_number = round(3.14159, 2)  # Round to 2 decimal places
+```
 
-        ```python
-        def sum_multiples(limit):
-            total = 0
-            for i in range(limit):
-                if i % 3 == 0 or i % 5 == 0:
-                    total += i
-            return total
+- **Project Euler Example (Problem 1: Multiples of 3 or 5):**
 
-        print(sum_multiples(1000))  # Output: 233168
-        ```
+```python
+def sum_multiples(limit):
+    total = 0
+    for i in range(limit):
+        if i % 3 == 0 or i % 5 == 0:
+            total += i
+    return total
 
-* **2. Strings (str)**
+print(sum_multiples(1000))  # Output: 233168
+```
 
-  * **Creating Strings:**
+## 2. Strings (str)
 
-        ```python
-        name = "Alice"
-        message = 'Hello, world!'
-        paragraph = """This is a
-        multi-line string."""
-        ```
+### Creating Strings
 
-  * **String Operations:**
+```python
+name = "Alice"
+message = 'Hello, world!'
+paragraph = """This is a
+multi-line string."""
+```
 
-        ```python
-        # Concatenation
-        greeting = "Hello" + " " + "world!"
+### String Operations
 
-        # Repetition
-        repeated_string = "abc" * 3  # Output: "abcabcabc"
+```python
+# Concatenation
+greeting = "Hello" + " " + "world!"
 
-        # Indexing (0-based)
-        first_char = name[0]  # Output: "A"
-        last_char = name[-1]  # Output: "e"
+# Repetition
+repeated_string = "abc" * 3  # Output: "abcabcabc"
 
-        # Slicing
-        substring = name[1:4]  # Output: "lic" (from index 1 up to, but not including, 4)
+# Indexing (0-based)
+first_char = name[0]  # Output: "A"
+last_char = name[-1]  # Output: "e"
 
-        # Length
-        length = len(name)  # Output: 5
+# Slicing
+substring = name[1:4]  # Output: "lic" (from index 1 up to, but not including, 4)
 
-        # String methods (a few examples)
-        uppercase_name = name.upper()
-        lowercase_name = name.lower()
-        is_alpha = name.isalpha()  # Check if all characters are letters
-        replaced_string = message.replace("world", "Python")
-        split_string = message.split(",")  # Split into a list of strings
-        ```
+# Length
+length = len(name)  # Output: 5
 
-  * **String Formatting:**
-    * **f-strings (formatted string literals - recommended in Python 3.12 and 3.13):**
+# String methods (a few examples)
+uppercase_name = name.upper()
+lowercase_name = name.lower()
+is_alpha = name.isalpha()  # Check if all characters are letters
+replaced_string = message.replace("world", "Python")
+split_string = message.split(",")  # Split into a list of strings
+```
 
-            ```python
-            name = "Bob"
-            age = 30
-            print(f"My name is {name} and I am {age} years old.")
+### String Formatting
 
-            # f-strings with expressions:
-            print(f"The sum of 2 and 3 is {2 + 3}.")
+#### f-strings (formatted string literals - recommended in Python 3.12 and 3.13)
 
-            # f-strings with formatting:
-            pi = 3.14159
-            print(f"Pi rounded to 2 decimal places: {pi:.2f}")
-            ```
+```python
+name = "Bob"
+age = 30
+print(f"My name is {name} and I am {age} years old.")
 
-    * **`str.format()` method (older style):**
+# f-strings with expressions:
+print(f"The sum of 2 and 3 is {2 + 3}.")
 
-            ```python
-            print("My name is {} and I am {} years old.".format(name, age))
-            ```
+# f-strings with formatting:
+pi = 3.14159
+print(f"Pi rounded to 2 decimal places: {pi:.2f}")
+```
 
-    * **%-formatting (very old style - avoid):**
+#### `str.format()` method (older style)
 
-            ```python
-            print("My name is %s and I am %d years old." % (name, age))
-            ```
+```python
+print("My name is {} and I am {} years old.".format(name, age))
+```
 
-  * **Data Analysis Example (basic string cleaning):**
+#### %-formatting (very old style - avoid)
 
-        ```python
-        text = "   This is a sentence with extra whitespace and mixed Case.   "
+```python
+print("My name is %s and I am %d years old." % (name, age))
+```
 
-        cleaned_text = text.strip().lower()  # Remove leading/trailing whitespace, convert to lowercase
-        print(cleaned_text)  # Output: "this is a sentence with extra whitespace and mixed case."
-        ```
+### Data Analysis Example (basic string cleaning)
 
-* **3. Booleans (bool)**
+```python
+text = "   This is a sentence with extra whitespace and mixed Case.   "
 
-  * **Values:** `True` and `False`
-  * **Logical Operators:**
-    * `and`: Returns `True` if both operands are `True`.
-    * `or`: Returns `True` if at least one operand is `True`.
-    * `not`: Negates the boolean value.
-  * **Comparison Operators:**
-    * `==`: Equal to
-    * `!=`: Not equal to
-    * `>`: Greater than
-    * `<`: Less than
-    * `>=`: Greater than or equal to
-    * `<=`: Less than or equal to
+cleaned_text = text.strip().lower()  # Remove leading/trailing whitespace, convert to lowercase
+print(cleaned_text)  # Output: "this is a sentence with extra whitespace and mixed case."
+```
+
+## 3. Booleans (bool)
+
+- **Values:** `True` and `False`
+- **Logical Operators:**
+  - `and`: Returns `True` if both operands are `True`.
+  - `or`: Returns `True` if at least one operand is `True`.
+  - `not`: Negates the boolean value.
+- **Comparison Operators:**
+  - `==`: Equal to
+  - `!=`: Not equal to
+  - `>`: Greater than
+  - `<`: Less than
+  - `>=`: Greater than or equal to
+  - `<=`: Less than or equal to
 
     ```python
     is_active = True
@@ -156,11 +159,11 @@ Okay, here is a comprehensive Python tutorial that addresses the concepts you've
     is_equal = "hello" == "hello"  # is_equal will be True
     ```
 
-**II. Collections**
+## II. Collections
 
-* **1. Lists**
+### 1. Lists
 
-  * **Creating Lists:** Ordered, mutable (changeable) sequences of items.
+- **Creating Lists:** Ordered, mutable (changeable) sequences of items.
 
         ```python
         numbers = [1, 2, 3, 4, 5]
@@ -168,7 +171,7 @@ Okay, here is a comprehensive Python tutorial that addresses the concepts you've
         mixed_list = [1, "hello", True, 3.14]
         ```
 
-  * **List Operations:**
+- **List Operations:**
 
         ```python
         # Accessing elements (0-based indexing)
@@ -203,7 +206,7 @@ Okay, here is a comprehensive Python tutorial that addresses the concepts you've
             print(number)
         ```
 
-  * **List Comprehensions:** A concise way to create lists.
+- **List Comprehensions:** A concise way to create lists.
 
         ```python
         # Create a list of squares
@@ -213,7 +216,7 @@ Okay, here is a comprehensive Python tutorial that addresses the concepts you've
         even_numbers = [x for x in numbers if x % 2 == 0]
         ```
 
-  * **Project Euler Example (Problem 2: Even Fibonacci Numbers):**
+- **Project Euler Example (Problem 2: Even Fibonacci Numbers):**
 
         ```python
         def even_fibonacci_sum(limit):
@@ -226,16 +229,16 @@ Okay, here is a comprehensive Python tutorial that addresses the concepts you've
         print(even_fibonacci_sum(4000000))  # Output: 4613732
         ```
 
-* **2. Tuples**
+### 2. Tuples
 
-  * **Creating Tuples:** Ordered, immutable sequences of items.
+- **Creating Tuples:** Ordered, immutable sequences of items.
 
         ```python
         coordinates = (10, 20)
         rgb_color = (255, 0, 0)  # Red
         ```
 
-  * **Tuple Operations:**
+- **Tuple Operations:**
 
         ```python
         # Accessing elements
@@ -260,14 +263,14 @@ Okay, here is a comprehensive Python tutorial that addresses the concepts you've
         # coordinates[0] = 5  # This would raise a TypeError
         ```
 
-  * **Use Cases:**
-    * Representing fixed collections of data.
-    * Returning multiple values from a function.
-    * Dictionary keys (since they must be immutable).
+- **Use Cases:**
+  - Representing fixed collections of data.
+  - Returning multiple values from a function.
+  - Dictionary keys (since they must be immutable).
 
-* **3. Dictionaries**
+### 3. Dictionaries
 
-  * **Creating Dictionaries:** Unordered collections of key-value pairs. Keys must be unique and immutable (e.g., strings, numbers, tuples).
+- **Creating Dictionaries:** Unordered collections of key-value pairs. Keys must be unique and immutable (e.g., strings, numbers, tuples).
 
         ```python
         person = {
@@ -282,7 +285,7 @@ Okay, here is a comprehensive Python tutorial that addresses the concepts you've
         }
         ```
 
-  * **Dictionary Operations:**
+- **Dictionary Operations:**
 
         ```python
         # Accessing values by key
@@ -314,14 +317,14 @@ Okay, here is a comprehensive Python tutorial that addresses the concepts you've
             print(key, value)
         ```
 
-  * **Dictionary Comprehensions:**
+- **Dictionary Comprehensions:**
 
         ```python
         # Create a dictionary that maps numbers to their squares
         squares_dict = {x: x**2 for x in range(1, 6)}  # Output: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
         ```
 
-  * **Data Analysis Example (counting word frequencies):**
+- **Data Analysis Example (counting word frequencies):**
 
         ```python
         text = "this is a sample text with some repeated words this is a sample"
@@ -334,16 +337,16 @@ Okay, here is a comprehensive Python tutorial that addresses the concepts you've
         # Output: {'this': 2, 'is': 2, 'a': 2, 'sample': 2, 'text': 1, 'with': 1, 'some': 1, 'repeated': 1, 'words': 1}
         ```
 
-* **4. Sets**
+### 4. Sets
 
-  * **Creating Sets:** Unordered collections of unique items.
+- **Creating Sets:** Unordered collections of unique items.
 
         ```python
         fruits = {"apple", "banana", "orange", "apple"}  # Duplicates are automatically removed
         print(fruits)  # Output: {'apple', 'banana', 'orange'} (order may vary)
         ```
 
-  * **Set Operations:**
+- **Set Operations:**
 
         ```python
         # Adding elements
@@ -370,10 +373,10 @@ Okay, here is a comprehensive Python tutorial that addresses the concepts you've
         symmetric_difference_set = set1 ^ set2  # or set1.symmetric_difference(set2)
         ```
 
-  * **Use Cases:**
-    * Removing duplicates from a list.
-    * Checking for membership efficiently.
-    * Performing mathematical set operations.
+- **Use Cases:**
+  - Removing duplicates from a list.
+  - Checking for membership efficiently.
+  - Performing mathematical set operations.
 
 **III. Date and Time**
 
