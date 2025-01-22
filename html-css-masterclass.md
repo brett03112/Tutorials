@@ -8,21 +8,21 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
 
 **Methodology:**
 
-*   **Concept Explanation:** Each topic starts with a clear and concise explanation.
-*   **Code Examples:** Numerous examples illustrate the concepts in action.
-*   **Best Practices:** Emphasize writing clean, maintainable, and accessible code.
-*   **Capstone Project:** A real-world project to solidify your skills and showcase in your portfolio.
+* **Concept Explanation:** Each topic starts with a clear and concise explanation.
+* **Code Examples:** Numerous examples illustrate the concepts in action.
+* **Best Practices:** Emphasize writing clean, maintainable, and accessible code.
+* **Capstone Project:** A real-world project to solidify your skills and showcase in your portfolio.
 
 **Module 1: Introduction to HTML**
 
 **1.1 What is HTML?**
 
-*   **HTML (HyperText Markup Language):** The standard markup language for creating web pages. It structures the content of a web page.
-*   **Structure, Not Style:** HTML defines the meaning and hierarchy of content (headings, paragraphs, lists, images, etc.), but it doesn't dictate how it looks. That's where CSS comes in.
-*   **Tags, Elements, and Attributes:**
-    *   **Tags:** Keywords enclosed in angle brackets (e.g., `<p>`, `<h1>`, `<img>`).
-    *   **Elements:** A complete piece of content, including the opening tag, content, and closing tag (e.g., `<p>This is a paragraph.</p>`).
-    *   **Attributes:** Provide additional information about an element and are included within the opening tag (e.g., `<img src="image.jpg" alt="Description">`).
+* **HTML (HyperText Markup Language):** The standard markup language for creating web pages. It structures the content of a web page.
+* **Structure, Not Style:** HTML defines the meaning and hierarchy of content (headings, paragraphs, lists, images, etc.), but it doesn't dictate how it looks. That's where CSS comes in.
+* **Tags, Elements, and Attributes:**
+  * **Tags:** Keywords enclosed in angle brackets (e.g., `<p>`, `<h1>`, `<img>`).
+  * **Elements:** A complete piece of content, including the opening tag, content, and closing tag (e.g., `<p>This is a paragraph.</p>`).
+  * **Attributes:** Provide additional information about an element and are included within the opening tag (e.g., `<img src="image.jpg" alt="Description">`).
 
 **1.2 Basic HTML Structure**
 
@@ -43,42 +43,47 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
 </html>
 ```
 
-*   **`<!DOCTYPE html>`:** Declares the document as HTML5.
-*   **`<html>`:** The root element of the page.
-    *   `lang="en"` attribute specifies the language as English.
-*   **`<head>`:** Contains meta-information about the page (not displayed on the page itself).
-    *   **`<meta charset="UTF-8">`:** Sets the character encoding to UTF-8, supporting a wide range of characters.
-    *   **`<meta name="viewport"...>`:** Configures how the page scales on different devices (essential for responsive design).
-    *   **`<title>`:** Sets the title that appears in the browser tab.
-    *   **`<link rel="stylesheet" href="style.css">`:** Links an external CSS file to style the page.
-*   **`<body>`:** Contains the visible content of the page.
-    *   **`<h1>`:** A top-level heading.
-    *   **`<p>`:** A paragraph of text.
-*   **`<script src="script.js"></script>`:** Links to an external JavaScript file (for interactivity). It's often placed at the end of the `<body>` so the HTML loads first.
+* **`<!DOCTYPE html>`:** Declares the document as HTML5.
+* **`<html>`:** The root element of the page.
+  * `lang="en"` attribute specifies the language as English.
+* **`<head>`:** Contains meta-information about the page (not displayed on the page itself).
+  * **`<meta charset="UTF-8">`:** Sets the character encoding to UTF-8, supporting a wide range of characters.
+  * **`<meta name="viewport"...>`:** Configures how the page scales on different devices (essential for responsive design).
+  * **`<title>`:** Sets the title that appears in the browser tab.
+  * **`<link rel="stylesheet" href="style.css">`:** Links an external CSS file to style the page.
+* **`<body>`:** Contains the visible content of the page.
+  * **`<h1>`:** A top-level heading.
+  * **`<p>`:** A paragraph of text.
+* **`<script src="script.js"></script>`:** Links to an external JavaScript file (for interactivity). It's often placed at the end of the `<body>` so the HTML loads first.
 
 **1.3 Common HTML Elements**
 
-*   **Headings:** `<h1>` to `<h6>` (<h1> is the most important, <h6> the least).
+* **Headings:** `<h1>` to `<h6>` (<h1> is the most important, <h6> the least).
+
     ```html
     <h1>Main Title</h1>
     <h2>Section Title</h2>
     <h3>Subsection Title</h3>
     ```
-    Best Practices:
-    - Use only one `<h1>` per page
-    - Maintain proper heading hierarchy
-    - Don't skip heading levels (e.g., don't go from h2 to h4)
 
-*   **Paragraphs:** `<p>`
+    Best Practices:
+  * Use only one `<h1>` per page
+  * Maintain proper heading hierarchy
+  * Don't skip heading levels (e.g., don't go from h2 to h4)
+
+* **Paragraphs:** `<p>`
+
     ```html
     <p>This is a paragraph of text. It can contain <strong>bold text</strong>, 
     <em>italic text</em>, and <a href="#">links</a>.</p>
     ```
-    Common Pitfalls:
-    - Avoid using `<br>` tags for spacing (use CSS margin/padding instead)
-    - Don't use empty paragraphs for spacing
 
-*   **Links:** `<a>` (anchor)
+    Common Pitfalls:
+  * Avoid using `<br>` tags for spacing (use CSS margin/padding instead)
+  * Don't use empty paragraphs for spacing
+
+* **Links:** `<a>` (anchor)
+
     ```html
     <!-- Basic link -->
     <a href="https://www.example.com">Visit Example</a>
@@ -94,13 +99,15 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     <!-- Telephone link -->
     <a href="tel:+1234567890">Call Us</a>
     ```
-    Key Attributes:
-    - `href`: Specifies the URL or resource
-    - `target`: Controls where link opens (_blank, _self, _parent, _top)
-    - `rel`: Specifies relationship (important for security with target="_blank")
-    - `download`: Forces download of linked resource
 
-*   **Images:** `<img>`
+    Key Attributes:
+  * `href`: Specifies the URL or resource
+  * `target`: Controls where link opens (_blank,_self, _parent,_top)
+  * `rel`: Specifies relationship (important for security with target="_blank")
+  * `download`: Forces download of linked resource
+
+* **Images:** `<img>`
+
     ```html
     <!-- Basic image -->
     <img src="images/logo.png" alt="Company Logo">
@@ -119,15 +126,16 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
          alt="Description"
          class="lazyload">
     ```
+
     Best Practices:
-    - Always include meaningful alt text
-    - Use srcset for responsive images
-    - Implement lazy loading for better performance
-    - Optimize image file sizes
-*   **Lists:**
-    *   **Unordered Lists (`<ul>`):** Bulleted lists.
-    *   **Ordered Lists (`<ol>`):** Numbered lists.
-    *   **List Items (`<li>`):** Items within a list.
+  * Always include meaningful alt text
+  * Use srcset for responsive images
+  * Implement lazy loading for better performance
+  * Optimize image file sizes
+* **Lists:**
+  * **Unordered Lists (`<ul>`):** Bulleted lists.
+  * **Ordered Lists (`<ol>`):** Numbered lists.
+  * **List Items (`<li>`):** Items within a list.
 
     ```html
     <ul>
@@ -140,28 +148,30 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
         <li>Second step</li>
     </ol>
     ```
-*   **Divisions (`<div>`):** Generic containers used to group other elements for styling or structural purposes.
-*   **Spans (`<span>`):** Inline containers used to apply styles to a specific portion of text within a larger element.
+
+* **Divisions (`<div>`):** Generic containers used to group other elements for styling or structural purposes.
+* **Spans (`<span>`):** Inline containers used to apply styles to a specific portion of text within a larger element.
 
 **Module 2: Introduction to CSS**
 
 **2.1 What is CSS?**
 
-*   **CSS (Cascading Style Sheets):** The language used to style the appearance of web pages.
-*   **Separation of Concerns:** CSS separates the styling from the HTML structure, making code cleaner and easier to maintain.
-*   **Selectors, Properties, and Values:**
-    *   **Selectors:** Target specific HTML elements to style.
-    *   **Properties:** The aspects of an element you want to style (e.g., `color`, `font-size`, `background-color`).
-    *   **Values:** The specific settings for a property (e.g., `red`, `16px`, `#f0f0f0`).
+* **CSS (Cascading Style Sheets):** The language used to style the appearance of web pages.
+* **Separation of Concerns:** CSS separates the styling from the HTML structure, making code cleaner and easier to maintain.
+* **Selectors, Properties, and Values:**
+  * **Selectors:** Target specific HTML elements to style.
+  * **Properties:** The aspects of an element you want to style (e.g., `color`, `font-size`, `background-color`).
+  * **Values:** The specific settings for a property (e.g., `red`, `16px`, `#f0f0f0`).
 
 **2.2 Ways to Add CSS**
 
-*   **Inline CSS:** Applied directly within an HTML tag using the `style` attribute (generally discouraged for maintainability).
+* **Inline CSS:** Applied directly within an HTML tag using the `style` attribute (generally discouraged for maintainability).
 
     ```html
     <p style="color: blue; font-size: 18px;">This is a blue paragraph.</p>
     ```
-*   **Internal CSS:** Placed within a `<style>` tag in the `<head>` of the HTML document (useful for styles specific to a single page).
+
+* **Internal CSS:** Placed within a `<style>` tag in the `<head>` of the HTML document (useful for styles specific to a single page).
 
     ```html
     <head>
@@ -173,7 +183,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
         </style>
     </head>
     ```
-*   **External CSS:** Stored in a separate `.css` file and linked to the HTML using the `<link>` tag (best practice for most cases).
+
+* **External CSS:** Stored in a separate `.css` file and linked to the HTML using the `<link>` tag (best practice for most cases).
 
     ```html
     <!-- In your HTML file (index.html) -->
@@ -192,7 +203,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
 
 **2.3 CSS Selectors**
 
-*   **Element Selector:** Targets elements by their tag name.
+* **Element Selector:** Targets elements by their tag name.
+
     ```css
     /* Style all paragraphs */
     p {
@@ -208,7 +220,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     }
     ```
 
-*   **ID Selector:** Targets a single element with a specific `id` attribute.
+* **ID Selector:** Targets a single element with a specific `id` attribute.
+
     ```css
     #main-header {
         background-color: #0077cc;
@@ -225,7 +238,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     }
     ```
 
-*   **Class Selector:** Targets elements with a specific `class` attribute.
+* **Class Selector:** Targets elements with a specific `class` attribute.
+
     ```css
     .btn {
         display: inline-block;
@@ -250,7 +264,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     }
     ```
 
-*   **Attribute Selectors:** Target elements based on attributes.
+* **Attribute Selectors:** Target elements based on attributes.
+
     ```css
     /* Links with target="_blank" */
     a[target="_blank"] {
@@ -270,7 +285,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     }
     ```
 
-*   **Pseudo-classes:** Target elements in specific states.
+* **Pseudo-classes:** Target elements in specific states.
+
     ```css
     /* Style visited links */
     a:visited {
@@ -294,7 +310,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     }
     ```
 
-*   **Combinators:** Combine selectors for more specific targeting.
+* **Combinators:** Combine selectors for more specific targeting.
+
     ```css
     /* Direct child selector */
     nav > ul {
@@ -318,7 +335,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     }
     ```
 
-*   **Universal Selector:** Selects all elements.
+* **Universal Selector:** Selects all elements.
+
     ```css
     * {
         box-sizing: border-box;
@@ -328,80 +346,100 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     ```
 
 Best Practices:
-- Use classes for reusable styles
-- Avoid overusing ID selectors
-- Keep specificity low when possible
-- Use meaningful class names (BEM methodology recommended)
-- Avoid inline styles
-- Use shorthand properties when appropriate
+* Use classes for reusable styles
+* Avoid overusing ID selectors
+* Keep specificity low when possible
+* Use meaningful class names (BEM methodology recommended)
+* Avoid inline styles
+* Use shorthand properties when appropriate
 
 **2.4 Common CSS Properties**
 
-*   **Text Styling:**
-    *   `color`: Sets the text color.
+* **Text Styling:**
+  * `color`: Sets the text color.
+
       ```css
       h1 {
         color: #333; /* Dark gray */
       }
       ```
-    *   `font-family`: Sets the font.
+
+  * `font-family`: Sets the font.
+
       ```css
       body {
         font-family: 'Arial', sans-serif;
       }
       ```
-    *   `font-size`: Sets the text size.
+
+  * `font-size`: Sets the text size.
+
       ```css
       p {
         font-size: 1rem; /* Responsive sizing */
       }
       ```
-    *   `font-weight`: Sets text boldness (e.g., `normal`, `bold`).
+
+  * `font-weight`: Sets text boldness (e.g., `normal`, `bold`).
+
       ```css
       strong {
         font-weight: bold;
       }
       ```
-    *   `text-align`: Aligns text (e.g., `left`, `center`, `right`).
+
+  * `text-align`: Aligns text (e.g., `left`, `center`, `right`).
+
       ```css
       .center {
         text-align: center;
       }
       ```
-    *   `text-decoration`: Adds decorations (e.g., `underline`, `line-through`).
+
+  * `text-decoration`: Adds decorations (e.g., `underline`, `line-through`).
+
       ```css
       a {
         text-decoration: none; /* Remove underline */
       }
       ```
 
-*   **Box Model:** (We'll cover this in more detail later)
-    *   `width`: Sets the width of an element.
+* **Box Model:** (We'll cover this in more detail later)
+  * `width`: Sets the width of an element.
+
       ```css
       .container {
         width: 80%;
         max-width: 1200px;
       }
       ```
-    *   `height`: Sets the height of an element.
+
+  * `height`: Sets the height of an element.
+
       ```css
       .hero {
         height: 100vh;
       }
       ```
-    *   `margin`: Sets the space outside the element's border.
+
+  * `margin`: Sets the space outside the element's border.
+
       ```css
       .section {
         margin: 2rem 0;
       }
       ```
-    *   `padding`: Sets the space inside the element's border.
+
+  * `padding`: Sets the space inside the element's border.
+
       ```css
       .card {
         padding: 1.5rem;
       }
       ```
-    *   `border`: Sets a border around the element.
+
+  * `border`: Sets a border around the element.
+
       ```css
       .button {
         border: 2px solid #0077cc;
@@ -409,27 +447,34 @@ Best Practices:
       }
       ```
 
-*   **Background:**
-    *   `background-color`: Sets the background color.
+* **Background:**
+  * `background-color`: Sets the background color.
+
       ```css
       header {
         background-color: #f8f9fa;
       }
       ```
-    *   `background-image`: Sets a background image.
+
+  * `background-image`: Sets a background image.
+
       ```css
       .hero {
         background-image: url('hero.jpg');
       }
       ```
-    *   `background-repeat`: Controls how a background image repeats.
+
+  * `background-repeat`: Controls how a background image repeats.
+
       ```css
       .pattern {
         background-image: url('pattern.png');
         background-repeat: repeat;
       }
       ```
-    *   `background-position`: Controls the position of a background image.
+
+  * `background-position`: Controls the position of a background image.
+
       ```css
       .hero {
         background-position: center top;
@@ -608,14 +653,15 @@ textarea:invalid:not(:placeholder-shown) + .error-message {
 ```
 
 **Key Features:**
-- **Accessibility:** Proper label associations, focus states, and ARIA attributes
-- **Validation:** HTML5 validation with custom error messages
-- **Responsive Design:** Flexbox layout for radio/checkbox groups
-- **User Experience:** Clear error states and helpful placeholders
-- **Security:** `novalidate` attribute for custom validation
-- **Styling:** Consistent design with focus states and hover effects
+* **Accessibility:** Proper label associations, focus states, and ARIA attributes
+* **Validation:** HTML5 validation with custom error messages
+* **Responsive Design:** Flexbox layout for radio/checkbox groups
+* **User Experience:** Clear error states and helpful placeholders
+* **Security:** `novalidate` attribute for custom validation
+* **Styling:** Consistent design with focus states and hover effects
 
 **Best Practices:**
+
 1. Always use `<label>` elements with `for` attributes
 2. Use proper input types for better mobile experience
 3. Implement client-side validation with HTML5 attributes
@@ -768,13 +814,14 @@ Tables are used to display tabular data in a structured format. Here's a compreh
 ```
 
 **Key Features:**
-- **Accessibility:** Proper use of scope attributes, ARIA roles, and screen reader-only text
-- **Responsive Design:** Mobile-friendly layout with horizontal scrolling
-- **Styling:** Clean, modern design with hover effects
-- **Structure:** Includes header, body, and footer sections
-- **Semantic HTML:** Proper use of table elements and attributes
+* **Accessibility:** Proper use of scope attributes, ARIA roles, and screen reader-only text
+* **Responsive Design:** Mobile-friendly layout with horizontal scrolling
+* **Styling:** Clean, modern design with hover effects
+* **Structure:** Includes header, body, and footer sections
+* **Semantic HTML:** Proper use of table elements and attributes
 
 **Best Practices:**
+
 1. Use `<th>` elements with `scope` attributes for accessibility
 2. Include a `<caption>` for table context
 3. Use `<thead>`, `<tbody>`, and `<tfoot>` for better structure
@@ -785,7 +832,9 @@ Tables are used to display tabular data in a structured format. Here's a compreh
 8. Implement sorting and filtering with JavaScript (not shown in this example)
 
 **Advanced Table Features:**
+
 1. **Sortable Columns:**
+
 ```javascript
 // JavaScript for sortable columns
 document.querySelectorAll('.data-table th').forEach(header => {
@@ -806,6 +855,7 @@ document.querySelectorAll('.data-table th').forEach(header => {
 ```
 
 2. **Pagination:**
+
 ```html
 <div class="table-pagination">
   <button class="pagination-btn" disabled>Previous</button>
@@ -815,6 +865,7 @@ document.querySelectorAll('.data-table th').forEach(header => {
 ```
 
 3. **Filtering:**
+
 ```html
 <div class="table-filters">
   <input type="text" class="filter-input" placeholder="Search...">
@@ -827,6 +878,7 @@ document.querySelectorAll('.data-table th').forEach(header => {
 ```
 
 4. **Export Options:**
+
 ```html
 <div class="table-export">
   <button class="export-btn">Export as CSV</button>
@@ -835,37 +887,39 @@ document.querySelectorAll('.data-table th').forEach(header => {
 ```
 
 **Accessibility Considerations:**
-- Use proper ARIA roles and attributes
-- Ensure keyboard navigation works
-- Provide text alternatives for visual elements
-- Use sufficient color contrast
-- Test with screen readers
-- Implement proper focus management
+* Use proper ARIA roles and attributes
+* Ensure keyboard navigation works
+* Provide text alternatives for visual elements
+* Use sufficient color contrast
+* Test with screen readers
+* Implement proper focus management
 
 **Performance Considerations:**
-- Virtualize large tables
-- Implement lazy loading for table data
-- Use efficient sorting algorithms
-- Optimize table rendering
-- Consider server-side pagination for large datasets
+* Virtualize large tables
+* Implement lazy loading for table data
+* Use efficient sorting algorithms
+* Optimize table rendering
+* Consider server-side pagination for large datasets
 
 **When to Use Tables:**
-- Displaying tabular data
-- Financial reports
-- Data comparisons
-- Statistical information
-- Product catalogs
-- Timetables and schedules
+* Displaying tabular data
+* Financial reports
+* Data comparisons
+* Statistical information
+* Product catalogs
+* Timetables and schedules
 
 **When Not to Use Tables:**
-- Page layout (use CSS Grid or Flexbox instead)
-- Non-tabular content
-- Visual design elements
-- Navigation menus
-- Image galleries
+* Page layout (use CSS Grid or Flexbox instead)
+* Non-tabular content
+* Visual design elements
+* Navigation menus
+* Image galleries
 
 **Modern Table Alternatives:**
+
 1. **CSS Grid Layout:**
+
 ```css
 .grid-table {
   display: grid;
@@ -880,6 +934,7 @@ document.querySelectorAll('.data-table th').forEach(header => {
 ```
 
 2. **Flexbox Layout:**
+
 ```css
 .flex-table {
   display: flex;
@@ -898,6 +953,7 @@ document.querySelectorAll('.data-table th').forEach(header => {
 ```
 
 3. **Component-Based Tables:**
+
 ```javascript
 // React example
 function DataTable({ data }) {
@@ -1162,57 +1218,57 @@ figcaption {
 **Key Semantic Elements:**
 
 1. **`<header>`**
-   - Represents introductory content
-   - Can be used at page level or within sections/articles
-   - Typically contains headings, logos, navigation
+   * Represents introductory content
+   * Can be used at page level or within sections/articles
+   * Typically contains headings, logos, navigation
 
 2. **`<nav>`**
-   - Defines navigation sections
-   - Should contain major navigation links
-   - Use aria-label for multiple nav elements
+   * Defines navigation sections
+   * Should contain major navigation links
+   * Use aria-label for multiple nav elements
 
 3. **`<main>`**
-   - Contains the primary content
-   - Should be unique per page
-   - Helps screen readers identify main content
+   * Contains the primary content
+   * Should be unique per page
+   * Helps screen readers identify main content
 
 4. **`<article>`**
-   - Represents self-contained content
-   - Should make sense independently
-   - Examples: blog posts, news articles, forum posts
+   * Represents self-contained content
+   * Should make sense independently
+   * Examples: blog posts, news articles, forum posts
 
 5. **`<section>`**
-   - Groups thematically related content
-   - Should have a heading (h2-h6)
-   - Use for distinct content areas
+   * Groups thematically related content
+   * Should have a heading (h2-h6)
+   * Use for distinct content areas
 
 6. **`<aside>`**
-   - Contains tangentially related content
-   - Often used for sidebars, pull quotes
-   - Can be nested within articles
+   * Contains tangentially related content
+   * Often used for sidebars, pull quotes
+   * Can be nested within articles
 
 7. **`<footer>`**
-   - Represents footer content
-   - Can contain copyright, contact info, links
-   - Can be used at page or section level
+   * Represents footer content
+   * Can contain copyright, contact info, links
+   * Can be used at page or section level
 
 **Additional Semantic Elements:**
 
 1. **`<figure>` and `<figcaption>`**
-   - For images, diagrams, code snippets
-   - Figcaption provides caption/description
+   * For images, diagrams, code snippets
+   * Figcaption provides caption/description
 
 2. **`<time>`**
-   - Represents dates/times
-   - Use datetime attribute for machine-readable format
+   * Represents dates/times
+   * Use datetime attribute for machine-readable format
 
 3. **`<mark>`**
-   - Highlights text for reference
-   - Useful for search results
+   * Highlights text for reference
+   * Useful for search results
 
 4. **`<details>` and `<summary>`**
-   - Creates expandable/collapsible content
-   - Good for FAQs, additional info
+   * Creates expandable/collapsible content
+   * Good for FAQs, additional info
 
 **Best Practices:**
 
@@ -1261,6 +1317,7 @@ figcaption {
 **Advanced Techniques:**
 
 1. **Microdata:**
+
 ```html
 <div itemscope itemtype="http://schema.org/Person">
   <span itemprop="name">John Doe</span>
@@ -1269,6 +1326,7 @@ figcaption {
 ```
 
 2. **ARIA Landmarks:**
+
 ```html
 <nav role="navigation">
   <!-- Navigation content -->
@@ -1280,6 +1338,7 @@ figcaption {
 ```
 
 3. **Accessible Forms:**
+
 ```html
 <form>
   <label for="name">Name:</label>
@@ -1298,6 +1357,7 @@ figcaption {
 ```
 
 4. **Responsive Images:**
+
 ```html
 <picture>
   <source media="(min-width: 1200px)" srcset="large.jpg">
@@ -1349,14 +1409,15 @@ The box model is a fundamental concept that describes how elements are rendered 
 ```
 
 * **Content Box**: The innermost area containing the actual content
-  - Controlled by width/height properties
-  - Default background color is transparent
-  - Text and child elements are rendered here
+  * Controlled by width/height properties
+  * Default background color is transparent
+  * Text and child elements are rendered here
 
 * **Padding**: Space between content and border
-  - Adds to element's total size
-  - Inherits background color
-  - Useful for internal spacing
+  * Adds to element's total size
+  * Inherits background color
+  * Useful for internal spacing
+
   ```css
   /* Individual sides */
   padding-top: 10px;
@@ -1371,8 +1432,9 @@ The box model is a fundamental concept that describes how elements are rendered 
   ```
 
 * **Border**: Line surrounding padding and content
-  - Adds to element's total size
-  - Can have different styles, widths, and colors
+  * Adds to element's total size
+  * Can have different styles, widths, and colors
+
   ```css
   /* Individual properties */
   border-width: 2px;
@@ -1387,9 +1449,10 @@ The box model is a fundamental concept that describes how elements are rendered 
   ```
 
 * **Margin**: Space outside the border
-  - Creates space between elements
-  - Transparent (doesn't inherit background)
-  - Can collapse with adjacent margins
+  * Creates space between elements
+  * Transparent (doesn't inherit background)
+  * Can collapse with adjacent margins
+
   ```css
   /* Individual sides */
   margin-top: 20px;
@@ -1446,11 +1509,11 @@ By default, padding and border are added to the element's width/height. The `box
 ```
 
 Best Practices:
-- Use `box-sizing: border-box` for more predictable layouts
-- Use margin for spacing between elements
-- Use padding for internal spacing within elements
-- Be consistent with spacing values (e.g., use multiples of 4px or 8px)
-- Use CSS variables for consistent spacing values
+* Use `box-sizing: border-box` for more predictable layouts
+* Use margin for spacing between elements
+* Use padding for internal spacing within elements
+* Be consistent with spacing values (e.g., use multiples of 4px or 8px)
+* Use CSS variables for consistent spacing values
 
 **4.2 Display Property**
 
@@ -1502,33 +1565,33 @@ The `display` property is one of the most important CSS properties, controlling 
 **Display Property Values:**
 
 * **`block`**
-  - Takes full available width (unless width is specified)
-  - Starts on a new line
-  - Can set width, height, margin, padding
-  - Examples: `<div>`, `<p>`, `<h1>`-`<h6>`, `<form>`, `<ul>`, `<ol>`, `<li>`
-  - Common uses: Page sections, containers, structural elements
+  * Takes full available width (unless width is specified)
+  * Starts on a new line
+  * Can set width, height, margin, padding
+  * Examples: `<div>`, `<p>`, `<h1>`-`<h6>`, `<form>`, `<ul>`, `<ol>`, `<li>`
+  * Common uses: Page sections, containers, structural elements
 
 * **`inline`**
-  - Takes only as much width as needed
-  - Flows with text content
-  - Cannot set width/height
-  - Vertical padding/margin doesn't affect surrounding elements
-  - Examples: `<span>`, `<a>`, `<img>`, `<strong>`, `<em>`
-  - Common uses: Text formatting, inline elements
+  * Takes only as much width as needed
+  * Flows with text content
+  * Cannot set width/height
+  * Vertical padding/margin doesn't affect surrounding elements
+  * Examples: `<span>`, `<a>`, `<img>`, `<strong>`, `<em>`
+  * Common uses: Text formatting, inline elements
 
 * **`inline-block`**
-  - Combines features of block and inline
-  - Flows like inline elements
-  - Can set width/height like block elements
-  - Respects vertical margin/padding
-  - Examples: Custom buttons, navigation items
-  - Common uses: Creating grid-like layouts without flex/grid
+  * Combines features of block and inline
+  * Flows like inline elements
+  * Can set width/height like block elements
+  * Respects vertical margin/padding
+  * Examples: Custom buttons, navigation items
+  * Common uses: Creating grid-like layouts without flex/grid
 
 * **`none`**
-  - Completely removes element from document flow
-  - Takes up no space
-  - Not accessible to screen readers
-  - Alternative: Use `visibility: hidden` to hide while maintaining space
+  * Completely removes element from document flow
+  * Takes up no space
+  * Not accessible to screen readers
+  * Alternative: Use `visibility: hidden` to hide while maintaining space
 
 **Display Property Best Practices:**
 
@@ -1536,6 +1599,7 @@ The `display` property is one of the most important CSS properties, controlling 
 2. Prefer `inline-block` over `float` for simple layouts
 3. Use `display: none` judiciously - consider accessibility implications
 4. Combine with other properties for complex layouts:
+
    ```css
    .menu-item {
      display: inline-block;
@@ -1547,11 +1611,13 @@ The `display` property is one of the most important CSS properties, controlling 
      border-radius: 4px;
    }
    ```
+
 5. Use CSS Grid or Flexbox for complex layouts instead of relying solely on display properties
 
 **Common Display Patterns:**
 
 1. Centering Elements:
+
 ```css
 /* Horizontally center block element */
 .block-center {
@@ -1570,6 +1636,7 @@ The `display` property is one of the most important CSS properties, controlling 
 ```
 
 2. Responsive Navigation:
+
 ```css
 /* Mobile first approach */
 .nav-item {
@@ -1585,6 +1652,7 @@ The `display` property is one of the most important CSS properties, controlling 
 ```
 
 3. Image Gallery:
+
 ```css
 .gallery-item {
   display: inline-block;
@@ -1601,6 +1669,7 @@ The `display` property is one of the most important CSS properties, controlling 
 ```
 
 4. Toggle Visibility:
+
 ```css
 /* JavaScript toggle class */
 .hidden {
@@ -1613,9 +1682,9 @@ The `display` property is one of the most important CSS properties, controlling 
 ```
 
 **Accessibility Considerations:**
-- Use `display: none` carefully as it removes elements from accessibility tree
-- Consider `visibility: hidden` or `opacity: 0` for hiding elements while maintaining accessibility
-- Ensure proper focus management when toggling visibility
+* Use `display: none` carefully as it removes elements from accessibility tree
+* Consider `visibility: hidden` or `opacity: 0` for hiding elements while maintaining accessibility
+* Ensure proper focus management when toggling visibility
 
 **4.3 Positioning**
 
@@ -1694,53 +1763,53 @@ The `position` property is crucial for controlling element placement and creatin
 **Position Property Values:**
 
 * **`static` (Default)**
-  - Elements follow normal document flow
-  - Ignores top/right/bottom/left properties
-  - Cannot use z-index
-  - Use case: Default behavior for most elements
+  * Elements follow normal document flow
+  * Ignores top/right/bottom/left properties
+  * Cannot use z-index
+  * Use case: Default behavior for most elements
 
 * **`relative`**
-  - Positioned relative to its normal position
-  - Can use top/right/bottom/left to offset
-  - Creates new stacking context (z-index works)
-  - Original space in document flow is preserved
-  - Use cases:
-    - Minor adjustments to element position
-    - Creating reference point for absolutely positioned children
-    - Overlapping elements with z-index
+  * Positioned relative to its normal position
+  * Can use top/right/bottom/left to offset
+  * Creates new stacking context (z-index works)
+  * Original space in document flow is preserved
+  * Use cases:
+    * Minor adjustments to element position
+    * Creating reference point for absolutely positioned children
+    * Overlapping elements with z-index
 
 * **`absolute`**
-  - Removed from normal document flow
-  - Positioned relative to nearest positioned ancestor
-  - If no positioned ancestor, uses initial containing block (usually viewport)
-  - Can use top/right/bottom/left for precise positioning
-  - Use cases:
-    - Tooltips and dropdown menus
-    - Modal dialogs
-    - Custom form controls
-    - Overlays and popups
+  * Removed from normal document flow
+  * Positioned relative to nearest positioned ancestor
+  * If no positioned ancestor, uses initial containing block (usually viewport)
+  * Can use top/right/bottom/left for precise positioning
+  * Use cases:
+    * Tooltips and dropdown menus
+    * Modal dialogs
+    * Custom form controls
+    * Overlays and popups
 
 * **`fixed`**
-  - Removed from normal document flow
-  - Positioned relative to viewport
-  - Stays fixed during scrolling
-  - Can use top/right/bottom/left for positioning
-  - Use cases:
-    - Fixed headers/footers
-    - Persistent navigation
-    - Chat widgets
-    - Back-to-top buttons
+  * Removed from normal document flow
+  * Positioned relative to viewport
+  * Stays fixed during scrolling
+  * Can use top/right/bottom/left for positioning
+  * Use cases:
+    * Fixed headers/footers
+    * Persistent navigation
+    * Chat widgets
+    * Back-to-top buttons
 
 * **`sticky`**
-  - Hybrid of relative and fixed
-  - Treated as relative until crossing specified threshold
-  - Then becomes fixed within its container
-  - Requires at least one positioning property (top/right/bottom/left)
-  - Use cases:
-    - Sticky table headers
-    - Sticky sidebars
-    - Sticky navigation
-    - Section headers in long pages
+  * Hybrid of relative and fixed
+  * Treated as relative until crossing specified threshold
+  * Then becomes fixed within its container
+  * Requires at least one positioning property (top/right/bottom/left)
+  * Use cases:
+    * Sticky table headers
+    * Sticky sidebars
+    * Sticky navigation
+    * Section headers in long pages
 
 **Positioning Best Practices:**
 
@@ -1756,6 +1825,7 @@ The `position` property is crucial for controlling element placement and creatin
 **Common Positioning Patterns:**
 
 1. Centering Elements:
+
 ```css
 /* Absolute Centering */
 .center-absolute {
@@ -1775,6 +1845,7 @@ The `position` property is crucial for controlling element placement and creatin
 ```
 
 2. Sticky Header:
+
 ```css
 .header {
   position: sticky;
@@ -1786,6 +1857,7 @@ The `position` property is crucial for controlling element placement and creatin
 ```
 
 3. Overlay Modal:
+
 ```css
 .modal-overlay {
   position: fixed;
@@ -1811,6 +1883,7 @@ The `position` property is crucial for controlling element placement and creatin
 ```
 
 4. Tooltip:
+
 ```css
 .tooltip-container {
   position: relative;
@@ -1836,17 +1909,17 @@ The `position` property is crucial for controlling element placement and creatin
 ```
 
 **Accessibility Considerations:**
-- Ensure positioned elements maintain proper focus order
-- Use ARIA attributes for modals and tooltips
-- Consider screen reader users when using absolute/fixed positioning
-- Test with keyboard navigation
-- Provide alternative ways to access content that might be obscured by fixed elements
+* Ensure positioned elements maintain proper focus order
+* Use ARIA attributes for modals and tooltips
+* Consider screen reader users when using absolute/fixed positioning
+* Test with keyboard navigation
+* Provide alternative ways to access content that might be obscured by fixed elements
 
 **Performance Considerations:**
-- Fixed and sticky elements can cause repaints during scrolling
-- Use transform instead of top/left for animations
-- Avoid excessive use of z-index
-- Use will-change property for elements that will be animated
+* Fixed and sticky elements can cause repaints during scrolling
+* Use transform instead of top/left for animations
+* Avoid excessive use of z-index
+* Use will-change property for elements that will be animated
 
 **4.4 Floats**
 
@@ -1905,18 +1978,18 @@ The `float` property was traditionally used for page layouts and wrapping text a
 **Float Property Values:**
 
 * **`left`**
-  - Floats element to left of container
-  - Content flows around right side
-  - Common uses: Image/text wrapping, legacy layouts
+  * Floats element to left of container
+  * Content flows around right side
+  * Common uses: Image/text wrapping, legacy layouts
 
 * **`right`**
-  - Floats element to right of container
-  - Content flows around left side
-  - Common uses: Pull quotes, sidebars
+  * Floats element to right of container
+  * Content flows around left side
+  * Common uses: Pull quotes, sidebars
 
 * **`none`** (default)
-  - Element remains in normal flow
-  - Useful for overriding float behavior
+  * Element remains in normal flow
+  * Useful for overriding float behavior
 
 **Float Behavior Characteristics:**
 
@@ -1929,6 +2002,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 **Modern Float Techniques:**
 
 1. Shape Wrapping:
+
 ```css
 .image-wrap {
   float: left;
@@ -1940,6 +2014,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 2. Text Wrapping:
+
 ```css
 .text-wrap {
   float: right;
@@ -1950,6 +2025,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 3. Drop Caps:
+
 ```css
 .drop-cap::first-letter {
   float: left;
@@ -1962,6 +2038,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 **Clearing Floats:**
 
 1. Clearfix Technique:
+
 ```css
 .clearfix::after {
   content: "";
@@ -1971,6 +2048,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 2. Modern Flow-Root:
+
 ```css
 .container {
   display: flow-root; /* Better alternative to clearfix */
@@ -1978,6 +2056,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 3. Clear Property:
+
 ```css
 .clear {
   clear: both;
@@ -1998,6 +2077,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 **Common Float Patterns:**
 
 1. Image Gallery:
+
 ```css
 .gallery-item {
   float: left;
@@ -2013,6 +2093,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 2. Pull Quotes:
+
 ```css
 .pull-quote {
   float: right;
@@ -2025,6 +2106,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 3. Sidebar Layout:
+
 ```css
 .sidebar {
   float: left;
@@ -2046,18 +2128,18 @@ The `float` property was traditionally used for page layouts and wrapping text a
 
 **Accessibility Considerations:**
 
-- Ensure content order makes sense when floated
-- Use proper alt text for floated images
-- Test with screen readers
-- Consider how floated elements affect tab order
-- Provide clear visual separation for floated content
+* Ensure content order makes sense when floated
+* Use proper alt text for floated images
+* Test with screen readers
+* Consider how floated elements affect tab order
+* Provide clear visual separation for floated content
 
 **Performance Considerations:**
 
-- Excessive floats can cause layout thrashing
-- Use will-change property for animated floats
-- Minimize reflows by batching float changes
-- Consider using CSS containment for complex float layouts
+* Excessive floats can cause layout thrashing
+* Use will-change property for animated floats
+* Minimize reflows by batching float changes
+* Consider using CSS containment for complex float layouts
 
 **When to Use Floats vs. Modern Layout Methods:**
 
@@ -2104,6 +2186,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 **Modern Alternatives:**
 
 1. Flexbox:
+
 ```css
 .container {
   display: flex;
@@ -2117,6 +2200,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 2. Grid:
+
 ```css
 .container {
   display: grid;
@@ -2164,13 +2248,14 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
 **Flexbox Container Properties:**
 
 1. **display: flex**
-   - Enables flexbox layout
-   - Creates flex formatting context
-   - Direct children become flex items
+   * Enables flexbox layout
+   * Creates flex formatting context
+   * Direct children become flex items
 
 2. **flex-direction**
-   - Defines main axis direction
-   - Values: row (default), row-reverse, column, column-reverse
+   * Defines main axis direction
+   * Values: row (default), row-reverse, column, column-reverse
+
    ```css
    .container {
      flex-direction: column; /* Stack items vertically */
@@ -2178,8 +2263,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
    ```
 
 3. **justify-content**
-   - Aligns items along main axis
-   - Values: flex-start, flex-end, center, space-between, space-around, space-evenly
+   * Aligns items along main axis
+   * Values: flex-start, flex-end, center, space-between, space-around, space-evenly
+
    ```css
    .container {
      justify-content: space-between; /* Distribute items with equal space between */
@@ -2187,8 +2273,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
    ```
 
 4. **align-items**
-   - Aligns items along cross axis
-   - Values: flex-start, flex-end, center, stretch, baseline
+   * Aligns items along cross axis
+   * Values: flex-start, flex-end, center, stretch, baseline
+
    ```css
    .container {
      align-items: stretch; /* Stretch items to fill container */
@@ -2196,8 +2283,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
    ```
 
 5. **flex-wrap**
-   - Controls wrapping behavior
-   - Values: nowrap (default), wrap, wrap-reverse
+   * Controls wrapping behavior
+   * Values: nowrap (default), wrap, wrap-reverse
+
    ```css
    .container {
      flex-wrap: wrap; /* Allow items to wrap to new line */
@@ -2205,8 +2293,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
    ```
 
 6. **gap**
-   - Sets spacing between items
-   - Values: length or percentage
+   * Sets spacing between items
+   * Values: length or percentage
+
    ```css
    .container {
      gap: 20px; /* Space between items */
@@ -2216,8 +2305,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
 **Flexbox Item Properties:**
 
 1. **flex**
-   - Shorthand for flex-grow, flex-shrink, and flex-basis
-   - Default: 0 1 auto
+   * Shorthand for flex-grow, flex-shrink, and flex-basis
+   * Default: 0 1 auto
+
    ```css
    .item {
      flex: 1 1 200px; /* Grow, shrink, basis */
@@ -2225,8 +2315,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
    ```
 
 2. **align-self**
-   - Overrides align-items for individual items
-   - Values: auto, flex-start, flex-end, center, stretch, baseline
+   * Overrides align-items for individual items
+   * Values: auto, flex-start, flex-end, center, stretch, baseline
+
    ```css
    .special-item {
      align-self: flex-end; /* Align this item differently */
@@ -2234,8 +2325,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
    ```
 
 3. **order**
-   - Controls display order of items
-   - Default: 0
+   * Controls display order of items
+   * Default: 0
+
    ```css
    .first-item {
      order: -1; /* Move to start */
@@ -2245,6 +2337,7 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
 **Common Flexbox Patterns:**
 
 1. **Responsive Navigation:**
+
 ```css
 .nav {
   display: flex;
@@ -2259,6 +2352,7 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
 ```
 
 2. **Card Layout:**
+
 ```css
 .card-container {
   display: flex;
@@ -2274,6 +2368,7 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
 ```
 
 3. **Sticky Footer:**
+
 ```css
 body {
   display: flex;
@@ -2291,6 +2386,7 @@ footer {
 ```
 
 4. **Centering Elements:**
+
 ```css
 .center-container {
   display: flex;
@@ -2301,6 +2397,7 @@ footer {
 ```
 
 5. **Equal Height Columns:**
+
 ```css
 .columns {
   display: flex;
@@ -2325,19 +2422,19 @@ footer {
 
 **Accessibility Considerations:**
 
-- Ensure logical source order matches visual order
-- Use proper heading hierarchy
-- Maintain keyboard navigation
-- Consider screen reader users
-- Test with high contrast modes
+* Ensure logical source order matches visual order
+* Use proper heading hierarchy
+* Maintain keyboard navigation
+* Consider screen reader users
+* Test with high contrast modes
 
 **Performance Considerations:**
 
-- Avoid excessive nesting of flex containers
-- Use will-change for animated flex items
-- Minimize layout thrashing
-- Use contain: layout when appropriate
-- Avoid unnecessary reflows
+* Avoid excessive nesting of flex containers
+* Use will-change for animated flex items
+* Minimize layout thrashing
+* Use contain: layout when appropriate
+* Avoid unnecessary reflows
 
 **Flexbox vs. Grid:**
 
@@ -2365,6 +2462,7 @@ footer {
 **Advanced Flexbox Techniques:**
 
 1. **Intrinsic Sizing:**
+
 ```css
 .container {
   display: flex;
@@ -2373,6 +2471,7 @@ footer {
 ```
 
 2. **Aspect Ratio Boxes:**
+
 ```css
 .aspect-box {
   flex: 1;
@@ -2381,6 +2480,7 @@ footer {
 ```
 
 3. **Sticky Sidebar:**
+
 ```css
 .layout {
   display: flex;
@@ -2395,6 +2495,7 @@ footer {
 ```
 
 4. **Responsive Masonry:**
+
 ```css
 .masonry {
   display: flex;
@@ -2408,6 +2509,7 @@ footer {
 ```
 
 5. **Dynamic Grid:**
+
 ```css
 .grid {
   display: flex;
@@ -2496,13 +2598,14 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 **Key Features:**
-- **Grid Areas:** Named template areas for better readability
-- **Responsive Design:** Media queries for mobile layout
-- **Fraction Units:** Flexible sizing with `fr` units
-- **Gap Property:** Consistent spacing between items
-- **Viewport Units:** Full-height layout with `100vh`
+* **Grid Areas:** Named template areas for better readability
+* **Responsive Design:** Media queries for mobile layout
+* **Fraction Units:** Flexible sizing with `fr` units
+* **Gap Property:** Consistent spacing between items
+* **Viewport Units:** Full-height layout with `100vh`
 
 **Best Practices:**
+
 1. Use semantic HTML with grid layout
 2. Name grid areas for better maintainability
 3. Use `fr` units for flexible sizing
@@ -2515,6 +2618,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 **Advanced Grid Techniques:**
 
 1. **Nested Grids:**
+
 ```css
 .main-content {
   display: grid;
@@ -2524,6 +2628,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 2. **Grid Auto-Flow:**
+
 ```css
 .grid-container {
   grid-auto-flow: dense;
@@ -2531,6 +2636,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 3. **Minmax Function:**
+
 ```css
 .grid-container {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -2538,6 +2644,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 4. **Grid Alignment:**
+
 ```css
 .header {
   justify-self: center;
@@ -2546,6 +2653,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 5. **Grid Spanning:**
+
 ```css
 .featured-item {
   grid-column: span 2;
@@ -2554,28 +2662,29 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 **Accessibility Considerations:**
-- Maintain logical source order
-- Ensure proper heading hierarchy
-- Use ARIA landmarks
-- Test with screen readers
-- Ensure keyboard navigation
-- Provide sufficient color contrast
-- Use semantic HTML elements
-- Test with different zoom levels
+* Maintain logical source order
+* Ensure proper heading hierarchy
+* Use ARIA landmarks
+* Test with screen readers
+* Ensure keyboard navigation
+* Provide sufficient color contrast
+* Use semantic HTML elements
+* Test with different zoom levels
 
 **Performance Considerations:**
-- Avoid excessive nesting of grids
-- Use `will-change` for animated grid items
-- Minimize layout thrashing
-- Use CSS containment
-- Optimize grid item rendering
-- Consider using `content-visibility` for large grids
-- Test performance with DevTools
-- Implement lazy loading for grid content
+* Avoid excessive nesting of grids
+* Use `will-change` for animated grid items
+* Minimize layout thrashing
+* Use CSS containment
+* Optimize grid item rendering
+* Consider using `content-visibility` for large grids
+* Test performance with DevTools
+* Implement lazy loading for grid content
 
 **Common Grid Patterns:**
 
 1. **Holy Grail Layout:**
+
 ```css
 .grid-container {
   display: grid;
@@ -2588,6 +2697,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 2. **Masonry Layout:**
+
 ```css
 .grid-container {
   display: grid;
@@ -2602,6 +2712,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 3. **Responsive Image Gallery:**
+
 ```css
 .gallery {
   display: grid;
@@ -2611,6 +2722,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 4. **Dashboard Layout:**
+
 ```css
 .dashboard {
   display: grid;
@@ -2623,6 +2735,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 5. **Card Layout:**
+
 ```css
 .card-grid {
   display: grid;
@@ -2649,13 +2762,14 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 **Grid Container Properties:**
 
 1. **display: grid**
-   - Enables grid layout
-   - Creates grid formatting context
-   - Direct children become grid items
+   * Enables grid layout
+   * Creates grid formatting context
+   * Direct children become grid items
 
 2. **grid-template-columns**
-   - Defines column tracks
-   - Values: length, percentage, fr (fraction), minmax(), repeat()
+   * Defines column tracks
+   * Values: length, percentage, fr (fraction), minmax(), repeat()
+
    ```css
    .container {
      grid-template-columns: 200px 1fr 30%;
@@ -2663,8 +2777,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
    ```
 
 3. **grid-template-rows**
-   - Defines row tracks
-   - Values: same as grid-template-columns
+   * Defines row tracks
+   * Values: same as grid-template-columns
+
    ```css
    .container {
      grid-template-rows: 100px auto 200px;
@@ -2672,8 +2787,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
    ```
 
 4. **gap**
-   - Sets spacing between grid items
-   - Values: length or percentage
+   * Sets spacing between grid items
+   * Values: length or percentage
+
    ```css
    .container {
      gap: 20px;
@@ -2681,8 +2797,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
    ```
 
 5. **grid-template-areas**
-   - Defines named grid areas
-   - Values: strings representing area names
+   * Defines named grid areas
+   * Values: strings representing area names
+
    ```css
    .container {
      grid-template-areas:
@@ -2693,8 +2810,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
    ```
 
 6. **justify-content**
-   - Aligns grid along the inline (row) axis
-   - Values: start, end, center, stretch, space-between, space-around, space-evenly
+   * Aligns grid along the inline (row) axis
+   * Values: start, end, center, stretch, space-between, space-around, space-evenly
+
    ```css
    .container {
      justify-content: center;
@@ -2702,8 +2820,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
    ```
 
 7. **align-content**
-   - Aligns grid along the block (column) axis
-   - Values: same as justify-content
+   * Aligns grid along the block (column) axis
+   * Values: same as justify-content
+
    ```css
    .container {
      align-content: start;
@@ -2713,8 +2832,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 **Grid Item Properties:**
 
 1. **grid-column**
-   - Controls item column placement
-   - Values: line numbers, span
+   * Controls item column placement
+   * Values: line numbers, span
+
    ```css
    .item {
      grid-column: 1 / 3;
@@ -2722,8 +2842,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
    ```
 
 2. **grid-row**
-   - Controls item row placement
-   - Values: same as grid-column
+   * Controls item row placement
+   * Values: same as grid-column
+
    ```css
    .item {
      grid-row: 2 / 4;
@@ -2731,8 +2852,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
    ```
 
 3. **grid-area**
-   - Shorthand for grid-row and grid-column
-   - Can reference named areas
+   * Shorthand for grid-row and grid-column
+   * Can reference named areas
+
    ```css
    .item {
      grid-area: header;
@@ -2740,8 +2862,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
    ```
 
 4. **justify-self**
-   - Aligns item along inline axis
-   - Values: start, end, center, stretch
+   * Aligns item along inline axis
+   * Values: start, end, center, stretch
+
    ```css
    .item {
      justify-self: center;
@@ -2749,8 +2872,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
    ```
 
 5. **align-self**
-   - Aligns item along block axis
-   - Values: same as justify-self
+   * Aligns item along block axis
+   * Values: same as justify-self
+
    ```css
    .item {
      align-self: end;
@@ -2760,6 +2884,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 **Common Grid Patterns:**
 
 1. **Responsive Grid:**
+
 ```css
 .grid-container {
   display: grid;
@@ -2769,6 +2894,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 ```
 
 2. **Masonry Layout:**
+
 ```css
 .grid-container {
   display: grid;
@@ -2783,6 +2909,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 ```
 
 3. **Holy Grail Layout:**
+
 ```css
 .container {
   display: grid;
@@ -2796,6 +2923,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 ```
 
 4. **Card Layout:**
+
 ```css
 .card-grid {
   display: grid;
@@ -2805,6 +2933,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 ```
 
 5. **Image Gallery:**
+
 ```css
 .gallery {
   display: grid;
@@ -2826,19 +2955,19 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 
 **Accessibility Considerations:**
 
-- Ensure logical source order matches visual order
-- Use proper heading hierarchy
-- Maintain keyboard navigation
-- Consider screen reader users
-- Test with high contrast modes
+* Ensure logical source order matches visual order
+* Use proper heading hierarchy
+* Maintain keyboard navigation
+* Consider screen reader users
+* Test with high contrast modes
 
 **Performance Considerations:**
 
-- Avoid excessive nesting of grid containers
-- Use will-change for animated grid items
-- Minimize layout thrashing
-- Use contain: layout when appropriate
-- Avoid unnecessary reflows
+* Avoid excessive nesting of grid containers
+* Use will-change for animated grid items
+* Minimize layout thrashing
+* Use contain: layout when appropriate
+* Avoid unnecessary reflows
 
 **Grid vs. Flexbox:**
 
@@ -2866,6 +2995,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 **Advanced Grid Techniques:**
 
 1. **Subgrid:**
+
 ```css
 .grid-container {
   display: grid;
@@ -2880,6 +3010,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 ```
 
 2. **Aspect Ratio Boxes:**
+
 ```css
 .grid-container {
   display: grid;
@@ -2889,6 +3020,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 ```
 
 3. **Sticky Sidebar:**
+
 ```css
 .layout {
   display: grid;
@@ -2903,6 +3035,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 ```
 
 4. **Responsive Masonry:**
+
 ```css
 .masonry {
   display: grid;
@@ -2917,6 +3050,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 ```
 
 5. **Dynamic Grid:**
+
 ```css
 .grid {
   display: grid;
@@ -2941,15 +3075,17 @@ Media queries are a fundamental tool for creating responsive websites that adapt
 ```
 
 **Media Types:**
-- `all` (default) - All devices
-- `screen` - Computer screens, tablets, smartphones
-- `print` - Printers and print preview
-- `speech` - Screen readers
+* `all` (default) - All devices
+* `screen` - Computer screens, tablets, smartphones
+* `print` - Printers and print preview
+* `speech` - Screen readers
 
 **Common Media Features:**
+
 1. **Width and Height:**
-   - `width`, `min-width`, `max-width`
-   - `height`, `min-height`, `max-height`
+   * `width`, `min-width`, `max-width`
+   * `height`, `min-height`, `max-height`
+
    ```css
    @media (min-width: 768px) {
      .container {
@@ -2959,8 +3095,9 @@ Media queries are a fundamental tool for creating responsive websites that adapt
    ```
 
 2. **Orientation:**
-   - `portrait` - Height > Width
-   - `landscape` - Width > Height
+   * `portrait` - Height > Width
+   * `landscape` - Width > Height
+
    ```css
    @media (orientation: landscape) {
      .header {
@@ -2970,8 +3107,9 @@ Media queries are a fundamental tool for creating responsive websites that adapt
    ```
 
 3. **Resolution:**
-   - `resolution` - Device pixel density
-   - `min-resolution`, `max-resolution`
+   * `resolution` - Device pixel density
+   * `min-resolution`, `max-resolution`
+
    ```css
    @media (min-resolution: 2dppx) {
      .logo {
@@ -2981,7 +3119,8 @@ Media queries are a fundamental tool for creating responsive websites that adapt
    ```
 
 4. **Aspect Ratio:**
-   - `aspect-ratio` - Width to height ratio
+   * `aspect-ratio` - Width to height ratio
+
    ```css
    @media (aspect-ratio: 16/9) {
      .video-container {
@@ -2993,6 +3132,7 @@ Media queries are a fundamental tool for creating responsive websites that adapt
 **Responsive Design Strategies:**
 
 1. **Mobile-First Approach:**
+
 ```css
 /* Base styles for mobile */
 .container {
@@ -3008,6 +3148,7 @@ Media queries are a fundamental tool for creating responsive websites that adapt
 ```
 
 2. **Breakpoint Selection:**
+
 ```css
 /* Common breakpoints */
 @media (min-width: 576px) { /* Small devices */ }
@@ -3017,6 +3158,7 @@ Media queries are a fundamental tool for creating responsive websites that adapt
 ```
 
 3. **Fluid Layouts:**
+
 ```css
 .container {
   width: 100%;
@@ -3026,6 +3168,7 @@ Media queries are a fundamental tool for creating responsive websites that adapt
 ```
 
 4. **Responsive Typography:**
+
 ```css
 html {
   font-size: 16px;
@@ -3039,6 +3182,7 @@ html {
 ```
 
 5. **Responsive Images:**
+
 ```html
 <picture>
   <source media="(min-width: 1200px)" srcset="large.jpg">
@@ -3050,6 +3194,7 @@ html {
 **Advanced Media Query Techniques:**
 
 1. **Combining Conditions:**
+
 ```css
 @media (min-width: 768px) and (max-width: 1199px) {
   /* Styles for tablets */
@@ -3057,6 +3202,7 @@ html {
 ```
 
 2. **Dark Mode Support:**
+
 ```css
 @media (prefers-color-scheme: dark) {
   body {
@@ -3067,6 +3213,7 @@ html {
 ```
 
 3. **Reduced Motion:**
+
 ```css
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -3077,6 +3224,7 @@ html {
 ```
 
 4. **High Contrast Mode:**
+
 ```css
 @media (prefers-contrast: high) {
   .button {
@@ -3086,6 +3234,7 @@ html {
 ```
 
 5. **Print Styles:**
+
 ```css
 @media print {
   .no-print {
@@ -3115,6 +3264,7 @@ html {
 **Common Responsive Patterns:**
 
 1. **Hamburger Menu:**
+
 ```css
 .nav {
   display: none;
@@ -3132,6 +3282,7 @@ html {
 ```
 
 2. **Responsive Grid:**
+
 ```css
 .grid {
   display: grid;
@@ -3141,6 +3292,7 @@ html {
 ```
 
 3. **Card Layout:**
+
 ```css
 .card {
   width: 100%;
@@ -3160,6 +3312,7 @@ html {
 ```
 
 4. **Responsive Tables:**
+
 ```css
 @media (max-width: 768px) {
   table, thead, tbody, th, td, tr {
@@ -3182,6 +3335,7 @@ html {
 ```
 
 5. **Viewport Units:**
+
 ```css
 .header {
   height: 100vh;
@@ -3313,42 +3467,47 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
 </html>
 ```
 
-*   **`<!DOCTYPE html>`:** Declares the document as HTML5.
-*   **`<html>`:** The root element of the page.
-    *   `lang="en"` attribute specifies the language as English.
-*   **`<head>`:** Contains meta-information about the page (not displayed on the page itself).
-    *   **`<meta charset="UTF-8">`:** Sets the character encoding to UTF-8, supporting a wide range of characters.
-    *   **`<meta name="viewport"...>`:** Configures how the page scales on different devices (essential for responsive design).
-    *   **`<title>`:** Sets the title that appears in the browser tab.
-    *   **`<link rel="stylesheet" href="style.css">`:** Links an external CSS file to style the page.
-*   **`<body>`:** Contains the visible content of the page.
-    *   **`<h1>`:** A top-level heading.
-    *   **`<p>`:** A paragraph of text.
-*   **`<script src="script.js"></script>`:** Links to an external JavaScript file (for interactivity). It's often placed at the end of the `<body>` so the HTML loads first.
+* **`<!DOCTYPE html>`:** Declares the document as HTML5.
+* **`<html>`:** The root element of the page.
+  * `lang="en"` attribute specifies the language as English.
+* **`<head>`:** Contains meta-information about the page (not displayed on the page itself).
+  * **`<meta charset="UTF-8">`:** Sets the character encoding to UTF-8, supporting a wide range of characters.
+  * **`<meta name="viewport"...>`:** Configures how the page scales on different devices (essential for responsive design).
+  * **`<title>`:** Sets the title that appears in the browser tab.
+  * **`<link rel="stylesheet" href="style.css">`:** Links an external CSS file to style the page.
+* **`<body>`:** Contains the visible content of the page.
+  * **`<h1>`:** A top-level heading.
+  * **`<p>`:** A paragraph of text.
+* **`<script src="script.js"></script>`:** Links to an external JavaScript file (for interactivity). It's often placed at the end of the `<body>` so the HTML loads first.
 
 **1.3 Common HTML Elements**
 
-*   **Headings:** `<h1>` to `<h6>` (<h1> is the most important, <h6> the least).
+* **Headings:** `<h1>` to `<h6>` (<h1> is the most important, <h6> the least).
+
     ```html
     <h1>Main Title</h1>
     <h2>Section Title</h2>
     <h3>Subsection Title</h3>
     ```
-    Best Practices:
-    - Use only one `<h1>` per page
-    - Maintain proper heading hierarchy
-    - Don't skip heading levels (e.g., don't go from h2 to h4)
 
-*   **Paragraphs:** `<p>`
+    Best Practices:
+  * Use only one `<h1>` per page
+  * Maintain proper heading hierarchy
+  * Don't skip heading levels (e.g., don't go from h2 to h4)
+
+* **Paragraphs:** `<p>`
+
     ```html
     <p>This is a paragraph of text. It can contain <strong>bold text</strong>, 
     <em>italic text</em>, and <a href="#">links</a>.</p>
     ```
-    Common Pitfalls:
-    - Avoid using `<br>` tags for spacing (use CSS margin/padding instead)
-    - Don't use empty paragraphs for spacing
 
-*   **Links:** `<a>` (anchor)
+    Common Pitfalls:
+  * Avoid using `<br>` tags for spacing (use CSS margin/padding instead)
+  * Don't use empty paragraphs for spacing
+
+* **Links:** `<a>` (anchor)
+
     ```html
     <!-- Basic link -->
     <a href="https://www.example.com">Visit Example</a>
@@ -3364,13 +3523,15 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     <!-- Telephone link -->
     <a href="tel:+1234567890">Call Us</a>
     ```
-    Key Attributes:
-    - `href`: Specifies the URL or resource
-    - `target`: Controls where link opens (_blank, _self, _parent, _top)
-    - `rel`: Specifies relationship (important for security with target="_blank")
-    - `download`: Forces download of linked resource
 
-*   **Images:** `<img>`
+    Key Attributes:
+  * `href`: Specifies the URL or resource
+  * `target`: Controls where link opens (_blank,_self, _parent,_top)
+  * `rel`: Specifies relationship (important for security with target="_blank")
+  * `download`: Forces download of linked resource
+
+* **Images:** `<img>`
+
     ```html
     <!-- Basic image -->
     <img src="images/logo.png" alt="Company Logo">
@@ -3389,15 +3550,16 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
          alt="Description"
          class="lazyload">
     ```
+
     Best Practices:
-    - Always include meaningful alt text
-    - Use srcset for responsive images
-    - Implement lazy loading for better performance
-    - Optimize image file sizes
-*   **Lists:**
-    *   **Unordered Lists (`<ul>`):** Bulleted lists.
-    *   **Ordered Lists (`<ol>`):** Numbered lists.
-    *   **List Items (`<li>`):** Items within a list.
+  * Always include meaningful alt text
+  * Use srcset for responsive images
+  * Implement lazy loading for better performance
+  * Optimize image file sizes
+* **Lists:**
+  * **Unordered Lists (`<ul>`):** Bulleted lists.
+  * **Ordered Lists (`<ol>`):** Numbered lists.
+  * **List Items (`<li>`):** Items within a list.
 
     ```html
     <ul>
@@ -3410,28 +3572,30 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
         <li>Second step</li>
     </ol>
     ```
-*   **Divisions (`<div>`):** Generic containers used to group other elements for styling or structural purposes.
-*   **Spans (`<span>`):** Inline containers used to apply styles to a specific portion of text within a larger element.
+
+* **Divisions (`<div>`):** Generic containers used to group other elements for styling or structural purposes.
+* **Spans (`<span>`):** Inline containers used to apply styles to a specific portion of text within a larger element.
 
 **Module 2: Introduction to CSS**
 
 **2.1 What is CSS?**
 
-*   **CSS (Cascading Style Sheets):** The language used to style the appearance of web pages.
-*   **Separation of Concerns:** CSS separates the styling from the HTML structure, making code cleaner and easier to maintain.
-*   **Selectors, Properties, and Values:**
-    *   **Selectors:** Target specific HTML elements to style.
-    *   **Properties:** The aspects of an element you want to style (e.g., `color`, `font-size`, `background-color`).
-    *   **Values:** The specific settings for a property (e.g., `red`, `16px`, `#f0f0f0`).
+* **CSS (Cascading Style Sheets):** The language used to style the appearance of web pages.
+* **Separation of Concerns:** CSS separates the styling from the HTML structure, making code cleaner and easier to maintain.
+* **Selectors, Properties, and Values:**
+  * **Selectors:** Target specific HTML elements to style.
+  * **Properties:** The aspects of an element you want to style (e.g., `color`, `font-size`, `background-color`).
+  * **Values:** The specific settings for a property (e.g., `red`, `16px`, `#f0f0f0`).
 
 **2.2 Ways to Add CSS**
 
-*   **Inline CSS:** Applied directly within an HTML tag using the `style` attribute (generally discouraged for maintainability).
+* **Inline CSS:** Applied directly within an HTML tag using the `style` attribute (generally discouraged for maintainability).
 
     ```html
     <p style="color: blue; font-size: 18px;">This is a blue paragraph.</p>
     ```
-*   **Internal CSS:** Placed within a `<style>` tag in the `<head>` of the HTML document (useful for styles specific to a single page).
+
+* **Internal CSS:** Placed within a `<style>` tag in the `<head>` of the HTML document (useful for styles specific to a single page).
 
     ```html
     <head>
@@ -3443,7 +3607,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
         </style>
     </head>
     ```
-*   **External CSS:** Stored in a separate `.css` file and linked to the HTML using the `<link>` tag (best practice for most cases).
+
+* **External CSS:** Stored in a separate `.css` file and linked to the HTML using the `<link>` tag (best practice for most cases).
 
     ```html
     <!-- In your HTML file (index.html) -->
@@ -3462,7 +3627,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
 
 **2.3 CSS Selectors**
 
-*   **Element Selector:** Targets elements by their tag name.
+* **Element Selector:** Targets elements by their tag name.
+
     ```css
     /* Style all paragraphs */
     p {
@@ -3478,7 +3644,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     }
     ```
 
-*   **ID Selector:** Targets a single element with a specific `id` attribute.
+* **ID Selector:** Targets a single element with a specific `id` attribute.
+
     ```css
     #main-header {
         background-color: #0077cc;
@@ -3495,7 +3662,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     }
     ```
 
-*   **Class Selector:** Targets elements with a specific `class` attribute.
+* **Class Selector:** Targets elements with a specific `class` attribute.
+
     ```css
     .btn {
         display: inline-block;
@@ -3520,7 +3688,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     }
     ```
 
-*   **Attribute Selectors:** Target elements based on attributes.
+* **Attribute Selectors:** Target elements based on attributes.
+
     ```css
     /* Links with target="_blank" */
     a[target="_blank"] {
@@ -3540,7 +3709,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     }
     ```
 
-*   **Pseudo-classes:** Target elements in specific states.
+* **Pseudo-classes:** Target elements in specific states.
+
     ```css
     /* Style visited links */
     a:visited {
@@ -3564,7 +3734,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     }
     ```
 
-*   **Combinators:** Combine selectors for more specific targeting.
+* **Combinators:** Combine selectors for more specific targeting.
+
     ```css
     /* Direct child selector */
     nav > ul {
@@ -3588,7 +3759,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     }
     ```
 
-*   **Universal Selector:** Selects all elements.
+* **Universal Selector:** Selects all elements.
+
     ```css
     * {
         box-sizing: border-box;
@@ -3598,80 +3770,100 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     ```
 
 Best Practices:
-- Use classes for reusable styles
-- Avoid overusing ID selectors
-- Keep specificity low when possible
-- Use meaningful class names (BEM methodology recommended)
-- Avoid inline styles
-- Use shorthand properties when appropriate
+* Use classes for reusable styles
+* Avoid overusing ID selectors
+* Keep specificity low when possible
+* Use meaningful class names (BEM methodology recommended)
+* Avoid inline styles
+* Use shorthand properties when appropriate
 
 **2.4 Common CSS Properties**
 
-*   **Text Styling:**
-    *   `color`: Sets the text color.
+* **Text Styling:**
+  * `color`: Sets the text color.
+
       ```css
       h1 {
         color: #333; /* Dark gray */
       }
       ```
-    *   `font-family`: Sets the font.
+
+  * `font-family`: Sets the font.
+
       ```css
       body {
         font-family: 'Arial', sans-serif;
       }
       ```
-    *   `font-size`: Sets the text size.
+
+  * `font-size`: Sets the text size.
+
       ```css
       p {
         font-size: 1rem; /* Responsive sizing */
       }
       ```
-    *   `font-weight`: Sets text boldness (e.g., `normal`, `bold`).
+
+  * `font-weight`: Sets text boldness (e.g., `normal`, `bold`).
+
       ```css
       strong {
         font-weight: bold;
       }
       ```
-    *   `text-align`: Aligns text (e.g., `left`, `center`, `right`).
+
+  * `text-align`: Aligns text (e.g., `left`, `center`, `right`).
+
       ```css
       .center {
         text-align: center;
       }
       ```
-    *   `text-decoration`: Adds decorations (e.g., `underline`, `line-through`).
+
+  * `text-decoration`: Adds decorations (e.g., `underline`, `line-through`).
+
       ```css
       a {
         text-decoration: none; /* Remove underline */
       }
       ```
 
-*   **Box Model:** (We'll cover this in more detail later)
-    *   `width`: Sets the width of an element.
+* **Box Model:** (We'll cover this in more detail later)
+  * `width`: Sets the width of an element.
+
       ```css
       .container {
         width: 80%;
         max-width: 1200px;
       }
       ```
-    *   `height`: Sets the height of an element.
+
+  * `height`: Sets the height of an element.
+
       ```css
       .hero {
         height: 100vh;
       }
       ```
-    *   `margin`: Sets the space outside the element's border.
+
+  * `margin`: Sets the space outside the element's border.
+
       ```css
       .section {
         margin: 2rem 0;
       }
       ```
-    *   `padding`: Sets the space inside the element's border.
+
+  * `padding`: Sets the space inside the element's border.
+
       ```css
       .card {
         padding: 1.5rem;
       }
       ```
-    *   `border`: Sets a border around the element.
+
+  * `border`: Sets a border around the element.
+
       ```css
       .button {
         border: 2px solid #0077cc;
@@ -3679,27 +3871,34 @@ Best Practices:
       }
       ```
 
-*   **Background:**
-    *   `background-color`: Sets the background color.
+* **Background:**
+  * `background-color`: Sets the background color.
+
       ```css
       header {
         background-color: #f8f9fa;
       }
       ```
-    *   `background-image`: Sets a background image.
+
+  * `background-image`: Sets a background image.
+
       ```css
       .hero {
         background-image: url('hero.jpg');
       }
       ```
-    *   `background-repeat`: Controls how a background image repeats.
+
+  * `background-repeat`: Controls how a background image repeats.
+
       ```css
       .pattern {
         background-image: url('pattern.png');
         background-repeat: repeat;
       }
       ```
-    *   `background-position`: Controls the position of a background image.
+
+  * `background-position`: Controls the position of a background image.
+
       ```css
       .hero {
         background-position: center top;
@@ -3878,14 +4077,15 @@ textarea:invalid:not(:placeholder-shown) + .error-message {
 ```
 
 **Key Features:**
-- **Accessibility:** Proper label associations, focus states, and ARIA attributes
-- **Validation:** HTML5 validation with custom error messages
-- **Responsive Design:** Flexbox layout for radio/checkbox groups
-- **User Experience:** Clear error states and helpful placeholders
-- **Security:** `novalidate` attribute for custom validation
-- **Styling:** Consistent design with focus states and hover effects
+* **Accessibility:** Proper label associations, focus states, and ARIA attributes
+* **Validation:** HTML5 validation with custom error messages
+* **Responsive Design:** Flexbox layout for radio/checkbox groups
+* **User Experience:** Clear error states and helpful placeholders
+* **Security:** `novalidate` attribute for custom validation
+* **Styling:** Consistent design with focus states and hover effects
 
 **Best Practices:**
+
 1. Always use `<label>` elements with `for` attributes
 2. Use proper input types for better mobile experience
 3. Implement client-side validation with HTML5 attributes
@@ -4038,13 +4238,14 @@ Tables are used to display tabular data in a structured format. Here's a compreh
 ```
 
 **Key Features:**
-- **Accessibility:** Proper use of scope attributes, ARIA roles, and screen reader-only text
-- **Responsive Design:** Mobile-friendly layout with horizontal scrolling
-- **Styling:** Clean, modern design with hover effects
-- **Structure:** Includes header, body, and footer sections
-- **Semantic HTML:** Proper use of table elements and attributes
+* **Accessibility:** Proper use of scope attributes, ARIA roles, and screen reader-only text
+* **Responsive Design:** Mobile-friendly layout with horizontal scrolling
+* **Styling:** Clean, modern design with hover effects
+* **Structure:** Includes header, body, and footer sections
+* **Semantic HTML:** Proper use of table elements and attributes
 
 **Best Practices:**
+
 1. Use `<th>` elements with `scope` attributes for accessibility
 2. Include a `<caption>` for table context
 3. Use `<thead>`, `<tbody>`, and `<tfoot>` for better structure
@@ -4055,7 +4256,9 @@ Tables are used to display tabular data in a structured format. Here's a compreh
 8. Implement sorting and filtering with JavaScript (not shown in this example)
 
 **Advanced Table Features:**
+
 1. **Sortable Columns:**
+
 ```javascript
 // JavaScript for sortable columns
 document.querySelectorAll('.data-table th').forEach(header => {
@@ -4076,6 +4279,7 @@ document.querySelectorAll('.data-table th').forEach(header => {
 ```
 
 2. **Pagination:**
+
 ```html
 <div class="table-pagination">
   <button class="pagination-btn" disabled>Previous</button>
@@ -4085,6 +4289,7 @@ document.querySelectorAll('.data-table th').forEach(header => {
 ```
 
 3. **Filtering:**
+
 ```html
 <div class="table-filters">
   <input type="text" class="filter-input" placeholder="Search...">
@@ -4097,6 +4302,7 @@ document.querySelectorAll('.data-table th').forEach(header => {
 ```
 
 4. **Export Options:**
+
 ```html
 <div class="table-export">
   <button class="export-btn">Export as CSV</button>
@@ -4105,37 +4311,39 @@ document.querySelectorAll('.data-table th').forEach(header => {
 ```
 
 **Accessibility Considerations:**
-- Use proper ARIA roles and attributes
-- Ensure keyboard navigation works
-- Provide text alternatives for visual elements
-- Use sufficient color contrast
-- Test with screen readers
-- Implement proper focus management
+* Use proper ARIA roles and attributes
+* Ensure keyboard navigation works
+* Provide text alternatives for visual elements
+* Use sufficient color contrast
+* Test with screen readers
+* Implement proper focus management
 
 **Performance Considerations:**
-- Virtualize large tables
-- Implement lazy loading for table data
-- Use efficient sorting algorithms
-- Optimize table rendering
-- Consider server-side pagination for large datasets
+* Virtualize large tables
+* Implement lazy loading for table data
+* Use efficient sorting algorithms
+* Optimize table rendering
+* Consider server-side pagination for large datasets
 
 **When to Use Tables:**
-- Displaying tabular data
-- Financial reports
-- Data comparisons
-- Statistical information
-- Product catalogs
-- Timetables and schedules
+* Displaying tabular data
+* Financial reports
+* Data comparisons
+* Statistical information
+* Product catalogs
+* Timetables and schedules
 
 **When Not to Use Tables:**
-- Page layout (use CSS Grid or Flexbox instead)
-- Non-tabular content
-- Visual design elements
-- Navigation menus
-- Image galleries
+* Page layout (use CSS Grid or Flexbox instead)
+* Non-tabular content
+* Visual design elements
+* Navigation menus
+* Image galleries
 
 **Modern Table Alternatives:**
+
 1. **CSS Grid Layout:**
+
 ```css
 .grid-table {
   display: grid;
@@ -4150,6 +4358,7 @@ document.querySelectorAll('.data-table th').forEach(header => {
 ```
 
 2. **Flexbox Layout:**
+
 ```css
 .flex-table {
   display: flex;
@@ -4168,6 +4377,7 @@ document.querySelectorAll('.data-table th').forEach(header => {
 ```
 
 3. **Component-Based Tables:**
+
 ```javascript
 // React example
 function DataTable({ data }) {
@@ -4432,57 +4642,57 @@ figcaption {
 **Key Semantic Elements:**
 
 1. **`<header>`**
-   - Represents introductory content
-   - Can be used at page level or within sections/articles
-   - Typically contains headings, logos, navigation
+   * Represents introductory content
+   * Can be used at page level or within sections/articles
+   * Typically contains headings, logos, navigation
 
 2. **`<nav>`**
-   - Defines navigation sections
-   - Should contain major navigation links
-   - Use aria-label for multiple nav elements
+   * Defines navigation sections
+   * Should contain major navigation links
+   * Use aria-label for multiple nav elements
 
 3. **`<main>`**
-   - Contains the primary content
-   - Should be unique per page
-   - Helps screen readers identify main content
+   * Contains the primary content
+   * Should be unique per page
+   * Helps screen readers identify main content
 
 4. **`<article>`**
-   - Represents self-contained content
-   - Should make sense independently
-   - Examples: blog posts, news articles, forum posts
+   * Represents self-contained content
+   * Should make sense independently
+   * Examples: blog posts, news articles, forum posts
 
 5. **`<section>`**
-   - Groups thematically related content
-   - Should have a heading (h2-h6)
-   - Use for distinct content areas
+   * Groups thematically related content
+   * Should have a heading (h2-h6)
+   * Use for distinct content areas
 
 6. **`<aside>`**
-   - Contains tangentially related content
-   - Often used for sidebars, pull quotes
-   - Can be nested within articles
+   * Contains tangentially related content
+   * Often used for sidebars, pull quotes
+   * Can be nested within articles
 
 7. **`<footer>`**
-   - Represents footer content
-   - Can contain copyright, contact info, links
-   - Can be used at page or section level
+   * Represents footer content
+   * Can contain copyright, contact info, links
+   * Can be used at page or section level
 
 **Additional Semantic Elements:**
 
 1. **`<figure>` and `<figcaption>`**
-   - For images, diagrams, code snippets
-   - Figcaption provides caption/description
+   * For images, diagrams, code snippets
+   * Figcaption provides caption/description
 
 2. **`<time>`**
-   - Represents dates/times
-   - Use datetime attribute for machine-readable format
+   * Represents dates/times
+   * Use datetime attribute for machine-readable format
 
 3. **`<mark>`**
-   - Highlights text for reference
-   - Useful for search results
+   * Highlights text for reference
+   * Useful for search results
 
 4. **`<details>` and `<summary>`**
-   - Creates expandable/collapsible content
-   - Good for FAQs, additional info
+   * Creates expandable/collapsible content
+   * Good for FAQs, additional info
 
 **Best Practices:**
 
@@ -4531,6 +4741,7 @@ figcaption {
 **Advanced Techniques:**
 
 1. **Microdata:**
+
 ```html
 <div itemscope itemtype="http://schema.org/Person">
   <span itemprop="name">John Doe</span>
@@ -4539,6 +4750,7 @@ figcaption {
 ```
 
 2. **ARIA Landmarks:**
+
 ```html
 <nav role="navigation">
   <!-- Navigation content -->
@@ -4550,6 +4762,7 @@ figcaption {
 ```
 
 3. **Accessible Forms:**
+
 ```html
 <form>
   <label for="name">Name:</label>
@@ -4568,6 +4781,7 @@ figcaption {
 ```
 
 4. **Responsive Images:**
+
 ```html
 <picture>
   <source media="(min-width: 1200px)" srcset="large.jpg">
@@ -4619,14 +4833,15 @@ The box model is a fundamental concept that describes how elements are rendered 
 ```
 
 * **Content Box**: The innermost area containing the actual content
-  - Controlled by width/height properties
-  - Default background color is transparent
-  - Text and child elements are rendered here
+  * Controlled by width/height properties
+  * Default background color is transparent
+  * Text and child elements are rendered here
 
 * **Padding**: Space between content and border
-  - Adds to element's total size
-  - Inherits background color
-  - Useful for internal spacing
+  * Adds to element's total size
+  * Inherits background color
+  * Useful for internal spacing
+
   ```css
   /* Individual sides */
   padding-top: 10px;
@@ -4641,8 +4856,9 @@ The box model is a fundamental concept that describes how elements are rendered 
   ```
 
 * **Border**: Line surrounding padding and content
-  - Adds to element's total size
-  - Can have different styles, widths, and colors
+  * Adds to element's total size
+  * Can have different styles, widths, and colors
+
   ```css
   /* Individual properties */
   border-width: 2px;
@@ -4657,9 +4873,10 @@ The box model is a fundamental concept that describes how elements are rendered 
   ```
 
 * **Margin**: Space outside the border
-  - Creates space between elements
-  - Transparent (doesn't inherit background)
-  - Can collapse with adjacent margins
+  * Creates space between elements
+  * Transparent (doesn't inherit background)
+  * Can collapse with adjacent margins
+
   ```css
   /* Individual sides */
   margin-top: 20px;
@@ -4716,11 +4933,11 @@ By default, padding and border are added to the element's width/height. The `box
 ```
 
 Best Practices:
-- Use `box-sizing: border-box` for more predictable layouts
-- Use margin for spacing between elements
-- Use padding for internal spacing within elements
-- Be consistent with spacing values (e.g., use multiples of 4px or 8px)
-- Use CSS variables for consistent spacing values
+* Use `box-sizing: border-box` for more predictable layouts
+* Use margin for spacing between elements
+* Use padding for internal spacing within elements
+* Be consistent with spacing values (e.g., use multiples of 4px or 8px)
+* Use CSS variables for consistent spacing values
 
 **4.2 Display Property**
 
@@ -4772,33 +4989,33 @@ The `display` property is one of the most important CSS properties, controlling 
 **Display Property Values:**
 
 * **`block`**
-  - Takes full available width (unless width is specified)
-  - Starts on a new line
-  - Can set width, height, margin, padding
-  - Examples: `<div>`, `<p>`, `<h1>`-`<h6>`, `<form>`, `<ul>`, `<ol>`, `<li>`
-  - Common uses: Page sections, containers, structural elements
+  * Takes full available width (unless width is specified)
+  * Starts on a new line
+  * Can set width, height, margin, padding
+  * Examples: `<div>`, `<p>`, `<h1>`-`<h6>`, `<form>`, `<ul>`, `<ol>`, `<li>`
+  * Common uses: Page sections, containers, structural elements
 
 * **`inline`**
-  - Takes only as much width as needed
-  - Flows with text content
-  - Cannot set width/height
-  - Vertical padding/margin doesn't affect surrounding elements
-  - Examples: `<span>`, `<a>`, `<img>`, `<strong>`, `<em>`
-  - Common uses: Text formatting, inline elements
+  * Takes only as much width as needed
+  * Flows with text content
+  * Cannot set width/height
+  * Vertical padding/margin doesn't affect surrounding elements
+  * Examples: `<span>`, `<a>`, `<img>`, `<strong>`, `<em>`
+  * Common uses: Text formatting, inline elements
 
 * **`inline-block`**
-  - Combines features of block and inline
-  - Flows like inline elements
-  - Can set width/height like block elements
-  - Respects vertical margin/padding
-  - Examples: Custom buttons, navigation items
-  - Common uses: Creating grid-like layouts without flex/grid
+  * Combines features of block and inline
+  * Flows like inline elements
+  * Can set width/height like block elements
+  * Respects vertical margin/padding
+  * Examples: Custom buttons, navigation items
+  * Common uses: Creating grid-like layouts without flex/grid
 
 * **`none`**
-  - Completely removes element from document flow
-  - Takes up no space
-  - Not accessible to screen readers
-  - Alternative: Use `visibility: hidden` to hide while maintaining space
+  * Completely removes element from document flow
+  * Takes up no space
+  * Not accessible to screen readers
+  * Alternative: Use `visibility: hidden` to hide while maintaining space
 
 **Display Property Best Practices:**
 
@@ -4806,6 +5023,7 @@ The `display` property is one of the most important CSS properties, controlling 
 2. Prefer `inline-block` over `float` for simple layouts
 3. Use `display: none` judiciously - consider accessibility implications
 4. Combine with other properties for complex layouts:
+
    ```css
    .menu-item {
      display: inline-block;
@@ -4817,11 +5035,13 @@ The `display` property is one of the most important CSS properties, controlling 
      border-radius: 4px;
    }
    ```
+
 5. Use CSS Grid or Flexbox for complex layouts instead of relying solely on display properties
 
 **Common Display Patterns:**
 
 1. Centering Elements:
+
 ```css
 /* Horizontally center block element */
 .block-center {
@@ -4840,6 +5060,7 @@ The `display` property is one of the most important CSS properties, controlling 
 ```
 
 2. Responsive Navigation:
+
 ```css
 /* Mobile first approach */
 .nav-item {
@@ -4855,6 +5076,7 @@ The `display` property is one of the most important CSS properties, controlling 
 ```
 
 3. Image Gallery:
+
 ```css
 .gallery-item {
   display: inline-block;
@@ -4871,6 +5093,7 @@ The `display` property is one of the most important CSS properties, controlling 
 ```
 
 4. Toggle Visibility:
+
 ```css
 /* JavaScript toggle class */
 .hidden {
@@ -4883,9 +5106,9 @@ The `display` property is one of the most important CSS properties, controlling 
 ```
 
 **Accessibility Considerations:**
-- Use `display: none` carefully as it removes elements from accessibility tree
-- Consider `visibility: hidden` or `opacity: 0` for hiding elements while maintaining accessibility
-- Ensure proper focus management when toggling visibility
+* Use `display: none` carefully as it removes elements from accessibility tree
+* Consider `visibility: hidden` or `opacity: 0` for hiding elements while maintaining accessibility
+* Ensure proper focus management when toggling visibility
 
 **4.3 Positioning**
 
@@ -4964,53 +5187,53 @@ The `position` property is crucial for controlling element placement and creatin
 **Position Property Values:**
 
 * **`static` (Default)**
-  - Elements follow normal document flow
-  - Ignores top/right/bottom/left properties
-  - Cannot use z-index
-  - Use case: Default behavior for most elements
+  * Elements follow normal document flow
+  * Ignores top/right/bottom/left properties
+  * Cannot use z-index
+  * Use case: Default behavior for most elements
 
 * **`relative`**
-  - Positioned relative to its normal position
-  - Can use top/right/bottom/left to offset
-  - Creates new stacking context (z-index works)
-  - Original space in document flow is preserved
-  - Use cases:
-    - Minor adjustments to element position
-    - Creating reference point for absolutely positioned children
-    - Overlapping elements with z-index
+  * Positioned relative to its normal position
+  * Can use top/right/bottom/left to offset
+  * Creates new stacking context (z-index works)
+  * Original space in document flow is preserved
+  * Use cases:
+    * Minor adjustments to element position
+    * Creating reference point for absolutely positioned children
+    * Overlapping elements with z-index
 
 * **`absolute`**
-  - Removed from normal document flow
-  - Positioned relative to nearest positioned ancestor
-  - If no positioned ancestor, uses initial containing block (usually viewport)
-  - Can use top/right/bottom/left for precise positioning
-  - Use cases:
-    - Tooltips and dropdown menus
-    - Modal dialogs
-    - Custom form controls
-    - Overlays and popups
+  * Removed from normal document flow
+  * Positioned relative to nearest positioned ancestor
+  * If no positioned ancestor, uses initial containing block (usually viewport)
+  * Can use top/right/bottom/left for precise positioning
+  * Use cases:
+    * Tooltips and dropdown menus
+    * Modal dialogs
+    * Custom form controls
+    * Overlays and popups
 
 * **`fixed`**
-  - Removed from normal document flow
-  - Positioned relative to viewport
-  - Stays fixed during scrolling
-  - Can use top/right/bottom/left for positioning
-  - Use cases:
-    - Fixed headers/footers
-    - Persistent navigation
-    - Chat widgets
-    - Back-to-top buttons
+  * Removed from normal document flow
+  * Positioned relative to viewport
+  * Stays fixed during scrolling
+  * Can use top/right/bottom/left for positioning
+  * Use cases:
+    * Fixed headers/footers
+    * Persistent navigation
+    * Chat widgets
+    * Back-to-top buttons
 
 * **`sticky`**
-  - Hybrid of relative and fixed
-  - Treated as relative until crossing specified threshold
-  - Then becomes fixed within its container
-  - Requires at least one positioning property (top/right/bottom/left)
-  - Use cases:
-    - Sticky table headers
-    - Sticky sidebars
-    - Sticky navigation
-    - Section headers in long pages
+  * Hybrid of relative and fixed
+  * Treated as relative until crossing specified threshold
+  * Then becomes fixed within its container
+  * Requires at least one positioning property (top/right/bottom/left)
+  * Use cases:
+    * Sticky table headers
+    * Sticky sidebars
+    * Sticky navigation
+    * Section headers in long pages
 
 **Positioning Best Practices:**
 
@@ -5026,6 +5249,7 @@ The `position` property is crucial for controlling element placement and creatin
 **Common Positioning Patterns:**
 
 1. Centering Elements:
+
 ```css
 /* Absolute Centering */
 .center-absolute {
@@ -5045,6 +5269,7 @@ The `position` property is crucial for controlling element placement and creatin
 ```
 
 2. Sticky Header:
+
 ```css
 .header {
   position: sticky;
@@ -5056,6 +5281,7 @@ The `position` property is crucial for controlling element placement and creatin
 ```
 
 3. Overlay Modal:
+
 ```css
 .modal-overlay {
   position: fixed;
@@ -5081,6 +5307,7 @@ The `position` property is crucial for controlling element placement and creatin
 ```
 
 4. Tooltip:
+
 ```css
 .tooltip-container {
   position: relative;
@@ -5106,17 +5333,17 @@ The `position` property is crucial for controlling element placement and creatin
 ```
 
 **Accessibility Considerations:**
-- Ensure positioned elements maintain proper focus order
-- Use ARIA attributes for modals and tooltips
-- Consider screen reader users when using absolute/fixed positioning
-- Test with keyboard navigation
-- Provide alternative ways to access content that might be obscured by fixed elements
+* Ensure positioned elements maintain proper focus order
+* Use ARIA attributes for modals and tooltips
+* Consider screen reader users when using absolute/fixed positioning
+* Test with keyboard navigation
+* Provide alternative ways to access content that might be obscured by fixed elements
 
 **Performance Considerations:**
-- Fixed and sticky elements can cause repaints during scrolling
-- Use transform instead of top/left for animations
-- Avoid excessive use of z-index
-- Use will-change property for elements that will be animated
+* Fixed and sticky elements can cause repaints during scrolling
+* Use transform instead of top/left for animations
+* Avoid excessive use of z-index
+* Use will-change property for elements that will be animated
 
 **4.4 Floats**
 
@@ -5175,18 +5402,18 @@ The `float` property was traditionally used for page layouts and wrapping text a
 **Float Property Values:**
 
 * **`left`**
-  - Floats element to left of container
-  - Content flows around right side
-  - Common uses: Image/text wrapping, legacy layouts
+  * Floats element to left of container
+  * Content flows around right side
+  * Common uses: Image/text wrapping, legacy layouts
 
 * **`right`**
-  - Floats element to right of container
-  - Content flows around left side
-  - Common uses: Pull quotes, sidebars
+  * Floats element to right of container
+  * Content flows around left side
+  * Common uses: Pull quotes, sidebars
 
 * **`none`** (default)
-  - Element remains in normal flow
-  - Useful for overriding float behavior
+  * Element remains in normal flow
+  * Useful for overriding float behavior
 
 **Float Behavior Characteristics:**
 
@@ -5199,6 +5426,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 **Modern Float Techniques:**
 
 1. Shape Wrapping:
+
 ```css
 .image-wrap {
   float: left;
@@ -5210,6 +5438,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 2. Text Wrapping:
+
 ```css
 .text-wrap {
   float: right;
@@ -5220,6 +5449,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 3. Drop Caps:
+
 ```css
 .drop-cap::first-letter {
   float: left;
@@ -5232,6 +5462,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 **Clearing Floats:**
 
 1. Clearfix Technique:
+
 ```css
 .clearfix::after {
   content: "";
@@ -5241,6 +5472,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 2. Modern Flow-Root:
+
 ```css
 .container {
   display: flow-root; /* Better alternative to clearfix */
@@ -5248,6 +5480,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 3. Clear Property:
+
 ```css
 .clear {
   clear: both;
@@ -5268,6 +5501,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 **Common Float Patterns:**
 
 1. Image Gallery:
+
 ```css
 .gallery-item {
   float: left;
@@ -5283,6 +5517,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 2. Pull Quotes:
+
 ```css
 .pull-quote {
   float: right;
@@ -5295,6 +5530,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 3. Sidebar Layout:
+
 ```css
 .sidebar {
   float: left;
@@ -5316,18 +5552,18 @@ The `float` property was traditionally used for page layouts and wrapping text a
 
 **Accessibility Considerations:**
 
-- Ensure content order makes sense when floated
-- Use proper alt text for floated images
-- Test with screen readers
-- Consider how floated elements affect tab order
-- Provide clear visual separation for floated content
+* Ensure content order makes sense when floated
+* Use proper alt text for floated images
+* Test with screen readers
+* Consider how floated elements affect tab order
+* Provide clear visual separation for floated content
 
 **Performance Considerations:**
 
-- Excessive floats can cause layout thrashing
-- Use will-change property for animated floats
-- Minimize reflows by batching float changes
-- Consider using CSS containment for complex float layouts
+* Excessive floats can cause layout thrashing
+* Use will-change property for animated floats
+* Minimize reflows by batching float changes
+* Consider using CSS containment for complex float layouts
 
 **When to Use Floats vs. Modern Layout Methods:**
 
@@ -5374,6 +5610,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 **Modern Alternatives:**
 
 1. Flexbox:
+
 ```css
 .container {
   display: flex;
@@ -5387,6 +5624,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 2. Grid:
+
 ```css
 .container {
   display: grid;
@@ -5434,13 +5672,14 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
 **Flexbox Container Properties:**
 
 1. **display: flex**
-   - Enables flexbox layout
-   - Creates flex formatting context
-   - Direct children become flex items
+   * Enables flexbox layout
+   * Creates flex formatting context
+   * Direct children become flex items
 
 2. **flex-direction**
-   - Defines main axis direction
-   - Values: row (default), row-reverse, column, column-reverse
+   * Defines main axis direction
+   * Values: row (default), row-reverse, column, column-reverse
+
    ```css
    .container {
      flex-direction: column; /* Stack items vertically */
@@ -5448,8 +5687,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
    ```
 
 3. **justify-content**
-   - Aligns items along main axis
-   - Values: flex-start, flex-end, center, space-between, space-around, space-evenly
+   * Aligns items along main axis
+   * Values: flex-start, flex-end, center, space-between, space-around, space-evenly
+
    ```css
    .container {
      justify-content: space-between; /* Distribute items with equal space between */
@@ -5457,8 +5697,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
    ```
 
 4. **align-items**
-   - Aligns items along cross axis
-   - Values: flex-start, flex-end, center, stretch, baseline
+   * Aligns items along cross axis
+   * Values: flex-start, flex-end, center, stretch, baseline
+
    ```css
    .container {
      align-items: stretch; /* Stretch items to fill container */
@@ -5466,8 +5707,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
    ```
 
 5. **flex-wrap**
-   - Controls wrapping behavior
-   - Values: nowrap (default), wrap, wrap-reverse
+   * Controls wrapping behavior
+   * Values: nowrap (default), wrap, wrap-reverse
+
    ```css
    .container {
      flex-wrap: wrap; /* Allow items to wrap to new line */
@@ -5475,8 +5717,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
    ```
 
 6. **gap**
-   - Sets spacing between items
-   - Values: length or percentage
+   * Sets spacing between items
+   * Values: length or percentage
+
    ```css
    .container {
      gap: 20px; /* Space between items */
@@ -5486,8 +5729,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
 **Flexbox Item Properties:**
 
 1. **flex**
-   - Shorthand for flex-grow, flex-shrink, and flex-basis
-   - Default: 0 1 auto
+   * Shorthand for flex-grow, flex-shrink, and flex-basis
+   * Default: 0 1 auto
+
    ```css
    .item {
      flex: 1 1 200px; /* Grow, shrink, basis */
@@ -5495,8 +5739,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
    ```
 
 2. **align-self**
-   - Overrides align-items for individual items
-   - Values: auto, flex-start, flex-end, center, stretch, baseline
+   * Overrides align-items for individual items
+   * Values: auto, flex-start, flex-end, center, stretch, baseline
+
    ```css
    .special-item {
      align-self: flex-end; /* Align this item differently */
@@ -5504,8 +5749,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
    ```
 
 3. **order**
-   - Controls display order of items
-   - Default: 0
+   * Controls display order of items
+   * Default: 0
+
    ```css
    .first-item {
      order: -1; /* Move to start */
@@ -5515,6 +5761,7 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
 **Common Flexbox Patterns:**
 
 1. **Responsive Navigation:**
+
 ```css
 .nav {
   display: flex;
@@ -5529,6 +5776,7 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
 ```
 
 2. **Card Layout:**
+
 ```css
 .card-container {
   display: flex;
@@ -5544,6 +5792,7 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
 ```
 
 3. **Sticky Footer:**
+
 ```css
 body {
   display: flex;
@@ -5561,6 +5810,7 @@ footer {
 ```
 
 4. **Centering Elements:**
+
 ```css
 .center-container {
   display: flex;
@@ -5571,6 +5821,7 @@ footer {
 ```
 
 5. **Equal Height Columns:**
+
 ```css
 .columns {
   display: flex;
@@ -5595,19 +5846,19 @@ footer {
 
 **Accessibility Considerations:**
 
-- Ensure logical source order matches visual order
-- Use proper heading hierarchy
-- Maintain keyboard navigation
-- Consider screen reader users
-- Test with high contrast modes
+* Ensure logical source order matches visual order
+* Use proper heading hierarchy
+* Maintain keyboard navigation
+* Consider screen reader users
+* Test with high contrast modes
 
 **Performance Considerations:**
 
-- Avoid excessive nesting of flex containers
-- Use will-change for animated flex items
-- Minimize layout thrashing
-- Use contain: layout when appropriate
-- Avoid unnecessary reflows
+* Avoid excessive nesting of flex containers
+* Use will-change for animated flex items
+* Minimize layout thrashing
+* Use contain: layout when appropriate
+* Avoid unnecessary reflows
 
 **Flexbox vs. Grid:**
 
@@ -5635,6 +5886,7 @@ footer {
 **Advanced Flexbox Techniques:**
 
 1. **Intrinsic Sizing:**
+
 ```css
 .container {
   display: flex;
@@ -5643,6 +5895,7 @@ footer {
 ```
 
 2. **Aspect Ratio Boxes:**
+
 ```css
 .aspect-box {
   flex: 1;
@@ -5651,6 +5904,7 @@ footer {
 ```
 
 3. **Sticky Sidebar:**
+
 ```css
 .layout {
   display: flex;
@@ -5665,6 +5919,7 @@ footer {
 ```
 
 4. **Responsive Masonry:**
+
 ```css
 .masonry {
   display: flex;
@@ -5678,6 +5933,7 @@ footer {
 ```
 
 5. **Dynamic Grid:**
+
 ```css
 .grid {
   display: flex;
@@ -5766,13 +6022,14 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 **Key Features:**
-- **Grid Areas:** Named template areas for better readability
-- **Responsive Design:** Media queries for mobile layout
-- **Fraction Units:** Flexible sizing with `fr` units
-- **Gap Property:** Consistent spacing between items
-- **Viewport Units:** Full-height layout with `100vh`
+* **Grid Areas:** Named template areas for better readability
+* **Responsive Design:** Media queries for mobile layout
+* **Fraction Units:** Flexible sizing with `fr` units
+* **Gap Property:** Consistent spacing between items
+* **Viewport Units:** Full-height layout with `100vh`
 
 **Best Practices:**
+
 1. Use semantic HTML with grid layout
 2. Name grid areas for better maintainability
 3. Use `fr` units for flexible sizing
@@ -5785,6 +6042,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 **Advanced Grid Techniques:**
 
 1. **Nested Grids:**
+
 ```css
 .main-content {
   display: grid;
@@ -5794,6 +6052,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 2. **Grid Auto-Flow:**
+
 ```css
 .grid-container {
   grid-auto-flow: dense;
@@ -5801,6 +6060,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 3. **Minmax Function:**
+
 ```css
 .grid-container {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -5808,6 +6068,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 4. **Grid Alignment:**
+
 ```css
 .header {
   justify-self: center;
@@ -5816,6 +6077,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 5. **Grid Spanning:**
+
 ```css
 .featured-item {
   grid-column: span 2;
@@ -5824,28 +6086,29 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 **Accessibility Considerations:**
-- Maintain logical source order
-- Ensure proper heading hierarchy
-- Use ARIA landmarks
-- Test with screen readers
-- Ensure keyboard navigation
-- Provide sufficient color contrast
-- Use semantic HTML elements
-- Test with different zoom levels
+* Maintain logical source order
+* Ensure proper heading hierarchy
+* Use ARIA landmarks
+* Test with screen readers
+* Ensure keyboard navigation
+* Provide sufficient color contrast
+* Use semantic HTML elements
+* Test with different zoom levels
 
 **Performance Considerations:**
-- Avoid excessive nesting of grids
-- Use `will-change` for animated grid items
-- Minimize layout thrashing
-- Use CSS containment
-- Optimize grid item rendering
-- Consider using `content-visibility` for large grids
-- Test performance with DevTools
-- Implement lazy loading for grid content
+* Avoid excessive nesting of grids
+* Use `will-change` for animated grid items
+* Minimize layout thrashing
+* Use CSS containment
+* Optimize grid item rendering
+* Consider using `content-visibility` for large grids
+* Test performance with DevTools
+* Implement lazy loading for grid content
 
 **Common Grid Patterns:**
 
 1. **Holy Grail Layout:**
+
 ```css
 .grid-container {
   display: grid;
@@ -5858,6 +6121,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 2. **Masonry Layout:**
+
 ```css
 .grid-container {
   display: grid;
@@ -5872,6 +6136,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 3. **Responsive Image Gallery:**
+
 ```css
 .gallery {
   display: grid;
@@ -5881,6 +6146,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 4. **Dashboard Layout:**
+
 ```css
 .dashboard {
   display: grid;
@@ -5893,6 +6159,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 5. **Card Layout:**
+
 ```css
 .card-grid {
   display: grid;
@@ -5919,13 +6186,14 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 **Grid Container Properties:**
 
 1. **display: grid**
-   - Enables grid layout
-   - Creates grid formatting context
-   - Direct children become grid items
+   * Enables grid layout
+   * Creates grid formatting context
+   * Direct children become grid items
 
 2. **grid-template-columns**
-   - Defines column tracks
-   - Values: length, percentage, fr (fraction), minmax(), repeat()
+   * Defines column tracks
+   * Values: length, percentage, fr (fraction), minmax(), repeat()
+
    ```css
    .container {
      grid-template-columns: 200px 1fr 30%;
@@ -5933,8 +6201,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
    ```
 
 3. **grid-template-rows**
-   - Defines row tracks
-   - Values: same as grid-template-columns
+   * Defines row tracks
+   * Values: same as grid-template-columns
+
    ```css
    .container {
      grid-template-rows: 100px auto 200px;
@@ -5942,8 +6211,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
    ```
 
 4. **gap**
-   - Sets spacing between grid items
-   - Values: length or percentage
+   * Sets spacing between grid items
+   * Values: length or percentage
+
    ```css
    .container {
      gap: 20px;
@@ -5951,8 +6221,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
    ```
 
 5. **grid-template-areas**
-   - Defines named grid areas
-   - Values: strings representing area names
+   * Defines named grid areas
+   * Values: strings representing area names
+
    ```css
    .container {
      grid-template-areas:
@@ -5963,8 +6234,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
    ```
 
 6. **justify-content**
-   - Aligns grid along the inline (row) axis
-   - Values: start, end, center, stretch, space-between, space-around, space-evenly
+   * Aligns grid along the inline (row) axis
+   * Values: start, end, center, stretch, space-between, space-around, space-evenly
+
    ```css
    .container {
      justify-content: center;
@@ -5972,8 +6244,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
    ```
 
 7. **align-content**
-   - Aligns grid along the block (column) axis
-   - Values: same as justify-content
+   * Aligns grid along the block (column) axis
+   * Values: same as justify-content
+
    ```css
    .container {
      align-content: start;
@@ -5983,8 +6256,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 **Grid Item Properties:**
 
 1. **grid-column**
-   - Controls item column placement
-   - Values: line numbers, span
+   * Controls item column placement
+   * Values: line numbers, span
+
    ```css
    .item {
      grid-column: 1 / 3;
@@ -5992,8 +6266,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
    ```
 
 2. **grid-row**
-   - Controls item row placement
-   - Values: same as grid-column
+   * Controls item row placement
+   * Values: same as grid-column
+
    ```css
    .item {
      grid-row: 2 / 4;
@@ -6001,8 +6276,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
    ```
 
 3. **grid-area**
-   - Shorthand for grid-row and grid-column
-   - Can reference named areas
+   * Shorthand for grid-row and grid-column
+   * Can reference named areas
+
    ```css
    .item {
      grid-area: header;
@@ -6010,8 +6286,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
    ```
 
 4. **justify-self**
-   - Aligns item along inline axis
-   - Values: start, end, center, stretch
+   * Aligns item along inline axis
+   * Values: start, end, center, stretch
+
    ```css
    .item {
      justify-self: center;
@@ -6019,8 +6296,9 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
    ```
 
 5. **align-self**
-   - Aligns item along block axis
-   - Values: same as justify-self
+   * Aligns item along block axis
+   * Values: same as justify-self
+
    ```css
    .item {
      align-self: end;
@@ -6030,6 +6308,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 **Common Grid Patterns:**
 
 1. **Responsive Grid:**
+
 ```css
 .grid-container {
   display: grid;
@@ -6039,6 +6318,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 ```
 
 2. **Masonry Layout:**
+
 ```css
 .grid-container {
   display: grid;
@@ -6053,6 +6333,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 ```
 
 3. **Holy Grail Layout:**
+
 ```css
 .container {
   display: grid;
@@ -6066,6 +6347,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 ```
 
 4. **Card Layout:**
+
 ```css
 .card-grid {
   display: grid;
@@ -6075,6 +6357,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 ```
 
 5. **Image Gallery:**
+
 ```css
 .gallery {
   display: grid;
@@ -6096,19 +6379,19 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 
 **Accessibility Considerations:**
 
-- Ensure logical source order matches visual order
-- Use proper heading hierarchy
-- Maintain keyboard navigation
-- Consider screen reader users
-- Test with high contrast modes
+* Ensure logical source order matches visual order
+* Use proper heading hierarchy
+* Maintain keyboard navigation
+* Consider screen reader users
+* Test with high contrast modes
 
 **Performance Considerations:**
 
-- Avoid excessive nesting of grid containers
-- Use will-change for animated grid items
-- Minimize layout thrashing
-- Use contain: layout when appropriate
-- Avoid unnecessary reflows
+* Avoid excessive nesting of grid containers
+* Use will-change for animated grid items
+* Minimize layout thrashing
+* Use contain: layout when appropriate
+* Avoid unnecessary reflows
 
 **Grid vs. Flexbox:**
 
@@ -6136,6 +6419,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 **Advanced Grid Techniques:**
 
 1. **Subgrid:**
+
 ```css
 .grid-container {
   display: grid;
@@ -6150,6 +6434,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 ```
 
 2. **Aspect Ratio Boxes:**
+
 ```css
 .grid-container {
   display: grid;
@@ -6159,6 +6444,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 ```
 
 3. **Sticky Sidebar:**
+
 ```css
 .layout {
   display: grid;
@@ -6173,6 +6459,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 ```
 
 4. **Responsive Masonry:**
+
 ```css
 .masonry {
   display: grid;
@@ -6187,6 +6474,7 @@ CSS Grid is an essential tool for modern web layouts, offering powerful two-dime
 ```
 
 5. **Dynamic Grid:**
+
 ```css
 .grid {
   display: grid;
@@ -6211,15 +6499,17 @@ Media queries are a fundamental tool for creating responsive websites that adapt
 ```
 
 **Media Types:**
-- `all` (default) - All devices
-- `screen` - Computer screens, tablets, smartphones
-- `print` - Printers and print preview
-- `speech` - Screen readers
+* `all` (default) - All devices
+* `screen` - Computer screens, tablets, smartphones
+* `print` - Printers and print preview
+* `speech` - Screen readers
 
 **Common Media Features:**
+
 1. **Width and Height:**
-   - `width`, `min-width`, `max-width`
-   - `height`, `min-height`, `max-height`
+   * `width`, `min-width`, `max-width`
+   * `height`, `min-height`, `max-height`
+
    ```css
    @media (min-width: 768px) {
      .container {
@@ -6229,8 +6519,9 @@ Media queries are a fundamental tool for creating responsive websites that adapt
    ```
 
 2. **Orientation:**
-   - `portrait` - Height > Width
-   - `landscape` - Width > Height
+   * `portrait` - Height > Width
+   * `landscape` - Width > Height
+
    ```css
    @media (orientation: landscape) {
      .header {
@@ -6240,8 +6531,9 @@ Media queries are a fundamental tool for creating responsive websites that adapt
    ```
 
 3. **Resolution:**
-   - `resolution` - Device pixel density
-   - `min-resolution`, `max-resolution`
+   * `resolution` - Device pixel density
+   * `min-resolution`, `max-resolution`
+
    ```css
    @media (min-resolution: 2dppx) {
      .logo {
@@ -6251,7 +6543,8 @@ Media queries are a fundamental tool for creating responsive websites that adapt
    ```
 
 4. **Aspect Ratio:**
-   - `aspect-ratio` - Width to height ratio
+   * `aspect-ratio` - Width to height ratio
+
    ```css
    @media (aspect-ratio: 16/9) {
      .video-container {
@@ -6263,6 +6556,7 @@ Media queries are a fundamental tool for creating responsive websites that adapt
 **Responsive Design Strategies:**
 
 1. **Mobile-First Approach:**
+
 ```css
 /* Base styles for mobile */
 .container {
@@ -6278,6 +6572,7 @@ Media queries are a fundamental tool for creating responsive websites that adapt
 ```
 
 2. **Breakpoint Selection:**
+
 ```css
 /* Common breakpoints */
 @media (min-width: 576px) { /* Small devices */ }
@@ -6287,6 +6582,7 @@ Media queries are a fundamental tool for creating responsive websites that adapt
 ```
 
 3. **Fluid Layouts:**
+
 ```css
 .container {
   width: 100%;
@@ -6296,6 +6592,7 @@ Media queries are a fundamental tool for creating responsive websites that adapt
 ```
 
 4. **Responsive Typography:**
+
 ```css
 html {
   font-size: 16px;
@@ -6309,6 +6606,7 @@ html {
 ```
 
 5. **Responsive Images:**
+
 ```html
 <picture>
   <source media="(min-width: 1200px)" srcset="large.jpg">
@@ -6320,6 +6618,7 @@ html {
 **Advanced Media Query Techniques:**
 
 1. **Combining Conditions:**
+
 ```css
 @media (min-width: 768px) and (max-width: 1199px) {
   /* Styles for tablets */
@@ -6327,6 +6626,7 @@ html {
 ```
 
 2. **Dark Mode Support:**
+
 ```css
 @media (prefers-color-scheme: dark) {
   body {
@@ -6337,6 +6637,7 @@ html {
 ```
 
 3. **Reduced Motion:**
+
 ```css
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -6347,6 +6648,7 @@ html {
 ```
 
 4. **High Contrast Mode:**
+
 ```css
 @media (prefers-contrast: high) {
   .button {
@@ -6356,6 +6658,7 @@ html {
 ```
 
 5. **Print Styles:**
+
 ```css
 @media print {
   .no-print {
@@ -6385,6 +6688,7 @@ html {
 **Common Responsive Patterns:**
 
 1. **Hamburger Menu:**
+
 ```css
 .nav {
   display: none;
@@ -6402,6 +6706,7 @@ html {
 ```
 
 2. **Responsive Grid:**
+
 ```css
 .grid {
   display: grid;
@@ -6411,6 +6716,7 @@ html {
 ```
 
 3. **Card Layout:**
+
 ```css
 .card {
   width: 100%;
@@ -6430,6 +6736,7 @@ html {
 ```
 
 4. **Responsive Tables:**
+
 ```css
 @media (max-width: 768px) {
   table, thead, tbody, th, td, tr {
@@ -6452,6 +6759,7 @@ html {
 ```
 
 5. **Viewport Units:**
+
 ```css
 .header {
   height: 100vh;
@@ -6527,37 +6835,38 @@ Responsive design is essential in today's multi-device world. By using media que
 
 **Project Requirements:**
 
-*   **HTML Structure:**
-    *   Use semantic HTML5 elements.
-    *   Include sections for:
-        *   **Header:** Name, tagline, navigation.
-        *   **About Me:** Brief introduction, photo, skills.
-        *   **Projects:** Showcase at least 3 projects with images, descriptions, and links.
-        *   **Contact:** Contact form.
-        *   **Footer:** Copyright, social media links.
-*   **CSS Styling:**
-    *   Use external CSS file.
-    *   Implement a visually appealing design.
-    *   Use Flexbox or Grid for layout.
-    *   Make the website responsive using media queries.
-*   **Responsiveness:** The website should look good and function well on different screen sizes (desktops, tablets, and mobile phones).
-*   **Accessibility:**
-    *   Use appropriate `alt` text for images.
-    *   Use semantic HTML elements.
-    *   Ensure good color contrast.
+* **HTML Structure:**
+  * Use semantic HTML5 elements.
+  * Include sections for:
+    * **Header:** Name, tagline, navigation.
+    * **About Me:** Brief introduction, photo, skills.
+    * **Projects:** Showcase at least 3 projects with images, descriptions, and links.
+    * **Contact:** Contact form.
+    * **Footer:** Copyright, social media links.
+* **CSS Styling:**
+  * Use external CSS file.
+  * Implement a visually appealing design.
+  * Use Flexbox or Grid for layout.
+  * Make the website responsive using media queries.
+* **Responsiveness:** The website should look good and function well on different screen sizes (desktops, tablets, and mobile phones).
+* **Accessibility:**
+  * Use appropriate `alt` text for images.
+  * Use semantic HTML elements.
+  * Ensure good color contrast.
 
 **Detailed Implementation Guide:**
 
 1. **Planning:**
-    *   **Content Strategy:**
-        - Write compelling copy for each section
-        - Prepare high-quality images
-        - Gather project details and screenshots
-    *   **Design Considerations:**
-        - Choose a color palette (use tools like Coolors or Adobe Color)
-        - Select appropriate fonts (Google Fonts recommended)
-        - Create wireframes for desktop and mobile layouts
-    *   **File Structure:**
+    * **Content Strategy:**
+        * Write compelling copy for each section
+        * Prepare high-quality images
+        * Gather project details and screenshots
+    * **Design Considerations:**
+        * Choose a color palette (use tools like Coolors or Adobe Color)
+        * Select appropriate fonts (Google Fonts recommended)
+        * Create wireframes for desktop and mobile layouts
+    * **File Structure:**
+
         ```
         portfolio/
         ├── index.html
@@ -6767,42 +7076,47 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
 </html>
 ```
 
-*   **`<!DOCTYPE html>`:** Declares the document as HTML5.
-*   **`<html>`:** The root element of the page.
-    *   `lang="en"` attribute specifies the language as English.
-*   **`<head>`:** Contains meta-information about the page (not displayed on the page itself).
-    *   **`<meta charset="UTF-8">`:** Sets the character encoding to UTF-8, supporting a wide range of characters.
-    *   **`<meta name="viewport"...>`:** Configures how the page scales on different devices (essential for responsive design).
-    *   **`<title>`:** Sets the title that appears in the browser tab.
-    *   **`<link rel="stylesheet" href="style.css">`:** Links an external CSS file to style the page.
-*   **`<body>`:** Contains the visible content of the page.
-    *   **`<h1>`:** A top-level heading.
-    *   **`<p>`:** A paragraph of text.
-*   **`<script src="script.js"></script>`:** Links to an external JavaScript file (for interactivity). It's often placed at the end of the `<body>` so the HTML loads first.
+* **`<!DOCTYPE html>`:** Declares the document as HTML5.
+* **`<html>`:** The root element of the page.
+  * `lang="en"` attribute specifies the language as English.
+* **`<head>`:** Contains meta-information about the page (not displayed on the page itself).
+  * **`<meta charset="UTF-8">`:** Sets the character encoding to UTF-8, supporting a wide range of characters.
+  * **`<meta name="viewport"...>`:** Configures how the page scales on different devices (essential for responsive design).
+  * **`<title>`:** Sets the title that appears in the browser tab.
+  * **`<link rel="stylesheet" href="style.css">`:** Links an external CSS file to style the page.
+* **`<body>`:** Contains the visible content of the page.
+  * **`<h1>`:** A top-level heading.
+  * **`<p>`:** A paragraph of text.
+* **`<script src="script.js"></script>`:** Links to an external JavaScript file (for interactivity). It's often placed at the end of the `<body>` so the HTML loads first.
 
 **1.3 Common HTML Elements**
 
-*   **Headings:** `<h1>` to `<h6>` (<h1> is the most important, <h6> the least).
+* **Headings:** `<h1>` to `<h6>` (<h1> is the most important, <h6> the least).
+
     ```html
     <h1>Main Title</h1>
     <h2>Section Title</h2>
     <h3>Subsection Title</h3>
     ```
-    Best Practices:
-    - Use only one `<h1>` per page
-    - Maintain proper heading hierarchy
-    - Don't skip heading levels (e.g., don't go from h2 to h4)
 
-*   **Paragraphs:** `<p>`
+    Best Practices:
+  * Use only one `<h1>` per page
+  * Maintain proper heading hierarchy
+  * Don't skip heading levels (e.g., don't go from h2 to h4)
+
+* **Paragraphs:** `<p>`
+
     ```html
     <p>This is a paragraph of text. It can contain <strong>bold text</strong>, 
     <em>italic text</em>, and <a href="#">links</a>.</p>
     ```
-    Common Pitfalls:
-    - Avoid using `<br>` tags for spacing (use CSS margin/padding instead)
-    - Don't use empty paragraphs for spacing
 
-*   **Links:** `<a>` (anchor)
+    Common Pitfalls:
+  * Avoid using `<br>` tags for spacing (use CSS margin/padding instead)
+  * Don't use empty paragraphs for spacing
+
+* **Links:** `<a>` (anchor)
+
     ```html
     <!-- Basic link -->
     <a href="https://www.example.com">Visit Example</a>
@@ -6818,13 +7132,15 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     <!-- Telephone link -->
     <a href="tel:+1234567890">Call Us</a>
     ```
-    Key Attributes:
-    - `href`: Specifies the URL or resource
-    - `target`: Controls where link opens (_blank, _self, _parent, _top)
-    - `rel`: Specifies relationship (important for security with target="_blank")
-    - `download`: Forces download of linked resource
 
-*   **Images:** `<img>`
+    Key Attributes:
+  * `href`: Specifies the URL or resource
+  * `target`: Controls where link opens (_blank,_self, _parent,_top)
+  * `rel`: Specifies relationship (important for security with target="_blank")
+  * `download`: Forces download of linked resource
+
+* **Images:** `<img>`
+
     ```html
     <!-- Basic image -->
     <img src="images/logo.png" alt="Company Logo">
@@ -6843,15 +7159,16 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
          alt="Description"
          class="lazyload">
     ```
+
     Best Practices:
-    - Always include meaningful alt text
-    - Use srcset for responsive images
-    - Implement lazy loading for better performance
-    - Optimize image file sizes
-*   **Lists:**
-    *   **Unordered Lists (`<ul>`):** Bulleted lists.
-    *   **Ordered Lists (`<ol>`):** Numbered lists.
-    *   **List Items (`<li>`):** Items within a list.
+  * Always include meaningful alt text
+  * Use srcset for responsive images
+  * Implement lazy loading for better performance
+  * Optimize image file sizes
+* **Lists:**
+  * **Unordered Lists (`<ul>`):** Bulleted lists.
+  * **Ordered Lists (`<ol>`):** Numbered lists.
+  * **List Items (`<li>`):** Items within a list.
 
     ```html
     <ul>
@@ -6864,28 +7181,30 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
         <li>Second step</li>
     </ol>
     ```
-*   **Divisions (`<div>`):** Generic containers used to group other elements for styling or structural purposes.
-*   **Spans (`<span>`):** Inline containers used to apply styles to a specific portion of text within a larger element.
+
+* **Divisions (`<div>`):** Generic containers used to group other elements for styling or structural purposes.
+* **Spans (`<span>`):** Inline containers used to apply styles to a specific portion of text within a larger element.
 
 **Module 2: Introduction to CSS**
 
 **2.1 What is CSS?**
 
-*   **CSS (Cascading Style Sheets):** The language used to style the appearance of web pages.
-*   **Separation of Concerns:** CSS separates the styling from the HTML structure, making code cleaner and easier to maintain.
-*   **Selectors, Properties, and Values:**
-    *   **Selectors:** Target specific HTML elements to style.
-    *   **Properties:** The aspects of an element you want to style (e.g., `color`, `font-size`, `background-color`).
-    *   **Values:** The specific settings for a property (e.g., `red`, `16px`, `#f0f0f0`).
+* **CSS (Cascading Style Sheets):** The language used to style the appearance of web pages.
+* **Separation of Concerns:** CSS separates the styling from the HTML structure, making code cleaner and easier to maintain.
+* **Selectors, Properties, and Values:**
+  * **Selectors:** Target specific HTML elements to style.
+  * **Properties:** The aspects of an element you want to style (e.g., `color`, `font-size`, `background-color`).
+  * **Values:** The specific settings for a property (e.g., `red`, `16px`, `#f0f0f0`).
 
 **2.2 Ways to Add CSS**
 
-*   **Inline CSS:** Applied directly within an HTML tag using the `style` attribute (generally discouraged for maintainability).
+* **Inline CSS:** Applied directly within an HTML tag using the `style` attribute (generally discouraged for maintainability).
 
     ```html
     <p style="color: blue; font-size: 18px;">This is a blue paragraph.</p>
     ```
-*   **Internal CSS:** Placed within a `<style>` tag in the `<head>` of the HTML document (useful for styles specific to a single page).
+
+* **Internal CSS:** Placed within a `<style>` tag in the `<head>` of the HTML document (useful for styles specific to a single page).
 
     ```html
     <head>
@@ -6897,7 +7216,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
         </style>
     </head>
     ```
-*   **External CSS:** Stored in a separate `.css` file and linked to the HTML using the `<link>` tag (best practice for most cases).
+
+* **External CSS:** Stored in a separate `.css` file and linked to the HTML using the `<link>` tag (best practice for most cases).
 
     ```html
     <!-- In your HTML file (index.html) -->
@@ -6916,7 +7236,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
 
 **2.3 CSS Selectors**
 
-*   **Element Selector:** Targets elements by their tag name.
+* **Element Selector:** Targets elements by their tag name.
+
     ```css
     /* Style all paragraphs */
     p {
@@ -6932,7 +7253,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     }
     ```
 
-*   **ID Selector:** Targets a single element with a specific `id` attribute.
+* **ID Selector:** Targets a single element with a specific `id` attribute.
+
     ```css
     #main-header {
         background-color: #0077cc;
@@ -6949,7 +7271,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     }
     ```
 
-*   **Class Selector:** Targets elements with a specific `class` attribute.
+* **Class Selector:** Targets elements with a specific `class` attribute.
+
     ```css
     .btn {
         display: inline-block;
@@ -6974,7 +7297,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     }
     ```
 
-*   **Attribute Selectors:** Target elements based on attributes.
+* **Attribute Selectors:** Target elements based on attributes.
+
     ```css
     /* Links with target="_blank" */
     a[target="_blank"] {
@@ -6994,7 +7318,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     }
     ```
 
-*   **Pseudo-classes:** Target elements in specific states.
+* **Pseudo-classes:** Target elements in specific states.
+
     ```css
     /* Style visited links */
     a:visited {
@@ -7018,7 +7343,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     }
     ```
 
-*   **Combinators:** Combine selectors for more specific targeting.
+* **Combinators:** Combine selectors for more specific targeting.
+
     ```css
     /* Direct child selector */
     nav > ul {
@@ -7042,7 +7368,8 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     }
     ```
 
-*   **Universal Selector:** Selects all elements.
+* **Universal Selector:** Selects all elements.
+
     ```css
     * {
         box-sizing: border-box;
@@ -7052,33 +7379,33 @@ Okay, here's an in-depth HTML and CSS masterclass covering the fundamentals, bes
     ```
 
 Best Practices:
-- Use classes for reusable styles
-- Avoid overusing ID selectors
-- Keep specificity low when possible
-- Use meaningful class names (BEM methodology recommended)
-- Avoid inline styles
-- Use shorthand properties when appropriate
+* Use classes for reusable styles
+* Avoid overusing ID selectors
+* Keep specificity low when possible
+* Use meaningful class names (BEM methodology recommended)
+* Avoid inline styles
+* Use shorthand properties when appropriate
 
 **2.4 Common CSS Properties**
 
-*   **Text Styling:**
-    *   `color`: Sets the text color.
-    *   `font-family`: Sets the font.
-    *   `font-size`: Sets the text size.
-    *   `font-weight`: Sets text boldness (e.g., `normal`, `bold`).
-    *   `text-align`: Aligns text (e.g., `left`, `center`, `right`).
-    *   `text-decoration`: Adds decorations (e.g., `underline`, `line-through`).
-*   **Box Model:** (We'll cover this in more detail later)
-    *   `width`: Sets the width of an element.
-    *   `height`: Sets the height of an element.
-    *   `margin`: Sets the space outside the element's border.
-    *   `padding`: Sets the space inside the element's border.
-    *   `border`: Sets a border around the element.
-*   **Background:**
-    *   `background-color`: Sets the background color.
-    *   `background-image`: Sets a background image.
-    *   `background-repeat`: Controls how a background image repeats.
-    *   `background-position`: Controls the position of a background image.
+* **Text Styling:**
+  * `color`: Sets the text color.
+  * `font-family`: Sets the font.
+  * `font-size`: Sets the text size.
+  * `font-weight`: Sets text boldness (e.g., `normal`, `bold`).
+  * `text-align`: Aligns text (e.g., `left`, `center`, `right`).
+  * `text-decoration`: Adds decorations (e.g., `underline`, `line-through`).
+* **Box Model:** (We'll cover this in more detail later)
+  * `width`: Sets the width of an element.
+  * `height`: Sets the height of an element.
+  * `margin`: Sets the space outside the element's border.
+  * `padding`: Sets the space inside the element's border.
+  * `border`: Sets a border around the element.
+* **Background:**
+  * `background-color`: Sets the background color.
+  * `background-image`: Sets a background image.
+  * `background-repeat`: Controls how a background image repeats.
+  * `background-position`: Controls the position of a background image.
 
 **Module 3: Intermediate HTML**
 
@@ -7252,14 +7579,15 @@ textarea:invalid:not(:placeholder-shown) + .error-message {
 ```
 
 **Key Features:**
-- **Accessibility:** Proper label associations, focus states, and ARIA attributes
-- **Validation:** HTML5 validation with custom error messages
-- **Responsive Design:** Flexbox layout for radio/checkbox groups
-- **User Experience:** Clear error states and helpful placeholders
-- **Security:** `novalidate` attribute for custom validation
-- **Styling:** Consistent design with focus states and hover effects
+* **Accessibility:** Proper label associations, focus states, and ARIA attributes
+* **Validation:** HTML5 validation with custom error messages
+* **Responsive Design:** Flexbox layout for radio/checkbox groups
+* **User Experience:** Clear error states and helpful placeholders
+* **Security:** `novalidate` attribute for custom validation
+* **Styling:** Consistent design with focus states and hover effects
 
 **Best Practices:**
+
 1. Always use `<label>` elements with `for` attributes
 2. Use proper input types for better mobile experience
 3. Implement client-side validation with HTML5 attributes
@@ -7271,19 +7599,19 @@ textarea:invalid:not(:placeholder-shown) + .error-message {
 9. Implement server-side validation (not shown in this example)
 10. Consider progressive enhancement for older browsers
 
-*   **`<form>`:** The main form element.
-    *   `action`: Specifies where to send the form data when submitted (usually a server-side script).
-    *   `method`: Specifies the HTTP method to use (usually `post` for sending data securely).
-*   **`<label>`:** Provides a label for an input field (important for accessibility).
-    *   `for`: Associates the label with an input field using the input's `id`.
-*   **`<input>`:** Creates various types of input fields.
-    *   `type`: Specifies the input type (e.g., `text`, `email`, `password`, `checkbox`, `radio`, `submit`).
-    *   `id`: Unique identifier for the input field.
-    *   `name`: Name of the input field (used when submitting data).
-    *   `required`: Makes the field mandatory.
-*   **`<textarea>`:** Creates a multi-line text input area.
-*   **`<select>`:** Creates a dropdown list.
-    *   **`<option>`:** Defines an option within the dropdown list.
+* **`<form>`:** The main form element.
+  * `action`: Specifies where to send the form data when submitted (usually a server-side script).
+  * `method`: Specifies the HTTP method to use (usually `post` for sending data securely).
+* **`<label>`:** Provides a label for an input field (important for accessibility).
+  * `for`: Associates the label with an input field using the input's `id`.
+* **`<input>`:** Creates various types of input fields.
+  * `type`: Specifies the input type (e.g., `text`, `email`, `password`, `checkbox`, `radio`, `submit`).
+  * `id`: Unique identifier for the input field.
+  * `name`: Name of the input field (used when submitting data).
+  * `required`: Makes the field mandatory.
+* **`<textarea>`:** Creates a multi-line text input area.
+* **`<select>`:** Creates a dropdown list.
+  * **`<option>`:** Defines an option within the dropdown list.
 
 **3.2 Tables**
 
@@ -7314,13 +7642,13 @@ Tables are used to display data in rows and columns.
 </table>
 ```
 
-*   **`<table>`:** The main table element.
-*   **`<caption>`:** Provides a caption for the table.
-*   **`<thead>`:** Groups the table header rows.
-*   **`<tbody>`:** Groups the table body rows.
-*   **`<tr>`:** Defines a table row.
-*   **`<th>`:** Defines a table header cell (usually bold and centered).
-*   **`<td>`:** Defines a table data cell.
+* **`<table>`:** The main table element.
+* **`<caption>`:** Provides a caption for the table.
+* **`<thead>`:** Groups the table header rows.
+* **`<tbody>`:** Groups the table body rows.
+* **`<tr>`:** Defines a table row.
+* **`<th>`:** Defines a table header cell (usually bold and centered).
+* **`<td>`:** Defines a table data cell.
 
 **3.3 Semantic HTML5 Elements**
 
@@ -7346,13 +7674,13 @@ Semantic elements provide meaning to the structure of a web page, making it more
     </footer>
 ```
 
-*   **`<header>`:** Represents the introductory content of a page or section.
-*   **`<nav>`:** Represents a section with navigation links.
-*   **`<main>`:** Represents the main content of the page (there should be only one per page).
-*   **`<article>`:** Represents a self-contained piece of content (e.g., a blog post).
-*   **`<section>`:** Represents a thematic grouping of content within a page or article.
-*   **`<aside>`:** Represents content that is tangentially related to the main content (e.g., a sidebar).
-*   **`<footer>`:** Represents the footer of a page or section.
+* **`<header>`:** Represents the introductory content of a page or section.
+* **`<nav>`:** Represents a section with navigation links.
+* **`<main>`:** Represents the main content of the page (there should be only one per page).
+* **`<article>`:** Represents a self-contained piece of content (e.g., a blog post).
+* **`<section>`:** Represents a thematic grouping of content within a page or article.
+* **`<aside>`:** Represents content that is tangentially related to the main content (e.g., a sidebar).
+* **`<footer>`:** Represents the footer of a page or section.
 
 **Module 4: Intermediate CSS**
 
@@ -7393,14 +7721,15 @@ The box model is a fundamental concept that describes how elements are rendered 
 ```
 
 * **Content Box**: The innermost area containing the actual content
-  - Controlled by width/height properties
-  - Default background color is transparent
-  - Text and child elements are rendered here
+  * Controlled by width/height properties
+  * Default background color is transparent
+  * Text and child elements are rendered here
 
 * **Padding**: Space between content and border
-  - Adds to element's total size
-  - Inherits background color
-  - Useful for internal spacing
+  * Adds to element's total size
+  * Inherits background color
+  * Useful for internal spacing
+
   ```css
   /* Individual sides */
   padding-top: 10px;
@@ -7415,8 +7744,9 @@ The box model is a fundamental concept that describes how elements are rendered 
   ```
 
 * **Border**: Line surrounding padding and content
-  - Adds to element's total size
-  - Can have different styles, widths, and colors
+  * Adds to element's total size
+  * Can have different styles, widths, and colors
+
   ```css
   /* Individual properties */
   border-width: 2px;
@@ -7431,9 +7761,10 @@ The box model is a fundamental concept that describes how elements are rendered 
   ```
 
 * **Margin**: Space outside the border
-  - Creates space between elements
-  - Transparent (doesn't inherit background)
-  - Can collapse with adjacent margins
+  * Creates space between elements
+  * Transparent (doesn't inherit background)
+  * Can collapse with adjacent margins
+
   ```css
   /* Individual sides */
   margin-top: 20px;
@@ -7490,11 +7821,11 @@ By default, padding and border are added to the element's width/height. The `box
 ```
 
 Best Practices:
-- Use `box-sizing: border-box` for more predictable layouts
-- Use margin for spacing between elements
-- Use padding for internal spacing within elements
-- Be consistent with spacing values (e.g., use multiples of 4px or 8px)
-- Use CSS variables for consistent spacing values
+* Use `box-sizing: border-box` for more predictable layouts
+* Use margin for spacing between elements
+* Use padding for internal spacing within elements
+* Be consistent with spacing values (e.g., use multiples of 4px or 8px)
+* Use CSS variables for consistent spacing values
 
 **4.2 Display Property**
 
@@ -7546,33 +7877,33 @@ The `display` property is one of the most important CSS properties, controlling 
 **Display Property Values:**
 
 * **`block`**
-  - Takes full available width (unless width is specified)
-  - Starts on a new line
-  - Can set width, height, margin, padding
-  - Examples: `<div>`, `<p>`, `<h1>`-`<h6>`, `<form>`, `<ul>`, `<ol>`, `<li>`
-  - Common uses: Page sections, containers, structural elements
+  * Takes full available width (unless width is specified)
+  * Starts on a new line
+  * Can set width, height, margin, padding
+  * Examples: `<div>`, `<p>`, `<h1>`-`<h6>`, `<form>`, `<ul>`, `<ol>`, `<li>`
+  * Common uses: Page sections, containers, structural elements
 
 * **`inline`**
-  - Takes only as much width as needed
-  - Flows with text content
-  - Cannot set width/height
-  - Vertical padding/margin doesn't affect surrounding elements
-  - Examples: `<span>`, `<a>`, `<img>`, `<strong>`, `<em>`
-  - Common uses: Text formatting, inline elements
+  * Takes only as much width as needed
+  * Flows with text content
+  * Cannot set width/height
+  * Vertical padding/margin doesn't affect surrounding elements
+  * Examples: `<span>`, `<a>`, `<img>`, `<strong>`, `<em>`
+  * Common uses: Text formatting, inline elements
 
 * **`inline-block`**
-  - Combines features of block and inline
-  - Flows like inline elements
-  - Can set width/height like block elements
-  - Respects vertical margin/padding
-  - Examples: Custom buttons, navigation items
-  - Common uses: Creating grid-like layouts without flex/grid
+  * Combines features of block and inline
+  * Flows like inline elements
+  * Can set width/height like block elements
+  * Respects vertical margin/padding
+  * Examples: Custom buttons, navigation items
+  * Common uses: Creating grid-like layouts without flex/grid
 
 * **`none`**
-  - Completely removes element from document flow
-  - Takes up no space
-  - Not accessible to screen readers
-  - Alternative: Use `visibility: hidden` to hide while maintaining space
+  * Completely removes element from document flow
+  * Takes up no space
+  * Not accessible to screen readers
+  * Alternative: Use `visibility: hidden` to hide while maintaining space
 
 **Display Property Best Practices:**
 
@@ -7580,6 +7911,7 @@ The `display` property is one of the most important CSS properties, controlling 
 2. Prefer `inline-block` over `float` for simple layouts
 3. Use `display: none` judiciously - consider accessibility implications
 4. Combine with other properties for complex layouts:
+
    ```css
    .menu-item {
      display: inline-block;
@@ -7591,11 +7923,13 @@ The `display` property is one of the most important CSS properties, controlling 
      border-radius: 4px;
    }
    ```
+
 5. Use CSS Grid or Flexbox for complex layouts instead of relying solely on display properties
 
 **Common Display Patterns:**
 
 1. Centering Elements:
+
 ```css
 /* Horizontally center block element */
 .block-center {
@@ -7614,6 +7948,7 @@ The `display` property is one of the most important CSS properties, controlling 
 ```
 
 2. Responsive Navigation:
+
 ```css
 /* Mobile first approach */
 .nav-item {
@@ -7629,6 +7964,7 @@ The `display` property is one of the most important CSS properties, controlling 
 ```
 
 3. Image Gallery:
+
 ```css
 .gallery-item {
   display: inline-block;
@@ -7645,6 +7981,7 @@ The `display` property is one of the most important CSS properties, controlling 
 ```
 
 4. Toggle Visibility:
+
 ```css
 /* JavaScript toggle class */
 .hidden {
@@ -7657,9 +7994,9 @@ The `display` property is one of the most important CSS properties, controlling 
 ```
 
 **Accessibility Considerations:**
-- Use `display: none` carefully as it removes elements from accessibility tree
-- Consider `visibility: hidden` or `opacity: 0` for hiding elements while maintaining accessibility
-- Ensure proper focus management when toggling visibility
+* Use `display: none` carefully as it removes elements from accessibility tree
+* Consider `visibility: hidden` or `opacity: 0` for hiding elements while maintaining accessibility
+* Ensure proper focus management when toggling visibility
 
 **4.3 Positioning**
 
@@ -7738,53 +8075,53 @@ The `position` property is crucial for controlling element placement and creatin
 **Position Property Values:**
 
 * **`static` (Default)**
-  - Elements follow normal document flow
-  - Ignores top/right/bottom/left properties
-  - Cannot use z-index
-  - Use case: Default behavior for most elements
+  * Elements follow normal document flow
+  * Ignores top/right/bottom/left properties
+  * Cannot use z-index
+  * Use case: Default behavior for most elements
 
 * **`relative`**
-  - Positioned relative to its normal position
-  - Can use top/right/bottom/left to offset
-  - Creates new stacking context (z-index works)
-  - Original space in document flow is preserved
-  - Use cases:
-    - Minor adjustments to element position
-    - Creating reference point for absolutely positioned children
-    - Overlapping elements with z-index
+  * Positioned relative to its normal position
+  * Can use top/right/bottom/left to offset
+  * Creates new stacking context (z-index works)
+  * Original space in document flow is preserved
+  * Use cases:
+    * Minor adjustments to element position
+    * Creating reference point for absolutely positioned children
+    * Overlapping elements with z-index
 
 * **`absolute`**
-  - Removed from normal document flow
-  - Positioned relative to nearest positioned ancestor
-  - If no positioned ancestor, uses initial containing block (usually viewport)
-  - Can use top/right/bottom/left for precise positioning
-  - Use cases:
-    - Tooltips and dropdown menus
-    - Modal dialogs
-    - Custom form controls
-    - Overlays and popups
+  * Removed from normal document flow
+  * Positioned relative to nearest positioned ancestor
+  * If no positioned ancestor, uses initial containing block (usually viewport)
+  * Can use top/right/bottom/left for precise positioning
+  * Use cases:
+    * Tooltips and dropdown menus
+    * Modal dialogs
+    * Custom form controls
+    * Overlays and popups
 
 * **`fixed`**
-  - Removed from normal document flow
-  - Positioned relative to viewport
-  - Stays fixed during scrolling
-  - Can use top/right/bottom/left for positioning
-  - Use cases:
-    - Fixed headers/footers
-    - Persistent navigation
-    - Chat widgets
-    - Back-to-top buttons
+  * Removed from normal document flow
+  * Positioned relative to viewport
+  * Stays fixed during scrolling
+  * Can use top/right/bottom/left for positioning
+  * Use cases:
+    * Fixed headers/footers
+    * Persistent navigation
+    * Chat widgets
+    * Back-to-top buttons
 
 * **`sticky`**
-  - Hybrid of relative and fixed
-  - Treated as relative until crossing specified threshold
-  - Then becomes fixed within its container
-  - Requires at least one positioning property (top/right/bottom/left)
-  - Use cases:
-    - Sticky table headers
-    - Sticky sidebars
-    - Sticky navigation
-    - Section headers in long pages
+  * Hybrid of relative and fixed
+  * Treated as relative until crossing specified threshold
+  * Then becomes fixed within its container
+  * Requires at least one positioning property (top/right/bottom/left)
+  * Use cases:
+    * Sticky table headers
+    * Sticky sidebars
+    * Sticky navigation
+    * Section headers in long pages
 
 **Positioning Best Practices:**
 
@@ -7800,6 +8137,7 @@ The `position` property is crucial for controlling element placement and creatin
 **Common Positioning Patterns:**
 
 1. Centering Elements:
+
 ```css
 /* Absolute Centering */
 .center-absolute {
@@ -7819,6 +8157,7 @@ The `position` property is crucial for controlling element placement and creatin
 ```
 
 2. Sticky Header:
+
 ```css
 .header {
   position: sticky;
@@ -7830,6 +8169,7 @@ The `position` property is crucial for controlling element placement and creatin
 ```
 
 3. Overlay Modal:
+
 ```css
 .modal-overlay {
   position: fixed;
@@ -7855,6 +8195,7 @@ The `position` property is crucial for controlling element placement and creatin
 ```
 
 4. Tooltip:
+
 ```css
 .tooltip-container {
   position: relative;
@@ -7880,17 +8221,17 @@ The `position` property is crucial for controlling element placement and creatin
 ```
 
 **Accessibility Considerations:**
-- Ensure positioned elements maintain proper focus order
-- Use ARIA attributes for modals and tooltips
-- Consider screen reader users when using absolute/fixed positioning
-- Test with keyboard navigation
-- Provide alternative ways to access content that might be obscured by fixed elements
+* Ensure positioned elements maintain proper focus order
+* Use ARIA attributes for modals and tooltips
+* Consider screen reader users when using absolute/fixed positioning
+* Test with keyboard navigation
+* Provide alternative ways to access content that might be obscured by fixed elements
 
 **Performance Considerations:**
-- Fixed and sticky elements can cause repaints during scrolling
-- Use transform instead of top/left for animations
-- Avoid excessive use of z-index
-- Use will-change property for elements that will be animated
+* Fixed and sticky elements can cause repaints during scrolling
+* Use transform instead of top/left for animations
+* Avoid excessive use of z-index
+* Use will-change property for elements that will be animated
 
 **4.4 Floats**
 
@@ -7949,18 +8290,18 @@ The `float` property was traditionally used for page layouts and wrapping text a
 **Float Property Values:**
 
 * **`left`**
-  - Floats element to left of container
-  - Content flows around right side
-  - Common uses: Image/text wrapping, legacy layouts
+  * Floats element to left of container
+  * Content flows around right side
+  * Common uses: Image/text wrapping, legacy layouts
 
 * **`right`**
-  - Floats element to right of container
-  - Content flows around left side
-  - Common uses: Pull quotes, sidebars
+  * Floats element to right of container
+  * Content flows around left side
+  * Common uses: Pull quotes, sidebars
 
 * **`none`** (default)
-  - Element remains in normal flow
-  - Useful for overriding float behavior
+  * Element remains in normal flow
+  * Useful for overriding float behavior
 
 **Float Behavior Characteristics:**
 
@@ -7973,6 +8314,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 **Modern Float Techniques:**
 
 1. Shape Wrapping:
+
 ```css
 .image-wrap {
   float: left;
@@ -7984,6 +8326,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 2. Text Wrapping:
+
 ```css
 .text-wrap {
   float: right;
@@ -7994,6 +8337,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 3. Drop Caps:
+
 ```css
 .drop-cap::first-letter {
   float: left;
@@ -8006,6 +8350,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 **Clearing Floats:**
 
 1. Clearfix Technique:
+
 ```css
 .clearfix::after {
   content: "";
@@ -8015,6 +8360,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 2. Modern Flow-Root:
+
 ```css
 .container {
   display: flow-root; /* Better alternative to clearfix */
@@ -8022,6 +8368,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 3. Clear Property:
+
 ```css
 .clear {
   clear: both;
@@ -8042,6 +8389,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 **Common Float Patterns:**
 
 1. Image Gallery:
+
 ```css
 .gallery-item {
   float: left;
@@ -8057,6 +8405,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 2. Pull Quotes:
+
 ```css
 .pull-quote {
   float: right;
@@ -8069,6 +8418,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 3. Sidebar Layout:
+
 ```css
 .sidebar {
   float: left;
@@ -8090,18 +8440,18 @@ The `float` property was traditionally used for page layouts and wrapping text a
 
 **Accessibility Considerations:**
 
-- Ensure content order makes sense when floated
-- Use proper alt text for floated images
-- Test with screen readers
-- Consider how floated elements affect tab order
-- Provide clear visual separation for floated content
+* Ensure content order makes sense when floated
+* Use proper alt text for floated images
+* Test with screen readers
+* Consider how floated elements affect tab order
+* Provide clear visual separation for floated content
 
 **Performance Considerations:**
 
-- Excessive floats can cause layout thrashing
-- Use will-change property for animated floats
-- Minimize reflows by batching float changes
-- Consider using CSS containment for complex float layouts
+* Excessive floats can cause layout thrashing
+* Use will-change property for animated floats
+* Minimize reflows by batching float changes
+* Consider using CSS containment for complex float layouts
 
 **When to Use Floats vs. Modern Layout Methods:**
 
@@ -8148,6 +8498,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 **Modern Alternatives:**
 
 1. Flexbox:
+
 ```css
 .container {
   display: flex;
@@ -8161,6 +8512,7 @@ The `float` property was traditionally used for page layouts and wrapping text a
 ```
 
 2. Grid:
+
 ```css
 .container {
   display: grid;
@@ -8208,13 +8560,14 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
 **Flexbox Container Properties:**
 
 1. **display: flex**
-   - Enables flexbox layout
-   - Creates flex formatting context
-   - Direct children become flex items
+   * Enables flexbox layout
+   * Creates flex formatting context
+   * Direct children become flex items
 
 2. **flex-direction**
-   - Defines main axis direction
-   - Values: row (default), row-reverse, column, column-reverse
+   * Defines main axis direction
+   * Values: row (default), row-reverse, column, column-reverse
+
    ```css
    .container {
      flex-direction: column; /* Stack items vertically */
@@ -8222,8 +8575,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
    ```
 
 3. **justify-content**
-   - Aligns items along main axis
-   - Values: flex-start, flex-end, center, space-between, space-around, space-evenly
+   * Aligns items along main axis
+   * Values: flex-start, flex-end, center, space-between, space-around, space-evenly
+
    ```css
    .container {
      justify-content: space-between; /* Distribute items with equal space between */
@@ -8231,8 +8585,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
    ```
 
 4. **align-items**
-   - Aligns items along cross axis
-   - Values: flex-start, flex-end, center, stretch, baseline
+   * Aligns items along cross axis
+   * Values: flex-start, flex-end, center, stretch, baseline
+
    ```css
    .container {
      align-items: stretch; /* Stretch items to fill container */
@@ -8240,8 +8595,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
    ```
 
 5. **flex-wrap**
-   - Controls wrapping behavior
-   - Values: nowrap (default), wrap, wrap-reverse
+   * Controls wrapping behavior
+   * Values: nowrap (default), wrap, wrap-reverse
+
    ```css
    .container {
      flex-wrap: wrap; /* Allow items to wrap to new line */
@@ -8249,8 +8605,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
    ```
 
 6. **gap**
-   - Sets spacing between items
-   - Values: length or percentage
+   * Sets spacing between items
+   * Values: length or percentage
+
    ```css
    .container {
      gap: 20px; /* Space between items */
@@ -8260,8 +8617,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
 **Flexbox Item Properties:**
 
 1. **flex**
-   - Shorthand for flex-grow, flex-shrink, and flex-basis
-   - Default: 0 1 auto
+   * Shorthand for flex-grow, flex-shrink, and flex-basis
+   * Default: 0 1 auto
+
    ```css
    .item {
      flex: 1 1 200px; /* Grow, shrink, basis */
@@ -8269,8 +8627,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
    ```
 
 2. **align-self**
-   - Overrides align-items for individual items
-   - Values: auto, flex-start, flex-end, center, stretch, baseline
+   * Overrides align-items for individual items
+   * Values: auto, flex-start, flex-end, center, stretch, baseline
+
    ```css
    .special-item {
      align-self: flex-end; /* Align this item differently */
@@ -8278,8 +8637,9 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
    ```
 
 3. **order**
-   - Controls display order of items
-   - Default: 0
+   * Controls display order of items
+   * Default: 0
+
    ```css
    .first-item {
      order: -1; /* Move to start */
@@ -8289,6 +8649,7 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
 **Common Flexbox Patterns:**
 
 1. **Responsive Navigation:**
+
 ```css
 .nav {
   display: flex;
@@ -8303,6 +8664,7 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
 ```
 
 2. **Card Layout:**
+
 ```css
 .card-container {
   display: flex;
@@ -8318,6 +8680,7 @@ Flexbox is a powerful one-dimensional layout system that provides efficient ways
 ```
 
 3. **Sticky Footer:**
+
 ```css
 body {
   display: flex;
@@ -8335,6 +8698,7 @@ footer {
 ```
 
 4. **Centering Elements:**
+
 ```css
 .center-container {
   display: flex;
@@ -8345,6 +8709,7 @@ footer {
 ```
 
 5. **Equal Height Columns:**
+
 ```css
 .columns {
   display: flex;
@@ -8369,19 +8734,19 @@ footer {
 
 **Accessibility Considerations:**
 
-- Ensure logical source order matches visual order
-- Use proper heading hierarchy
-- Maintain keyboard navigation
-- Consider screen reader users
-- Test with high contrast modes
+* Ensure logical source order matches visual order
+* Use proper heading hierarchy
+* Maintain keyboard navigation
+* Consider screen reader users
+* Test with high contrast modes
 
 **Performance Considerations:**
 
-- Avoid excessive nesting of flex containers
-- Use will-change for animated flex items
-- Minimize layout thrashing
-- Use contain: layout when appropriate
-- Avoid unnecessary reflows
+* Avoid excessive nesting of flex containers
+* Use will-change for animated flex items
+* Minimize layout thrashing
+* Use contain: layout when appropriate
+* Avoid unnecessary reflows
 
 **Flexbox vs. Grid:**
 
@@ -8409,6 +8774,7 @@ footer {
 **Advanced Flexbox Techniques:**
 
 1. **Intrinsic Sizing:**
+
 ```css
 .container {
   display: flex;
@@ -8417,6 +8783,7 @@ footer {
 ```
 
 2. **Aspect Ratio Boxes:**
+
 ```css
 .aspect-box {
   flex: 1;
@@ -8425,6 +8792,7 @@ footer {
 ```
 
 3. **Sticky Sidebar:**
+
 ```css
 .layout {
   display: flex;
@@ -8439,6 +8807,7 @@ footer {
 ```
 
 4. **Responsive Masonry:**
+
 ```css
 .masonry {
   display: flex;
@@ -8452,6 +8821,7 @@ footer {
 ```
 
 5. **Dynamic Grid:**
+
 ```css
 .grid {
   display: flex;
@@ -8504,13 +8874,14 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 **Grid Container Properties:**
 
 1. **display: grid**
-   - Enables grid layout
-   - Creates grid formatting context
-   - Direct children become grid items
+   * Enables grid layout
+   * Creates grid formatting context
+   * Direct children become grid items
 
 2. **grid-template-columns**
-   - Defines column tracks
-   - Values: length, percentage, fr (fraction), minmax(), repeat()
+   * Defines column tracks
+   * Values: length, percentage, fr (fraction), minmax(), repeat()
+
    ```css
    .container {
      grid-template-columns: 200px 1fr 30%;
@@ -8518,8 +8889,9 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
    ```
 
 3. **grid-template-rows**
-   - Defines row tracks
-   - Values: same as grid-template-columns
+   * Defines row tracks
+   * Values: same as grid-template-columns
+
    ```css
    .container {
      grid-template-rows: 100px auto 200px;
@@ -8527,8 +8899,9 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
    ```
 
 4. **gap**
-   - Sets spacing between grid items
-   - Values: length or percentage
+   * Sets spacing between grid items
+   * Values: length or percentage
+
    ```css
    .container {
      gap: 20px;
@@ -8536,8 +8909,9 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
    ```
 
 5. **grid-template-areas**
-   - Defines named grid areas
-   - Values: strings representing area names
+   * Defines named grid areas
+   * Values: strings representing area names
+
    ```css
    .container {
      grid-template-areas:
@@ -8548,8 +8922,9 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
    ```
 
 6. **justify-content**
-   - Aligns grid along the inline (row) axis
-   - Values: start, end, center, stretch, space-between, space-around, space-evenly
+   * Aligns grid along the inline (row) axis
+   * Values: start, end, center, stretch, space-between, space-around, space-evenly
+
    ```css
    .container {
      justify-content: center;
@@ -8557,8 +8932,9 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
    ```
 
 7. **align-content**
-   - Aligns grid along the block (column) axis
-   - Values: same as justify-content
+   * Aligns grid along the block (column) axis
+   * Values: same as justify-content
+
    ```css
    .container {
      align-content: start;
@@ -8568,8 +8944,9 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 **Grid Item Properties:**
 
 1. **grid-column**
-   - Controls item column placement
-   - Values: line numbers, span
+   * Controls item column placement
+   * Values: line numbers, span
+
    ```css
    .item {
      grid-column: 1 / 3;
@@ -8577,8 +8954,9 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
    ```
 
 2. **grid-row**
-   - Controls item row placement
-   - Values: same as grid-column
+   * Controls item row placement
+   * Values: same as grid-column
+
    ```css
    .item {
      grid-row: 2 / 4;
@@ -8586,8 +8964,9 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
    ```
 
 3. **grid-area**
-   - Shorthand for grid-row and grid-column
-   - Can reference named areas
+   * Shorthand for grid-row and grid-column
+   * Can reference named areas
+
    ```css
    .item {
      grid-area: header;
@@ -8595,8 +8974,9 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
    ```
 
 4. **justify-self**
-   - Aligns item along inline axis
-   - Values: start, end, center, stretch
+   * Aligns item along inline axis
+   * Values: start, end, center, stretch
+
    ```css
    .item {
      justify-self: center;
@@ -8604,8 +8984,9 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
    ```
 
 5. **align-self**
-   - Aligns item along block axis
-   - Values: same as justify-self
+   * Aligns item along block axis
+   * Values: same as justify-self
+
    ```css
    .item {
      align-self: end;
@@ -8615,6 +8996,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 **Common Grid Patterns:**
 
 1. **Responsive Grid:**
+
 ```css
 .grid-container {
   display: grid;
@@ -8624,6 +9006,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 2. **Masonry Layout:**
+
 ```css
 .grid-container {
   display: grid;
@@ -8638,6 +9021,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 3. **Holy Grail Layout:**
+
 ```css
 .container {
   display: grid;
@@ -8651,6 +9035,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 4. **Card Layout:**
+
 ```css
 .card-grid {
   display: grid;
@@ -8660,6 +9045,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 5. **Image Gallery:**
+
 ```css
 .gallery {
   display: grid;
@@ -8681,19 +9067,19 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 
 **Accessibility Considerations:**
 
-- Ensure logical source order matches visual order
-- Use proper heading hierarchy
-- Maintain keyboard navigation
-- Consider screen reader users
-- Test with high contrast modes
+* Ensure logical source order matches visual order
+* Use proper heading hierarchy
+* Maintain keyboard navigation
+* Consider screen reader users
+* Test with high contrast modes
 
 **Performance Considerations:**
 
-- Avoid excessive nesting of grid containers
-- Use will-change for animated grid items
-- Minimize layout thrashing
-- Use contain: layout when appropriate
-- Avoid unnecessary reflows
+* Avoid excessive nesting of grid containers
+* Use will-change for animated grid items
+* Minimize layout thrashing
+* Use contain: layout when appropriate
+* Avoid unnecessary reflows
 
 **Grid vs. Flexbox:**
 
@@ -8721,6 +9107,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 **Advanced Grid Techniques:**
 
 1. **Subgrid:**
+
 ```css
 .grid-container {
   display: grid;
@@ -8735,6 +9122,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 2. **Aspect Ratio Boxes:**
+
 ```css
 .grid-container {
   display: grid;
@@ -8744,6 +9132,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 3. **Sticky Sidebar:**
+
 ```css
 .layout {
   display: grid;
@@ -8758,6 +9147,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 4. **Responsive Masonry:**
+
 ```css
 .masonry {
   display: grid;
@@ -8772,6 +9162,7 @@ CSS Grid is a powerful two-dimensional layout system that allows for precise con
 ```
 
 5. **Dynamic Grid:**
+
 ```css
 .grid {
   display: grid;
@@ -8796,15 +9187,17 @@ Media queries are a fundamental tool for creating responsive websites that adapt
 ```
 
 **Media Types:**
-- `all` (default) - All devices
-- `screen` - Computer screens, tablets, smartphones
-- `print` - Printers and print preview
-- `speech` - Screen readers
+* `all` (default) - All devices
+* `screen` - Computer screens, tablets, smartphones
+* `print` - Printers and print preview
+* `speech` - Screen readers
 
 **Common Media Features:**
+
 1. **Width and Height:**
-   - `width`, `min-width`, `max-width`
-   - `height`, `min-height`, `max-height`
+   * `width`, `min-width`, `max-width`
+   * `height`, `min-height`, `max-height`
+
    ```css
    @media (min-width: 768px) {
      .container {
@@ -8814,8 +9207,9 @@ Media queries are a fundamental tool for creating responsive websites that adapt
    ```
 
 2. **Orientation:**
-   - `portrait` - Height > Width
-   - `landscape` - Width > Height
+   * `portrait` - Height > Width
+   * `landscape` - Width > Height
+
    ```css
    @media (orientation: landscape) {
      .header {
@@ -8825,8 +9219,9 @@ Media queries are a fundamental tool for creating responsive websites that adapt
    ```
 
 3. **Resolution:**
-   - `resolution` - Device pixel density
-   - `min-resolution`, `max-resolution`
+   * `resolution` - Device pixel density
+   * `min-resolution`, `max-resolution`
+
    ```css
    @media (min-resolution: 2dppx) {
      .logo {
@@ -8836,7 +9231,8 @@ Media queries are a fundamental tool for creating responsive websites that adapt
    ```
 
 4. **Aspect Ratio:**
-   - `aspect-ratio` - Width to height ratio
+   * `aspect-ratio` - Width to height ratio
+
    ```css
    @media (aspect-ratio: 16/9) {
      .video-container {
@@ -8848,6 +9244,7 @@ Media queries are a fundamental tool for creating responsive websites that adapt
 **Responsive Design Strategies:**
 
 1. **Mobile-First Approach:**
+
 ```css
 /* Base styles for mobile */
 .container {
@@ -8863,6 +9260,7 @@ Media queries are a fundamental tool for creating responsive websites that adapt
 ```
 
 2. **Breakpoint Selection:**
+
 ```css
 /* Common breakpoints */
 @media (min-width: 576px) { /* Small devices */ }
@@ -8872,6 +9270,7 @@ Media queries are a fundamental tool for creating responsive websites that adapt
 ```
 
 3. **Fluid Layouts:**
+
 ```css
 .container {
   width: 100%;
@@ -8881,6 +9280,7 @@ Media queries are a fundamental tool for creating responsive websites that adapt
 ```
 
 4. **Responsive Typography:**
+
 ```css
 html {
   font-size: 16px;
@@ -8894,6 +9294,7 @@ html {
 ```
 
 5. **Responsive Images:**
+
 ```html
 <picture>
   <source media="(min-width: 1200px)" srcset="large.jpg">
@@ -8905,6 +9306,7 @@ html {
 **Advanced Media Query Techniques:**
 
 1. **Combining Conditions:**
+
 ```css
 @media (min-width: 768px) and (max-width: 1199px) {
   /* Styles for tablets */
@@ -8912,6 +9314,7 @@ html {
 ```
 
 2. **Dark Mode Support:**
+
 ```css
 @media (prefers-color-scheme: dark) {
   body {
@@ -8922,6 +9325,7 @@ html {
 ```
 
 3. **Reduced Motion:**
+
 ```css
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -8932,6 +9336,7 @@ html {
 ```
 
 4. **High Contrast Mode:**
+
 ```css
 @media (prefers-contrast: high) {
   .button {
@@ -8941,6 +9346,7 @@ html {
 ```
 
 5. **Print Styles:**
+
 ```css
 @media print {
   .no-print {
@@ -8970,6 +9376,7 @@ html {
 **Common Responsive Patterns:**
 
 1. **Hamburger Menu:**
+
 ```css
 .nav {
   display: none;
@@ -8987,6 +9394,7 @@ html {
 ```
 
 2. **Responsive Grid:**
+
 ```css
 .grid {
   display: grid;
@@ -8996,6 +9404,7 @@ html {
 ```
 
 3. **Card Layout:**
+
 ```css
 .card {
   width: 100%;
@@ -9015,6 +9424,7 @@ html {
 ```
 
 4. **Responsive Tables:**
+
 ```css
 @media (max-width: 768px) {
   table, thead, tbody, th, td, tr {
@@ -9037,6 +9447,7 @@ html {
 ```
 
 5. **Viewport Units:**
+
 ```css
 .header {
   height: 100vh;
@@ -9112,31 +9523,31 @@ Responsive design is essential in today's multi-device world. By using media que
 
 **Project Requirements:**
 
-*   **HTML Structure:**
-    *   Use semantic HTML5 elements.
-    *   Include sections for:
-        *   **Header:** Name, tagline, navigation.
-        *   **About Me:** Brief introduction, photo, skills.
-        *   **Projects:** Showcase at least 3 projects with images, descriptions, and links.
-        *   **Contact:** Contact form.
-        *   **Footer:** Copyright, social media links.
-*   **CSS Styling:**
-    *   Use external CSS file.
-    *   Implement a visually appealing design.
-    *   Use Flexbox or Grid for layout.
-    *   Make the website responsive using media queries.
-*   **Responsiveness:** The website should look good and function well on different screen sizes (desktops, tablets, and mobile phones).
-*   **Accessibility:**
-    *   Use appropriate `alt` text for images.
-    *   Use semantic HTML elements.
-    *   Ensure good color contrast.
+* **HTML Structure:**
+  * Use semantic HTML5 elements.
+  * Include sections for:
+    * **Header:** Name, tagline, navigation.
+    * **About Me:** Brief introduction, photo, skills.
+    * **Projects:** Showcase at least 3 projects with images, descriptions, and links.
+    * **Contact:** Contact form.
+    * **Footer:** Copyright, social media links.
+* **CSS Styling:**
+  * Use external CSS file.
+  * Implement a visually appealing design.
+  * Use Flexbox or Grid for layout.
+  * Make the website responsive using media queries.
+* **Responsiveness:** The website should look good and function well on different screen sizes (desktops, tablets, and mobile phones).
+* **Accessibility:**
+  * Use appropriate `alt` text for images.
+  * Use semantic HTML elements.
+  * Ensure good color contrast.
 
 **Project Steps:**
 
 1. **Planning:**
-    *   **Content:** Decide on the content you want to include in each section.
-    *   **Design:** Sketch a basic layout (wireframe) for different screen sizes. Choose a color scheme and fonts.
-    *   **File Structure:** Create a project folder and organize files (HTML, CSS, images).
+    * **Content:** Decide on the content you want to include in each section.
+    * **Design:** Sketch a basic layout (wireframe) for different screen sizes. Choose a color scheme and fonts.
+    * **File Structure:** Create a project folder and organize files (HTML, CSS, images).
 
     ```
     portfolio/
@@ -9333,18 +9744,18 @@ Responsive design is essential in today's multi-device world. By using media que
 ```
 
 1. **Further Development:**
-    *   Add more styles and refine the design.
-    *   Fill in the content for all sections.
-    *   Add more projects.
-    *   Consider adding JavaScript for interactivity (e.g., a responsive menu toggle, form validation).
-    *   Test thoroughly on different browsers and devices.
+    * Add more styles and refine the design.
+    * Fill in the content for all sections.
+    * Add more projects.
+    * Consider adding JavaScript for interactivity (e.g., a responsive menu toggle, form validation).
+    * Test thoroughly on different browsers and devices.
 
 **Project Enhancements:**
 
-*   **Image Gallery:** Use a JavaScript library (like Lightbox or PhotoSwipe) to create an interactive image gallery for your project screenshots.
-*   **Testimonials:** If you have client feedback, add a testimonials section.
-*   **Blog:** If you write, add a blog section where you can post articles related to web development. You can create a simple static blog using HTML and CSS or use a static site generator like Jekyll or Hugo.
-*   **Custom 404 Page:** Create a custom 404 error page to provide a better user experience if someone tries to access a non-existent page on your website.
+* **Image Gallery:** Use a JavaScript library (like Lightbox or PhotoSwipe) to create an interactive image gallery for your project screenshots.
+* **Testimonials:** If you have client feedback, add a testimonials section.
+* **Blog:** If you write, add a blog section where you can post articles related to web development. You can create a simple static blog using HTML and CSS or use a static site generator like Jekyll or Hugo.
+* **Custom 404 Page:** Create a custom 404 error page to provide a better user experience if someone tries to access a non-existent page on your website.
 
 **Deployment:**
 

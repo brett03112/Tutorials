@@ -3,8 +3,8 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
 **I. Basic Calculations, Input and Output**
 
 1. **Calculator:**
-    *   Write a program that takes two numbers and an operator (+, -, \*, /) as input and performs the corresponding calculation.
-    *   Handle potential errors like division by zero.
+    * Write a program that takes two numbers and an operator (+, -, \*, /) as input and performs the corresponding calculation.
+    * Handle potential errors like division by zero.
 
     ```csharp
     using System;
@@ -54,8 +54,8 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 2. **Area of a Circle:**
-    *   Prompt the user to enter the radius of a circle and calculate its area.
-    *   Use `Math.PI` for the value of pi.
+    * Prompt the user to enter the radius of a circle and calculate its area.
+    * Use `Math.PI` for the value of pi.
 
     ```csharp
     using System;
@@ -75,10 +75,10 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 3. **Temperature Converter:**
-    *   Create a program that converts temperature from Celsius to Fahrenheit and vice-versa, based on user input.
-    *   Formula:
-        *   Fahrenheit = (Celsius \* 9/5) + 32
-        *   Celsius = (Fahrenheit - 32) \* 5/9
+    * Create a program that converts temperature from Celsius to Fahrenheit and vice-versa, based on user input.
+    * Formula:
+        * Fahrenheit = (Celsius \* 9/5) + 32
+        * Celsius = (Fahrenheit - 32) \* 5/9
 
     ```csharp
     using System;
@@ -118,10 +118,10 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
 **II. Control Flow and Loops**
 
 1. **FizzBuzz:** (Classic interview question)
-    *   Print numbers from 1 to 100.
-    *   For multiples of 3, print "Fizz".
-    *   For multiples of 5, print "Buzz".
-    *   For multiples of both 3 and 5, print "FizzBuzz".
+    * Print numbers from 1 to 100.
+    * For multiples of 3, print "Fizz".
+    * For multiples of 5, print "Buzz".
+    * For multiples of both 3 and 5, print "FizzBuzz".
 
     ```csharp
     using System;
@@ -154,7 +154,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 2. **Factorial:**
-    *   Calculate the factorial of a number entered by the user.
+    * Calculate the factorial of a number entered by the user.
 
     ```csharp
     using System;
@@ -184,7 +184,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 3. **Prime Number Check:**
-    *   Determine if a given number is prime or not.
+    * Determine if a given number is prime or not.
 
     ```csharp
     using System;
@@ -225,7 +225,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 4. **Fibonacci Sequence:**
-    *   Generate the first `n` numbers of the Fibonacci sequence.
+    * Generate the first `n` numbers of the Fibonacci sequence.
 
     ```csharp
     using System;
@@ -256,7 +256,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
 **III. Arrays**
 
 1. **Reverse Array:**
-    *   Write a program to reverse an array of integers.
+    * Write a program to reverse an array of integers.
 
     ```csharp
     using System;
@@ -303,7 +303,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 2. **Find Maximum and Minimum:**
-    *   Find the maximum and minimum elements in an array.
+    * Find the maximum and minimum elements in an array.
 
     ```csharp
     using System;
@@ -337,7 +337,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 3. **Two Sum (LeetCode #1):**
-    *   Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.
+    * Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.
 
     ```csharp
     using System;
@@ -379,7 +379,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
 **IV. Strings**
 
 1. **Palindrome Check:**
-    *   Check if a given string is a palindrome (reads the same backward as forward).
+    * Check if a given string is a palindrome (reads the same backward as forward).
 
     ```csharp
     using System;
@@ -424,7 +424,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 2. **String Reversal:**
-    *   Reverse a given string.
+    * Reverse a given string.
 
     ```csharp
     using System;
@@ -451,7 +451,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 3. **Anagram Check:**
-    *   Determine if two strings are anagrams of each other (contain the same characters in a different order).
+    * Determine if two strings are anagrams of each other (contain the same characters in a different order).
 
     ```csharp
     using System;
@@ -492,7 +492,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 4. **Valid Parentheses (LeetCode #20):**
-    *   Given a string `s` containing just the characters '(', ')', '{', '}', '\[' and '\]', determine if the input string is valid.
+    * Given a string `s` containing just the characters '(', ')', '{', '}', '\[' and '\]', determine if the input string is valid.
 
     ```csharp
     using System;
@@ -543,8 +543,8 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
 **V. Object-Oriented Programming (OOP)**
 
 1. **Basic Class - `BankAccount`:**
-    *   Create a `BankAccount` class with properties like `AccountNumber`, `AccountHolderName`, `Balance`.
-    *   Implement methods for `Deposit`, `Withdraw`, and `GetBalance`.
+    * Create a `BankAccount` class with properties like `AccountNumber`, `AccountHolderName`, `Balance`.
+    * Implement methods for `Deposit`, `Withdraw`, and `GetBalance`.
 
     ```csharp
     using System;
@@ -596,9 +596,9 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 2. **Inheritance - `SavingsAccount`:**
-    *   Create a `SavingsAccount` class that inherits from `BankAccount`.
-    *   Add an `InterestRate` property.
-    *   Implement a method to `CalculateInterest` and add it to the balance.
+    * Create a `SavingsAccount` class that inherits from `BankAccount`.
+    * Add an `InterestRate` property.
+    * Implement a method to `CalculateInterest` and add it to the balance.
 
     ```csharp
     using System;
@@ -623,9 +623,9 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 3. **Polymorphism - `Animal` class:**
-    *   Create a base class `Animal` with a virtual method `MakeSound`.
-    *   Create derived classes like `Dog`, `Cat`, and `Cow` that override `MakeSound` to produce their respective sounds.
-    *   Demonstrate polymorphism by creating a list of `Animal` objects and calling `MakeSound` on each.
+    * Create a base class `Animal` with a virtual method `MakeSound`.
+    * Create derived classes like `Dog`, `Cat`, and `Cow` that override `MakeSound` to produce their respective sounds.
+    * Demonstrate polymorphism by creating a list of `Animal` objects and calling `MakeSound` on each.
 
     ```csharp
     using System;
@@ -685,7 +685,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
 **VI. LINQ (Language Integrated Query)**
 
 1. **Filtering with LINQ:**
-    *   Given a list of numbers, use LINQ to filter out all even numbers.
+    * Given a list of numbers, use LINQ to filter out all even numbers.
 
     ```csharp
     using System;
@@ -711,7 +711,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 2. **Sorting with LINQ:**
-    *   Given a list of strings, use LINQ to sort them in alphabetical order.
+    * Given a list of strings, use LINQ to sort them in alphabetical order.
 
     ```csharp
     using System;
@@ -737,7 +737,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 3. **Projection with LINQ:**
-    *   Given a list of `Person` objects (with `Name` and `Age` properties), use LINQ to create a new list containing only the names of people older than 25.
+    * Given a list of `Person` objects (with `Name` and `Age` properties), use LINQ to create a new list containing only the names of people older than 25.
 
     ```csharp
     using System;
@@ -777,7 +777,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 4. **Grouping with LINQ:**
-    *   Given a list of `Product` objects (with `Name` and `Category` properties), use LINQ to group them by category.
+    * Given a list of `Product` objects (with `Name` and `Category` properties), use LINQ to group them by category.
 
     ```csharp
     using System;
@@ -820,7 +820,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
 **VII. Data Structures**
 
 1. **Linked List Implementation:**
-    *   Implement a basic singly linked list with `Add`, `Remove`, and `Print` operations.
+    * Implement a basic singly linked list with `Add`, `Remove`, and `Print` operations.
 
     ```csharp
     using System;
@@ -895,7 +895,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 2. **Stack Implementation:**
-    *   Implement a stack using an array or `List<T>`. Include `Push`, `Pop`, and `Peek` methods.
+    * Implement a stack using an array or `List<T>`. Include `Push`, `Pop`, and `Peek` methods.
 
     ```csharp
     using System;
@@ -938,7 +938,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 3. **Queue Implementation:**
-    *   Implement a queue using an array or `List<T>`. Include `Enqueue`, `Dequeue`, and `Peek` methods.
+    * Implement a queue using an array or `List<T>`. Include `Enqueue`, `Dequeue`, and `Peek` methods.
 
     ```csharp
     using System;
@@ -981,7 +981,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 4. **Merge Two Sorted Arrays (LeetCode #88):**
-    *   You are given two integer arrays `nums1` and `nums2`, sorted in non-decreasing order, and two integers `m` and `n`, representing the number of elements in `nums1` and `nums2` respectively. Merge `nums2` into `nums1` as one sorted array.
+    * You are given two integer arrays `nums1` and `nums2`, sorted in non-decreasing order, and two integers `m` and `n`, representing the number of elements in `nums1` and `nums2` respectively. Merge `nums2` into `nums1` as one sorted array.
 
     ```csharp
     using System;
@@ -1040,7 +1040,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
 **VIII. File Input and Output**
 
 1. **Read from a File:**
-    *   Read the contents of a text file and print them to the console.
+    * Read the contents of a text file and print them to the console.
 
     ```csharp
     using System;
@@ -1076,7 +1076,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 2. **Write to a File:**
-    *   Write a list of strings to a text file, each string on a new line.
+    * Write a list of strings to a text file, each string on a new line.
 
     ```csharp
     using System;
@@ -1115,7 +1115,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 3. **Copy a File:**
-    *   Copy the contents of one file to another.
+    * Copy the contents of one file to another.
 
     ```csharp
     using System;
@@ -1148,7 +1148,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
 **IX. Asynchronous Programming**
 
 1. **Basic Asynchronous Method:**
-    *   Create an asynchronous method that simulates a long-running operation (e.g., using `Task.Delay`) and returns a result.
+    * Create an asynchronous method that simulates a long-running operation (e.g., using `Task.Delay`) and returns a result.
 
     ```csharp
     using System;
@@ -1175,7 +1175,7 @@ Okay, here's a comprehensive set of C# coding exercises categorized by topic, in
     ```
 
 2. **Handling Multiple Asynchronous Tasks:**
-    *   Use `Task.WhenAll` to run multiple asynchronous operations concurrently and wait for all of them to complete.
+    * Use `Task.WhenAll` to run multiple asynchronous operations concurrently and wait for all of them to complete.
 
     ```csharp
     using System;
@@ -1225,7 +1225,7 @@ Okay, let's continue with the Asynchronous File I/O example and then cover Event
 
 **3. Asynchronous File I/O:**
 
-*   Read the contents of a file asynchronously.
+* Read the contents of a file asynchronously.
 
 ```csharp
 using System;
@@ -1265,14 +1265,14 @@ public class AsyncFileIO
 
 **Explanation:**
 
-*   **`async` and `await`:** The `ReadFileAsync` method is marked as `async`, allowing it to use the `await` keyword. The `await` keyword pauses execution until the asynchronous operation (reading the file) is complete.
-*   **`StreamReader.ReadToEndAsync()`:** This method reads the entire content of the file asynchronously and returns a `Task<string>` representing the result.
-*   **`using` statement:** Ensures that the `StreamReader` (which implements `IDisposable`) is properly disposed of even if exceptions occur.
-*   **Error Handling:** The `try-catch` block handles potential `FileNotFoundException` and `IOException`.
+* **`async` and `await`:** The `ReadFileAsync` method is marked as `async`, allowing it to use the `await` keyword. The `await` keyword pauses execution until the asynchronous operation (reading the file) is complete.
+* **`StreamReader.ReadToEndAsync()`:** This method reads the entire content of the file asynchronously and returns a `Task<string>` representing the result.
+* **`using` statement:** Ensures that the `StreamReader` (which implements `IDisposable`) is properly disposed of even if exceptions occur.
+* **Error Handling:** The `try-catch` block handles potential `FileNotFoundException` and `IOException`.
 
 **4. Asynchronous File I/O (Write):**
 
-*   Write to a file asynchronously
+* Write to a file asynchronously
 
 ```csharp
 using System;
@@ -1309,14 +1309,14 @@ public class AsyncFileIOWrite
 
 **Explanation:**
 
-*   **`StreamWriter.WriteAsync()`:** This method writes the provided string to the file asynchronously.
+* **`StreamWriter.WriteAsync()`:** This method writes the provided string to the file asynchronously.
 
 **X. Events and Delegates**
 
 **1. Delegate Basics:**
 
-*   Define a simple delegate that takes two integers and returns their sum.
-*   Create an instance of the delegate and invoke it.
+* Define a simple delegate that takes two integers and returns their sum.
+* Create an instance of the delegate and invoke it.
 
 ```csharp
 using System;
@@ -1342,8 +1342,8 @@ public class DelegateExample
 
 **2. Event Basics:**
 
-*   Create a `Counter` class that has an event `ThresholdReached`.
-*   The event should be raised when the counter reaches a certain threshold.
+* Create a `Counter` class that has an event `ThresholdReached`.
+* The event should be raised when the counter reaches a certain threshold.
 
 ```csharp
 using System;
@@ -1419,16 +1419,16 @@ public class EventExample
 
 **Explanation:**
 
-*   **Delegate for Event Handler:** The `ThresholdReachedEventHandler` delegate defines the signature of the method that will handle the `ThresholdReached` event.
-*   **Event Arguments:** The `ThresholdReachedEventArgs` class (inheriting from `EventArgs`) is used to pass data with the event.
-*   **`event` Keyword:** The `ThresholdReached` event is declared using the `event` keyword along with the delegate type.
-*   **`OnThresholdReached` Method:** This method is responsible for raising the event. The `?.` (null-conditional operator) checks if there are any subscribers before invoking the event to avoid a `NullReferenceException`.
-*   **Event Subscription:** In `Main`, `Counter_ThresholdReached` is subscribed to the `ThresholdReached` event using the `+=` operator.
-*   **Event Handler:** The `Counter_ThresholdReached` method is the event handler that will be executed when the event is raised.
+* **Delegate for Event Handler:** The `ThresholdReachedEventHandler` delegate defines the signature of the method that will handle the `ThresholdReached` event.
+* **Event Arguments:** The `ThresholdReachedEventArgs` class (inheriting from `EventArgs`) is used to pass data with the event.
+* **`event` Keyword:** The `ThresholdReached` event is declared using the `event` keyword along with the delegate type.
+* **`OnThresholdReached` Method:** This method is responsible for raising the event. The `?.` (null-conditional operator) checks if there are any subscribers before invoking the event to avoid a `NullReferenceException`.
+* **Event Subscription:** In `Main`, `Counter_ThresholdReached` is subscribed to the `ThresholdReached` event using the `+=` operator.
+* **Event Handler:** The `Counter_ThresholdReached` method is the event handler that will be executed when the event is raised.
 
 **3. Multicast Delegate:**
 
-*   Demonstrate how a delegate can point to multiple methods (multicast).
+* Demonstrate how a delegate can point to multiple methods (multicast).
 
 ```csharp
 using System;
@@ -1467,12 +1467,12 @@ public class MulticastDelegateExample
 
 **Explanation:**
 
-*   **`del1 + del2`:** Combines `del1` and `del2` into a single multicast delegate `multiDel`. When `multiDel` is invoked, it will call both `Method1` and `Method2`.
-*   **`multiDel -= del1`:** Removes `del1` from the invocation list of `multiDel`.
+* **`del1 + del2`:** Combines `del1` and `del2` into a single multicast delegate `multiDel`. When `multiDel` is invoked, it will call both `Method1` and `Method2`.
+* **`multiDel -= del1`:** Removes `del1` from the invocation list of `multiDel`.
 
 **4. Anonymous Methods:**
 
-*   Use an anonymous method with a delegate.
+* Use an anonymous method with a delegate.
 
 ```csharp
 using System;
@@ -1496,7 +1496,7 @@ public class AnonymousMethodExample
 
 **5. Lambda Expressions:**
 
-*   Use a lambda expression with a delegate.
+* Use a lambda expression with a delegate.
 
 ```csharp
 using System;
@@ -1518,7 +1518,7 @@ public class LambdaExpressionExample
 
 **6. Delegates with LINQ:**
 
-*   Show how delegates (via lambda expressions) are used with LINQ methods like `Where`, `Select`, etc.
+* Show how delegates (via lambda expressions) are used with LINQ methods like `Where`, `Select`, etc.
 
 ```csharp
 using System;
@@ -1554,7 +1554,7 @@ public class LinqWithDelegates
 
 **Explanation:**
 
-*   **`Where` and `Select`:** These LINQ methods take delegates (often expressed as lambda expressions) to define the filtering or projection logic.
-*   **`Func` Delegate:**  LINQ often uses the `Func` delegate, which represents a method that takes a certain number of input parameters and returns a value of a specific type.
+* **`Where` and `Select`:** These LINQ methods take delegates (often expressed as lambda expressions) to define the filtering or projection logic.
+* **`Func` Delegate:**  LINQ often uses the `Func` delegate, which represents a method that takes a certain number of input parameters and returns a value of a specific type.
 
 This concludes the C# coding exercises, covering a broad range of topics from basic to more advanced concepts. If you have any further questions, feel free to ask!
